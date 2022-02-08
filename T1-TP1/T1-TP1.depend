@@ -6,7 +6,7 @@
 	<iostream>
 	<dominios.h>
 
-1644323882 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
+1644326842 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	<testes.h>
 
@@ -19,7 +19,7 @@
 	<iostream>
 	<stdexcept>
 
-1644324054 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+1644326927 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	"dominios.h"
 	"entidades.h"

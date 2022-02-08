@@ -16,23 +16,23 @@ void TUNota::tearDown(){
 
 void TUNota::testarCenarioSucesso(){
     try{
-        nota -> setValor(VALOR_VALIDO);
-        if(nota -> getValor() != VALOR_VALIDO){
+        nota->setValor(VALOR_VALIDO);
+        if(nota->getValor() != VALOR_VALIDO){
             estado = FALHA;
         }
     }
-    catch (invalid_argument &exception){
+    catch (invalid_argument &excecao){
         estado = FALHA;
     }
 }
 
 void TUNota::testarCenarioFalha(){
     try{
-        nota -> setValor(VALOR_INVALIDO);
+        nota->setValor(VALOR_INVALIDO);
         estado = FALHA;
     }
-    catch(invalid_argument &exception){
-        if (nota -> getValor() == VALOR_INVALIDO)
+    catch(invalid_argument &excecao){
+        if (nota->getValor() == VALOR_INVALIDO)
             estado = FALHA;
     }
 }
