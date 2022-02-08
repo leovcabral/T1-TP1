@@ -1,9 +1,27 @@
+#ifndef TESTES_H_INCLUDED
+#define TESTES_H_INCLUDED
+
 #include <iostream>
+#include "dominios.h"
+#include "entidades.h"
 
 using namespace std;
 
-int main()
-{
-    cout << "Hello world!" << endl;
-    return 0;
-}
+class TUNota {
+private:
+    const static int VALOR_VALIDO   = 1;
+    const static int VALOR_INVALIDO = 6;
+    Nota *nota;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+#endif

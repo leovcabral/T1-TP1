@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1644323245 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.cpp
+	<iostream>
+
+1644322213 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.cpp
+	<iostream>
+	<dominios.h>
+
+1644323882 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
+	<iostream>
+	<testes.h>
+
+1644323278 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
+	<iostream>
+	"dominios.h"
+	"testes.h"
+
+1644323201 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
+	<iostream>
+	<stdexcept>
+
+1644324054 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+	<iostream>
+	"dominios.h"
+	"entidades.h"
+
+1644321724 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
+	<iostream>
+
