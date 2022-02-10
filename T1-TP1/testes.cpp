@@ -44,3 +44,45 @@ int TUNota::run(){
     tearDown();
     return estado;
 }
+
+
+void TUDuracao::setUp(){
+    duracao = new Duracao();
+    estado = SUCESSO;
+}
+
+void TUDuracao::tearDown(){
+    delete duracao;
+
+}
+
+void TUDuracao::testarCenarioSucesso(){
+    try{
+        duracao->setValor(VALOR_VALIDO);
+        if(duracao->getValor() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch (invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUDuracao::testarCenarioFalha(){
+    try{
+        duracao->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    }
+    catch(invalid_argument &excecao){
+        if (duracao->getValor() == VALOR_INVALIDO)
+            estado = FALHA;
+    }
+}
+
+int TUDuracao::run(){
+    setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}

@@ -13,3 +13,22 @@ void Nota::setValor(int valor){
     validar(valor);
     this->valor = valor;
 }
+
+
+void Duracao::validar(int duracao){
+    bool valido = false;
+    for (const int n : valores_validos){
+        if (duracao == n) {
+            valido = true;
+        }
+    }
+
+    if (valido == false) {
+        throw invalid_argument("Argumento invalido");
+    }
+}
+
+void Duracao::setValor(int valor){
+    validar(valor);
+    this->valor = valor;
+}
