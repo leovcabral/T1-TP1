@@ -14,10 +14,14 @@ int main()
 //    descrip.setDescription("Cidade Foda");
 //    cout << "DESCRICAO = " << descrip.getDescription() << endl;
 
-    Titulo title;
-    title.setTitulo("Thecity");
-    cout << "TITULO = " << title.getTitulo() << endl;
+//    Titulo title;
+//    title.setTitulo("Thecity");
+//    cout << "TITULO = " << title.getTitulo() << endl;
 
+
+    Senha pass ;
+    pass.setPassword("123ACb");
+    cout << "Password = " << pass.getPassword() << endl;
 
     return 0;
 }

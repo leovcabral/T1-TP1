@@ -1,9 +1,10 @@
 #include <iostream>
 #include <dominios.h>
 #include <cstring>
+#include <ctype.h>
+#include <stdio.h>
 
 using namespace std;
-
 
 bool CheckRepeated(string valor, char caracter){
     int contador = 0;
@@ -20,6 +21,28 @@ bool CheckRepeated(string valor, char caracter){
     }
     return false;
 }
+
+bool MagicThree(string valor){
+    bool has_upper = false;
+    bool has_lower = false;
+    bool has_digit = false;
+    for(int i = 0; i < valor.length(); i++)
+    {
+        if( isupper(valor[i]) ){
+            has_upper = true;
+        }
+        else if( islower(valor[i]) ){
+            has_lower = true;
+        }
+        else if( valor[i] ) {
+            has_digit = true;
+       }
+    }
+    if(has_upper == true && has_lower == true && has_digit && true){
+        return true;}
+    else{
+        return false;}
+   }
 
 bool CheckIfAlpha(string valor){
     for(int i = 0; i < valor.length(); i++){
@@ -42,8 +65,8 @@ void Cidade::validar(string valor){
             break;
          }
     }
-         if(in == false){
-            throw invalid_argument("Argumento invalido.");}
+     if(in == false){
+        throw invalid_argument("Argumento invalido.");}
 }
 
 
@@ -94,9 +117,29 @@ void Titulo::setTitulo(string valor){
 
 void Senha::validar(string valor){
     bool repeated_char = false;
-    bool at_least = false;
+    bool all_digit_or_num = true;
+    bool magic_three = MagicThree(valor) ;
+    for( int i = 0; i < valor.length(); i++){
+        if(CheckRepeated(valor, valor[i]) == true){
+            repeated_char = true;
+        }
+        if( !isalpha(valor[i]) && !isdigit(valor[i]) ){
+            all_digit_or_num = false;
+        }
+    }
+    if(repeated_char == true || all_digit_or_num == false || magic_three == false){
+        throw invalid_argument("Argumento invalido.");}
 }
 
+string Senha::getPassword() const{
+    string hidden_password;
+    for( int i = 0; i < valor.length() ; i++)
+    {
+        hidden_password = hidden_password + 'X';
+
+    }
+    return hidden_password;
+}
 
 void Senha::setPassword(string valor){
     validar(valor);
