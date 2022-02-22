@@ -2,25 +2,30 @@
 1644323245 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.cpp
 	<iostream>
 
-1644495960 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.cpp
+1645562773 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
 	<dominios.h>
+	<cctype>
+	<ctype.h>
+	<cstring>
 
-1644495705 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
+1645562195 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	<testes.h>
 
-1644495760 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
+1645562833 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	"dominios.h"
 	"testes.h"
 
-1644496043 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
+1645561135 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
 	<iostream>
 	<stdexcept>
+	<cstring>
 
-1644496092 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+1645562358 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
+	<cstring>
 	"dominios.h"
 	"entidades.h"
 

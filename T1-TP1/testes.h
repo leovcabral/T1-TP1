@@ -2,6 +2,7 @@
 #define TESTES_H_INCLUDED
 
 #include <iostream>
+#include <cstring>
 #include "dominios.h"
 #include "entidades.h"
 
@@ -29,6 +30,23 @@ private:
     const static int VALOR_VALIDO   = 90;
     const static int VALOR_INVALIDO = 110;
     Duracao *duracao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+class TUNome {
+private:
+    const string VALOR_VALIDO   = "Leonardo";
+    const string VALOR_INVALIDO = "Leo";
+    Nome *nome;
     int estado;
     void setUp();
     void tearDown();

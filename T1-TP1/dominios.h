@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <cstring>
 
 using namespace std;
 
@@ -33,5 +34,19 @@ class Duracao {
 inline int Duracao::getValor() const {
     return valor;
 }
+
+class Nome {
+    private:
+        string valor;
+        void validar(string);
+    public:
+        void setValor(string);
+        string getValor() const;
+};
+
+inline string Nome::getValor() const {
+    return valor;
+}
+
 
 #endif
