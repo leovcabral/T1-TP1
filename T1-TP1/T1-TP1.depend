@@ -1,12 +1,36 @@
 # depslib dependency file v1.0
+140733379332912 <<<<<<< HEAD
+
 1645052530 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.cpp
 
 1645052538 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.cpp
 
 1645154851 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
+
+1645569312 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.cpp
+
+1645569592 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.cpp
+	<iostream>
+	<dominios.h>
+	<cstring>
+	<ctype.h>
+	<stdio.h>
+
+1645568281 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
+	<iostream>
+	<testes.h>
+
+1645569709 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	"dominios.h"
 	"testes.h"
+
+1644321724 gin/development
+	<iostream>
+	"dominios.h"
+	"testes.h"
+
+1645562833 D
 
 1645059962 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
 	<iostream>
@@ -20,4 +44,19 @@
 	<cstring>
 	<ctype.h>
 	<stdio.h>
+
+1645154723 
+
+1645568649 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
+	<iostream>
+	<stdexcept>
+	<cstring>
+
+1645569655 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+	<iostream>
+	<cstring>
+	"dominios.h"
+	"entidades.h"
+
+1645569580 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
 

@@ -6,22 +6,38 @@ using namespace std;
 
 int main()
 {
-//    Cidade city;
-//    city.setCidade("Nova Iorque");
-//    cout << "Cidade = " << city.getCidade() << endl;
+    TUNota testeA;
+    TUDuracao testeB;
+    TUNome testeC;
 
-//    Descricao descrip;
-//    descrip.setDescription("Cidade Foda");
-//    cout << "DESCRICAO = " << descrip.getDescription() << endl;
+    switch(testeA.run()){
+        case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
+                                break;
+        case TUNota::FALHA  : cout << "FALHA - NOTA" << endl;
+                                break;
+    }
 
-//    Titulo title;
-//    title.setTitulo("Thecity");
-//    cout << "TITULO = " << title.getTitulo() << endl;
+    switch(testeB.run()){
+        case TUDuracao::SUCESSO: cout << "SUCESSO - DURACAO" << endl;
+                                break;
+        case TUDuracao::FALHA  : cout << "FALHA - DURACAO" << endl;
+                                break;
+    }
 
+    switch(testeC.run()){
+        case TUNome::SUCESSO: cout << "SUCESSO - NOME" << endl;
+                                break;
+        case TUNome::FALHA  : cout << "FALHA - NOME" << endl;
+                                break;
+    }
 
-    Senha pass ;
-    pass.setPassword("123ACb");
-    cout << "Password = " << pass.getPassword() << endl;
+    Nome name;
+    name.setValor("L. V. Cabral");
+    cout << "Nome: " << name.getValor() << endl;
+
+    Cidade cidade;
+    cidade.setCidade("Hong Kong");
+    cout << "Cidade: " << cidade.getCidade();
 
     return 0;
 }

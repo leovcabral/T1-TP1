@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <cstring>
 
 using namespace std;
 
@@ -19,6 +20,18 @@ inline string Cidade::getCidade() const {
     return valor;
 }
 
+class Nota {
+    private:
+        int valor;
+        void validar(int);
+    public:
+        void setValor(int);
+        int getValor() const;
+};
+
+inline int Nota::getValor() const {
+    return valor;
+}
 
 class Descricao  {
     private :
@@ -27,9 +40,7 @@ class Descricao  {
     public:
         void setDescription(string);
         string getDescription() const;
-
 };
-
 
 inline string Descricao::getDescription() const {
     return valor;
@@ -55,7 +66,37 @@ class Senha {
     public:
         void setPassword(string);
         string getPassword() const;
-
 };
+
+inline string Senha::getPassword() const {
+    return valor;
+}
+
+class Nome {
+    private:
+        string valor;
+        void validar(string);
+    public:
+        void setValor(string);
+        string getValor() const;
+};
+
+inline string Nome::getValor() const {
+    return valor;
+}
+
+class Duracao {
+    private:
+        int valor;
+        const int valores_validos[5] = {30, 60, 90, 120, 180};
+        void validar(int);
+    public:
+        void setValor(int);
+        int getValor() const;
+};
+
+inline int Duracao::getValor() const {
+    return valor;
+}
 
 #endif
