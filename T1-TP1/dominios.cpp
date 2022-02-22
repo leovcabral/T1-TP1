@@ -129,15 +129,15 @@ void Senha::validar(string valor){
         throw invalid_argument("Argumento invalido.");}
 }
 
-/*string Senha::getPassword() const{
-    string hidden_password;
-    for( int i = 0; i < valor.length() ; i++)
-    {
-        hidden_password = hidden_password + 'X';
-
-    }
-    return hidden_password;
-}*/
+//string Senha::getPassword() const{
+//    string hidden_password;
+//    for( int i = 0; i < valor.length() ; i++)
+//    {
+//        hidden_password = hidden_password + 'X';
+//
+//    }
+//    return hidden_password;
+//}
 
 void Senha::setPassword(string valor){
     validar(valor);

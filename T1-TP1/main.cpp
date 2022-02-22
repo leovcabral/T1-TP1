@@ -37,7 +37,11 @@ int main()
 
     Cidade cidade;
     cidade.setCidade("Hong Kong");
-    cout << "Cidade: " << cidade.getCidade();
+    cout << "Cidade: " << cidade.getCidade() << endl;
+
+    Senha senha;
+    senha.setPassword("Ab123456");
+    cout << "Senha: " << senha.getPassword();
 
     return 0;
 }

@@ -7,20 +7,20 @@
 
 1645154851 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
 
-1645569312 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.cpp
+1645570218 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.cpp
 
-1645569592 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.cpp
+1645570440 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
 	<dominios.h>
 	<cstring>
 	<ctype.h>
 	<stdio.h>
 
-1645568281 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
+1645570218 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	<testes.h>
 
-1645569709 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
+1645570464 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	"dominios.h"
 	"testes.h"
@@ -47,16 +47,16 @@
 
 1645154723 
 
-1645568649 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
+1645570447 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
 	<iostream>
 	<stdexcept>
 	<cstring>
 
-1645569655 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+1645570218 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
 	"entidades.h"
 
-1645569580 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
+1645570218 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
 
