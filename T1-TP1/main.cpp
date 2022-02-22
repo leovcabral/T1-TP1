@@ -33,7 +33,11 @@ int main()
 
     Nome name;
     name.setValor("L. V. Cabral");
-    cout << "Nome: " << name.getValor();
+    cout << "Nome: " << name.getValor() << endl;
+
+    Cidade cidade;
+    cidade.setCidade("Hong Kong");
+    cout << "Cidade: " << cidade.getCidade();
 
     return 0;
 }

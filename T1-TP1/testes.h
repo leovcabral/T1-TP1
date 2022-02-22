@@ -30,6 +30,7 @@ private:
     const static int VALOR_VALIDO   = 90;
     const static int VALOR_INVALIDO = 110;
     Duracao *duracao;
+
     int estado;
     void setUp();
     void tearDown();
@@ -41,6 +42,7 @@ public:
     const static int FALHA   = -1;
     int run();
 };
+
 
 class TUNome {
 private:
