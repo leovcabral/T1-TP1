@@ -61,24 +61,6 @@ public:
     int run();
 };
 
-class TUCidade {
-private:
-    const string VALOR_VALIDO   = "Nova Iorque";
-    const string VALOR_INVALIDO = "Pequena Manaus";
-    Cidade *cidade;
-    int estado;
-    void setUp();
-    void tearDown();
-    void testarCenarioSucesso();
-    void testarCenarioFalha();
-
-public:
-    const static int SUCESSO =  0;
-    const static int FALHA   = -1;
-    int run();
-};
-
-
 class TUTitulo {
 private:
     const string VALOR_VALIDO   = "Amor e Choppa";

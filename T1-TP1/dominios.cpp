@@ -94,14 +94,20 @@ void Descricao::setDescription(string valor){
 
 
 void Titulo::validar(string valor){
+    bool right_charaters = true;
     bool right_length = false;
     if(valor.length()<= 30){
         right_length = true;
     }
-    bool only_letters = CheckIfAlpha(valor);
+    for(int i =0; i < valor.length(); i++){
+        if(!isalpha(valor[i]) && valor[i] != ' ' && valor[i] != '.'){
+            right_charaters = false;
+        }
+    }
+
     bool repeated_spaces = CheckRepeated(valor, ' ');
     bool repeated_dots = CheckRepeated(valor, '.');
-    if(right_length == false || repeated_dots == true || repeated_spaces == true || only_letters == false){
+    if(right_length == false || repeated_dots == true || repeated_spaces == true || right_charaters == false){
         throw invalid_argument("Argumento invalido.");
     }
 }
