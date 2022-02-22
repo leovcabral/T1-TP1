@@ -9,6 +9,7 @@ int main()
     TUNota testeA;
     TUDuracao testeB;
     TUNome testeC;
+    TUCidade testeD;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -30,6 +31,14 @@ int main()
         case TUNome::FALHA  : cout << "FALHA - NOME" << endl;
                                 break;
     }
+
+    switch(testeD.run()){
+        case TUCidade::SUCESSO: cout << "SUCESSO - CIDADE" << endl;
+                                break;
+        case TUCidade::FALHA  : cout << "FALHA - CIDADE" << endl;
+                                break;
+    }
+
 
     Nome name;
     name.setValor("L. V. Cabral");

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-/*void TUCidade::setUp(){
+void TUCidade::setUp(){
     cidade = new Cidade();
     estado = SUCESSO;
 }
@@ -17,6 +17,14 @@ void TUCidade::testarCenarioSucesso(){
     try{
         cidade->setCidade(VALOR_VALIDO);
         if(cidade->getCidade() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch (invalid_argument &excecao){
+        estado = FALHA;
+    }
+};
+
 
 void TUCidade::testarCenarioFalha(){
     try{
@@ -24,7 +32,11 @@ void TUCidade::testarCenarioFalha(){
         estado = FALHA;
     }
     catch(invalid_argument &excecao){
-        if (cidade->getCidade() == VALOR_INVALIDO)
+        if (cidade->getCidade() == VALOR_INVALIDO){
+            estado = FALHA;
+        }
+    }
+}
 
 int TUCidade::run(){
     setUp();
@@ -33,7 +45,6 @@ int TUCidade::run(){
     tearDown();
     return estado;
 }
-*/
 
 
 void TUNota::setUp(){
