@@ -100,7 +100,7 @@ class TUDescricao {
 private:
     const string VALOR_VALIDO   = "cidade das cidades";
     const string VALOR_INVALIDO = "muito  coitada...poxa";
-    Titulo *titulo;
+    Descricao *descricao;
     int estado;
     void setUp();
     void tearDown();

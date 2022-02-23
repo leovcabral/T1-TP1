@@ -11,6 +11,7 @@ int main()
     TUNome testeC;
     TUCidade testeD;
     TUTitulo testeE;
+    TUDescricao testeF;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -44,6 +45,13 @@ int main()
         case TUTitulo::SUCESSO: cout << "SUCESSO - TITULO" << endl;
                                 break;
         case TUTitulo::FALHA  : cout << "FALHA - TITULO" << endl;
+                                break;
+    }
+
+    switch(testeF.run()){
+        case TUDescricao::SUCESSO: cout << "SUCESSO - DESCRICAO" << endl;
+                                break;
+        case TUDescricao::FALHA  : cout << "FALHA - DESCRICAO" << endl;
                                 break;
     }
 
