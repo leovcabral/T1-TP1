@@ -12,6 +12,7 @@ int main()
     TUCidade testeD;
     TUTitulo testeE;
     TUDescricao testeF;
+    TUSenha testeG;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -55,9 +56,16 @@ int main()
                                 break;
     }
 
+    switch(testeG.run()){
+        case TUSenha::SUCESSO: cout << "SUCESSO - SENHA" << endl;
+                                break;
+        case TUSenha::FALHA  : cout << "FALHA - SENHA" << endl;
+                                break;
+    }
+
     Nome name;
     name.setValor("L. V. Cabral");
-    cout << "Nome: " << name.getValor() << endl;
+    cout << "\nNome: " << name.getValor() << endl;
 
     Cidade cidade;
     cidade.setCidade("Hong Kong");
@@ -65,7 +73,7 @@ int main()
 
     Senha senha;
     senha.setPassword("Ab123456");
-    cout << "Senha: " << senha.getPassword();
+    cout << "Senha: " << senha.getPassword() << endl;
 
     return 0;
 }
