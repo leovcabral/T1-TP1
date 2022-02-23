@@ -10,6 +10,7 @@ int main()
     TUDuracao testeB;
     TUNome testeC;
     TUCidade testeD;
+    TUTitulo testeE;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -36,6 +37,13 @@ int main()
         case TUCidade::SUCESSO: cout << "SUCESSO - CIDADE" << endl;
                                 break;
         case TUCidade::FALHA  : cout << "FALHA - CIDADE" << endl;
+                                break;
+    }
+
+     switch(testeE.run()){
+        case TUTitulo::SUCESSO: cout << "SUCESSO - TITULO" << endl;
+                                break;
+        case TUTitulo::FALHA  : cout << "FALHA - TITULO" << endl;
                                 break;
     }
 

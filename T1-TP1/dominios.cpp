@@ -98,10 +98,9 @@ void Titulo::validar(string valor){
     if(valor.length()<= 30){
         right_length = true;
     }
-    bool only_letters = CheckIfAlpha(valor);
     bool repeated_spaces = CheckRepeated(valor, ' ');
     bool repeated_dots = CheckRepeated(valor, '.');
-    if(right_length == false || repeated_dots == true || repeated_spaces == true || only_letters == false){
+    if(right_length == false || repeated_dots == true || repeated_spaces == true){
         throw invalid_argument("Argumento invalido.");
     }
 }

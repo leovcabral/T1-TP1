@@ -89,20 +89,6 @@ int TUNota::run(){
     return estado;
 }
 
-/*void TUDescricao::setUp(){
-    descricao = new Descricao();
-    estado = SUCESSO;
-}
-
-void TUDescricao::tearDown(){
-    delete descricao;
-
-}
-
-void TUCidade::testarCenarioSucesso(){
-    try{
-        descricao->setDescription(VALOR_VALIDO);
-        if(descricao->getDescription() != VALOR_VALIDO){ */
 
 void TUDuracao::setUp(){
     duracao = new Duracao();
@@ -186,19 +172,42 @@ int TUNome::run(){
     tearDown();
     return estado;
 }
-/*
-void TUDescricao::testarCenarioFalha(){
+
+
+void TUTitulo::setUp(){
+    titulo = new Titulo();
+    estado = SUCESSO;
+}
+
+void TUTitulo::tearDown(){
+    delete titulo;
+
+}
+
+void TUTitulo::testarCenarioSucesso(){
     try{
-        descricao->setDescription(VALOR_INVALIDO);
+        titulo->setTitulo(VALOR_VALIDO);
+        if(titulo->getTitulo() != VALOR_VALIDO){
+            estado = FALHA;
+        }
+    }
+    catch (invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
+
+void TUTitulo::testarCenarioFalha(){
+    try{
+        titulo->setTitulo(VALOR_INVALIDO);
         estado = FALHA;
     }
     catch(invalid_argument &excecao){
-        if (descricao->getDescription() == VALOR_INVALIDO)
+        if (titulo->getTitulo() == VALOR_INVALIDO)
             estado = FALHA;
     }
 }
 
-int TUDescricao::run(){
+int TUTitulo::run(){
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -206,4 +215,3 @@ int TUDescricao::run(){
     return estado;
 }
 
-*/
