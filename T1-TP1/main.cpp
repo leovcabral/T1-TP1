@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include  "dominios.h"
 
+
 using namespace std;
 
 int main()
@@ -38,7 +39,7 @@ int main()
     Data* ptr3;
     ptr3 = new Data;
 
-    ptr3->setData(31, "Jan", 2001);
+    ptr3->setData(3, "Jan", 2001);
 
     ptr3->getData();
 
@@ -52,6 +53,17 @@ int main()
     ptr4->setHorario(23, 59);
 
     ptr4->getHorario();
+
+    std::cout << "\n";
+
+     ////////////////////
+
+    Email* ptr5;
+    ptr5 = new Email;
+
+    ptr5->setEmail("adriano@maaaaaail.com");
+
+
 
 
     return 0;
