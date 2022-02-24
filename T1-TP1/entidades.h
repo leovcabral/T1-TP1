@@ -83,4 +83,54 @@ inline Descricao Avaliacao::getDescricao() const {
     return descricao;
 }
 
+
+class Sessao {
+private:
+    Codigo codigo;
+    Data  data;
+    Horario horario;
+    Idioma idioma;
+public:
+    void setCodigo(const Codigo&);
+    Codigo getCodigo() const;
+    void setData(const Data&);
+    Data getData() const;
+    void setHorario(const Horario&);
+    Horario getHorario() const;
+    void setIdioma(const Idioma&);
+    Idioma getIdioma() const;
+};
+
+inline void Sessao::setCodigo(const Codigo& codigo){
+    this-> codigo = codigo;
+}
+
+inline Codigo Sessao::getCodigo() const {
+    return codigo;
+}
+
+inline void Sessao::setData(const Data& data){
+    this->data = data;
+}
+
+inline Data Sessao::getData() const {
+    return data;
+}
+
+inline void Sessao::setHorario(const Horario& horario){
+    this-> horario = horario;
+}
+
+inline Horario Sessao::getHorario() const {
+    return horario;
+}
+
+inline void Sessao::setIdioma(const Idioma& idioma){
+    this-> idioma = idioma;
+}
+
+inline Idioma Sessao::getIdioma() const {
+    return idioma;
+}
+
 #endif // ENTIDADES_H_INCLUDE

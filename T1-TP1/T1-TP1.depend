@@ -64,7 +64,7 @@
 	<iostream>
 	"testes.h"
 
-1645714912 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
+1645715186 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
@@ -102,13 +102,13 @@
 	<string.h>
 	<cstring>
 
-1645714950 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+1645717670 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
 	"entidades.h"
 
-1645714306 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
+1645717403 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
 	"dominios.h"
 	<string>
 
