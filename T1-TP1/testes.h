@@ -1,10 +1,6 @@
 #ifndef TESTES_H_INCLUDED
 #define TESTES_H_INCLUDED
 
-<<<<<<< HEAD
-#include "dominios.h"
-=======
->>>>>>> main
 #include <iostream>
 #include <cstring>
 #include "dominios.h"
@@ -12,7 +8,6 @@
 
 using namespace std;
 
-<<<<<<< HEAD
 class TUIdioma{
 
     private:
@@ -132,13 +127,6 @@ class TUEmail{
 
 };
 
-
-
-
-
-
-
-=======
 class TUNota {
 private:
     const static int VALOR_VALIDO   = 3;
@@ -277,6 +265,6 @@ public:
     const static int FALHA   = -1;
     int run();
 };
->>>>>>> main
+
 
 #endif
