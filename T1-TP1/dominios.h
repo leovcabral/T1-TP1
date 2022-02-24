@@ -6,6 +6,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <cstring>
 
 
 using namespace std;
@@ -93,10 +94,7 @@ class Email {
 
 };
 
-=======
-#include <iostream>
-#include <stdexcept>
-#include <cstring>
+
 
 using namespace std;
 
@@ -205,5 +203,4 @@ inline string Codigo::getValor() const {
     return valor;
 }
 
->>>>>>> main
 #endif
