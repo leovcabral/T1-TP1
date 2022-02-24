@@ -13,6 +13,7 @@ int main()
     TUTitulo testeE;
     TUDescricao testeF;
     TUSenha testeG;
+    TUCodigo testeH;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -63,6 +64,13 @@ int main()
                                 break;
     }
 
+    switch(testeH.run()){
+        case TUCodigo::SUCESSO: cout << "SUCESSO - CODIGO" << endl;
+                                break;
+        case TUCodigo::FALHA  : cout << "FALHA - CODIGO" << endl;
+                                break;
+    }
+
     Nome name;
     name.setValor("L. V. Cabral");
     cout << "\nNome: " << name.getValor() << endl;
@@ -74,6 +82,10 @@ int main()
     Senha senha;
     senha.setPassword("Ab123456");
     cout << "Senha: " << senha.getPassword() << endl;
+
+    Codigo codigo;
+    codigo.setValor("2615339");
+    cout << "Codigo: " << codigo.getValor() << endl;
 
     return 0;
 }

@@ -82,7 +82,7 @@ public:
 class TUTitulo {
 private:
     const string VALOR_VALIDO   = "Amor e Choppa";
-    const string VALOR_INVALIDO = "a mais  feinha...";
+    const string VALOR_INVALIDO = "a mais 2feinha...";
     Titulo *titulo;
     int estado;
     void setUp();
@@ -118,6 +118,23 @@ private:
     const string VALOR_VALIDO   = "Ab123456";
     const string VALOR_INVALIDO = "aadriano!";
     Senha *senha;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+    void testarCenarioFalha();
+
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+class TUCodigo {
+private:
+    const string VALOR_VALIDO   = "2615339";
+    const string VALOR_INVALIDO = "2615338!";
+    Codigo *codigo;
     int estado;
     void setUp();
     void tearDown();

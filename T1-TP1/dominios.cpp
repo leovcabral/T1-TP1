@@ -94,13 +94,20 @@ void Descricao::setDescription(string valor){
 
 
 void Titulo::validar(string valor){
+    bool right_charaters = true;
     bool right_length = false;
     if(valor.length()<= 30){
         right_length = true;
     }
+    for(int i =0; i < valor.length(); i++){
+        if(!isalpha(valor[i]) && valor[i] != ' ' && valor[i] != '.'){
+            right_charaters = false;
+        }
+    }
+
     bool repeated_spaces = CheckRepeated(valor, ' ');
     bool repeated_dots = CheckRepeated(valor, '.');
-    if(right_length == false || repeated_dots == true || repeated_spaces == true){
+    if(right_length == false || repeated_dots == true || repeated_spaces == true || right_charaters == false){
         throw invalid_argument("Argumento invalido.");
     }
 }
@@ -230,3 +237,45 @@ void Nome::setValor(string valor){
     this->valor = valor;
 }
 
+
+void Codigo::validar(string codigo){
+    bool tamanho = false;
+    bool so_digitos = true;
+    bool codigo_verificador = false;
+
+    if (codigo.length() == 7){
+        tamanho = true;
+    }
+
+    for (int i = 0; codigo[i]; i++){
+        if (!isdigit(codigo[i])){
+            so_digitos = false;
+        }
+    }
+
+    int soma = 0;
+    int multiplicador = 2;
+    int digito_verificador;
+    for (int i = codigo.length() - 2; i >= 0 ; i--){
+        if (multiplicador < 9){
+          soma += multiplicador*(codigo[i] - '0');
+          multiplicador++;
+        }
+      }
+    digito_verificador = (soma*10) % 11;
+    if (digito_verificador == 10){
+        digito_verificador = 0;
+    }
+    if (digito_verificador == codigo[6] - '0'){
+        codigo_verificador = true;
+    }
+
+    if (tamanho == false || so_digitos == false || codigo_verificador == false){
+        throw invalid_argument("Argumento invalido");
+   }
+}
+
+void Codigo::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}

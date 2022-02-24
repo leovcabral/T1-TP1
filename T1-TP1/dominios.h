@@ -99,4 +99,17 @@ inline int Duracao::getValor() const {
     return valor;
 }
 
+class Codigo {
+    private:
+        string valor;
+        void validar(string);
+    public:
+        void setValor(string);
+        string getValor() const;
+};
+
+inline string Codigo::getValor() const {
+    return valor;
+}
+
 #endif
