@@ -37,6 +37,7 @@ class Descricao  {
     private :
         string valor;
         void validar(string);
+        bool CheckRepeated(string, char);
     public:
         void setDescription(string);
         string getDescription() const;
@@ -50,6 +51,7 @@ class Titulo {
     private:
         string valor;
         void validar(string);
+        bool CheckRepeated(string,char);
     public:
         void setTitulo(string);
         string getTitulo() const;
@@ -63,6 +65,8 @@ class Senha {
     private:
         string valor;
         void validar(string);
+        bool MagicThree(string);
+        bool CheckRepeated(string,char);
     public:
         void setPassword(string);
         string getPassword() const;
