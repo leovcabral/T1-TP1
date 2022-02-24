@@ -3,11 +3,11 @@
 
 1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.cpp
 
-1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.cpp
+1645746334 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	<testes.h>
 
-1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
+1645746334 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	"dominios.h"
 	"testes.h"
@@ -37,12 +37,12 @@
 
 1645562833 D
 
-1645571630 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
+1645746764 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
 	<iostream>
 	<stdexcept>
 	<cstring>
 
-1645572226 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.h
+1645746334 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
