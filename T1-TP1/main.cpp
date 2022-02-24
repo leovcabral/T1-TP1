@@ -135,5 +135,13 @@ TUEmail testeEmail;
     codigo.setValor("2615339");
     cout << "Codigo: " << codigo.getValor() << endl;
 
+    Usuario user;
+    user.setNome("Leonardo");
+    user.setEmail("leonardo@gmail.com");
+    user.setSenha("Aabc123");
+    cout << "Nome: " << user.getNome() << endl;
+    cout << "Email: " << user.getEmail() << endl;
+    cout << "Senha: " << user.getSenha() << endl;
+
     return 0;
 }
