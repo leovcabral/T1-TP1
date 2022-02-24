@@ -16,14 +16,14 @@ class Idioma
 private:
 
     static const int TAM_DISP = 10;
-    const char* disponivel[TAM_DISP] = {"Ingles", "Chines Mandarim", "Hindi", "Espanhol", "Frances", "Arabe", "Bengali", "Russo", "Portugues", "Indonesio"};
-    const char* selecionado = "";
-    void validar(const char* str);
+    string disponivel[TAM_DISP] = {"Ingles", "Chines Mandarim", "Hindi", "Espanhol", "Frances", "Arabe", "Bengali", "Russo", "Portugues", "Indonesio"};
+    string selecionado = "";
+    void validar(string str);
 
 public:
 
     void getDisp();
-    void setIdioma(const char* str);
+    void setIdioma(string str);
     string getIdioma();
 };
 
@@ -83,12 +83,12 @@ class Endereco
 {
 
 private:
-    const char* valor = "";
-    void validar(const char* str);
+    string valor = "";
+    void validar(string str);
 
 public:
 
-    void setEndereco(const char* str);
+    void setEndereco(string str);
     string getEndereco();
 };
 
@@ -150,15 +150,15 @@ private:
 
     const char* MES_DISP[12] = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
     int Dia;
-    const char* Mes = "";
+    string Mes = "";
     int Ano;
-    void validar(const int DD, const char* MM, const int AA);
+    void validar(const int DD, string, const int AA);
 
 
 public:
 
-    void setData(const int DD, const char* MM, const int AA);
-    void getData();
+    void setData(const int DD, string, const int AA);
+    string getData();
 
 };
 
@@ -343,7 +343,7 @@ private:
 public:
 
     void setHorario(int HH, int MM);
-    int* getHorario();
+    string getHorario();
 
 
 };

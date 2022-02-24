@@ -1,22 +1,24 @@
 # depslib dependency file v1.0
-1645661964 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/main.cpp
+1645675428 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
+	"testes.h"
 
-1645663328 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.cpp
+1645675474 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
 	<stdlib.h>
-	<string.h>
+	<string>
 	"dominios.h"
 
 1645364174 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/entidades.cpp
 	<iostream>
 
-1645364158 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.cpp
+1645675352 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
+	"testes.h"
 
-1645663158 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
+1645674505 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
@@ -27,4 +29,8 @@
 	<stdlib.h>
 	<string.h>
 	"dominios.h"
+
+1645675512 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.h
+	"dominios.h"
+	<iostream>
 

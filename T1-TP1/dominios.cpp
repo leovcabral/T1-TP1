@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
-#include <string.h>
+#include <string>
 #include "dominios.h"
 
 using namespace std;
@@ -19,7 +19,7 @@ void Idioma::getDisp()
 
 }
 
-void Idioma::validar(const char* str)
+void Idioma::validar(string str)
 {
 
     int i;
@@ -28,7 +28,7 @@ void Idioma::validar(const char* str)
     for(i = 0; i < TAM_DISP; i++)
     {
 
-        if(strcmp(str,disponivel[i]) == 0)
+        if(str == disponivel[i])
         {
             verificador = 1;
         }
@@ -43,7 +43,7 @@ void Idioma::validar(const char* str)
 
 }
 
-void Idioma::setIdioma(const char* str)
+void Idioma::setIdioma(string str)
 {
 
     validar(str);
@@ -54,37 +54,37 @@ void Idioma::setIdioma(const char* str)
 string Idioma::getIdioma()
 {
 
-    std::cout << this->selecionado << "\n";
     return selecionado;
 
 }
 
 ///endereço /////////////////////
 
-void Endereco::validar(const char* str)
+void Endereco::validar(string str)
 {
 
     bool pontos_repetidos = false;
     bool espacos_repetidos = false;
+    int i;
 
 
-
-    while(*(str+1) != '\0')
-    {
+    for(i = 0; i < str.length()-1; i++) {
 
 
-        if(*str == 32 && *(str+1) == 32)
+        if(str[i] == 32 && str[i+1] == 32)
         {
             espacos_repetidos = true;
         }
 
-        if(*str == 46 && *(str+1) == 46)
+        if(str[i] == 46 && str[i+1] == 46)
         {
             pontos_repetidos = true;
         }
 
-        str++;
     }
+
+
+
 
     if(pontos_repetidos || espacos_repetidos)
     {
@@ -96,7 +96,7 @@ void Endereco::validar(const char* str)
 }
 
 
-void Endereco::setEndereco(const char* str)
+void Endereco::setEndereco(string str)
 {
 
     validar(str);
@@ -107,14 +107,13 @@ void Endereco::setEndereco(const char* str)
 string Endereco::getEndereco()
 {
 
-    std::cout << this-> valor << "\n";
     return valor;
 
 }
 
 /// Data ///////////////
 
-void Data::validar(const int DD, const char* MM, const int AA)
+void Data::validar(const int DD, string MM, const int AA)
 {
 
     int dia_bisexto = 28;
@@ -131,7 +130,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
     }
 
 
-    if(strcmp(MM, "Jan") == 0) {
+    if(MM == "Jan") {
 
         if(DD >= 1 && DD <= 31)
         {
@@ -141,7 +140,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if (strcmp(MM, "Fev") == 0) {
+    else if (MM == "Fev") {
 
         if(DD >= 1 && DD <= dia_bisexto)
         {
@@ -151,7 +150,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if (strcmp(MM, "Mar") == 0) {
+    else if (MM == "Mar") {
 
         if(DD >= 1 && DD <= 31)
         {
@@ -161,7 +160,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Abr") == 0) {
+    else if(MM == "Abr") {
 
         if(DD >= 1 && DD <= 30)
         {
@@ -172,7 +171,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-     else if(strcmp(MM, "Mai") == 0) {
+     else if(MM == "Mai") {
 
         if(DD >= 1 && DD <= 31)
         {
@@ -182,7 +181,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Jun") == 0) {
+    else if(MM == "Jun") {
 
         if(DD >= 1 && DD <= 30)
         {
@@ -192,7 +191,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Jul") == 0) {
+    else if(MM == "Jul") {
 
         if(DD >= 1 && DD <= 31)
         {
@@ -202,7 +201,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Ago") == 0) {
+    else if(MM == "Ago") {
 
         if(DD >= 1 && DD <= 31)
         {
@@ -212,7 +211,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Set") == 0) {
+    else if(MM == "Set") {
 
         if(DD >= 1 && DD <= 30)
         {
@@ -222,7 +221,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Out") == 0) {
+    else if(MM == "Out") {
 
         if(DD >= 1 && DD <= 31)
         {
@@ -232,7 +231,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Nov") == 0) {
+    else if(MM == "Nov") {
 
         if(DD >= 1 && DD <= 30)
         {
@@ -242,7 +241,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
         }
 
     }
-    else if(strcmp(MM, "Dez") == 0) {
+    else if(MM == "Dez") {
 
         if(DD >= 1 && DD <= 31)
         {
@@ -261,7 +260,7 @@ void Data::validar(const int DD, const char* MM, const int AA)
 
 }
 
-void Data::setData(const int DD, const char* MM, const int AA)
+void Data::setData(const int DD, string MM, const int AA)
 {
 
     validar(DD, MM, AA);
@@ -272,12 +271,20 @@ void Data::setData(const int DD, const char* MM, const int AA)
 
 }
 
-void Data::getData()
+string Data::getData()
 {
+    string data;
 
-    std::cout << "Dia = " << this->Dia << "\n";
-    std::cout << "Mes = " << this->Mes << "\n";
-    std::cout << "Ano = " << this->Ano << "\n";
+    if(Dia < 10) {
+        data =  "0" + std::to_string(Dia) + "-" + Mes + "-" + std::to_string(Ano);
+    }
+    else {
+        data = std::to_string(Dia) + "-" + Mes + "-" + std::to_string(Ano);
+    }
+
+
+    return data;
+
 
 }
 
@@ -302,12 +309,25 @@ void Horario::setHorario(int HH, int MM)
         this->minutos = MM;
 }
 
-int* Horario::getHorario()
+string Horario::getHorario()
 {
-    int arr[2] = {this->horas, this->minutos};
-    std::cout << "horario = " << this->horas << ":" << this->minutos << "\n";
+    string str;
 
-    return &arr[0];
+    if(horas < 10 && minutos < 10) {
+        str =  "0" + std::to_string(horas) + ":" + "0" + std::to_string(minutos);
+    }
+    else if(horas < 10 && minutos >= 10){
+         str =  "0" + std::to_string(horas) + ":" + std::to_string(minutos);
+    }
+    else if(horas >= 10 && minutos < 10){
+         str = std::to_string(horas) + ":" + "0" + std::to_string(minutos);
+    }
+    else if(horas >= 10 && minutos >= 10){
+         str = std::to_string(horas) + ":" + std::to_string(minutos);
+    }
+
+
+    return str;
 
 }
 
@@ -334,13 +354,10 @@ void Email::validar(string str) {
 
     }
 
-    std::cout << aux << endl;
 
     parte_local = str.substr(0,aux);
     dominio = str.substr(aux+1);
 
-    std::cout << parte_local  << " " << dominio << endl;
-    std::cout << parte_local.length()  << " " << dominio.length() << endl;
 
     if(parte_local.length() == 0 || dominio.length() == 0) {
          throw invalid_argument("parte local e ou dominio não podem ser vazios");
@@ -472,7 +489,6 @@ void Email::setEmail(string str) {
 
 string Email::getEmail() {
 
-    std::cout << "email= "<< this->valor <<"n";
     return valor;
 
 }
