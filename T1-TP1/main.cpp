@@ -8,7 +8,9 @@ using namespace std;
 int main()
 {
 
- TUIdioma testeIdioma;
+cout << "TESTES DE UNIDADE DE DOMINIOS: \n";
+
+TUIdioma testeIdioma;
     switch(testeIdioma.run()){
         case TUIdioma::SUCESSO : cout << "SUCESSO - IDIOMA" << endl;
             break;
@@ -115,6 +117,8 @@ TUEmail testeEmail;
                                 break;
     }
 
+    cout << "\nTESTES DE UNIDADE DE ENTIDADES: \n";
+
     switch(testeI.run()){
         case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO" << endl;
                                 break;
@@ -131,10 +135,10 @@ TUEmail testeEmail;
 
 
 
-
+    cout << "\nINSTANCIAS TESTE: \n";
     Nome name;
     name.setValor("L. V. Cabral");
-    cout << "\nNome: " << name.getValor() << endl;
+    cout << "Nome: " << name.getValor() << endl;
 
     Cidade cidade;
     cidade.setCidade("Hong Kong");
