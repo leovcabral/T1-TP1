@@ -266,5 +266,39 @@ public:
     int run();
 };
 
+// TESTES DE ENTIDADE
+
+class TUUsuario {
+private:
+    const string NOME_VALIDO = "Leonardo";
+    const string EMAIL_VALIDO = "leonardo@gmail.com";
+    const string SENHA_VALIDA = "Aab1234";
+    Usuario *usuario;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+class TUAvaliacao {
+private:
+    const string CODIGO_VALIDO = "2615339";
+    const int NOTA_VALIDA = 4;
+    const string DESCRICAO_VALIDA = "cidade das cidades";
+    Avaliacao *avaliacao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
 
 #endif

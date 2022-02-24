@@ -56,10 +56,8 @@ TUEmail testeEmail;
     TUDescricao testeF;
     TUSenha testeG;
     TUCodigo testeH;
-    TUIdioma testeI;
-    TUEndereco testeJ;
-    TUData testeK;
-    TUHorario testeL;
+    TUUsuario testeI;
+    TUAvaliacao testeJ;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -117,6 +115,21 @@ TUEmail testeEmail;
                                 break;
     }
 
+    switch(testeI.run()){
+        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO" << endl;
+                                break;
+        case TUUsuario::FALHA  : cout << "FALHA   - USUARIO" << endl;
+                                break;
+    }
+
+    switch(testeJ.run()){
+        case TUAvaliacao::SUCESSO: cout << "SUCESSO - AVALIAÇÂO" << endl;
+                                break;
+        case TUAvaliacao::FALHA  : cout << "FALHA   - AVALIAÇÂO" << endl;
+                                break;
+    }
+
+
 
 
     Nome name;
@@ -136,12 +149,17 @@ TUEmail testeEmail;
     cout << "Codigo: " << codigo.getValor() << endl;
 
     Usuario user;
-    user.setNome("Leonardo");
-    user.setEmail("leonardo@gmail.com");
-    user.setSenha("Aabc123");
-    cout << "Nome: " << user.getNome() << endl;
-    cout << "Email: " << user.getEmail() << endl;
-    cout << "Senha: " << user.getSenha() << endl;
+    Email email;
+    Senha password;
+    email.setEmail("leonardo@gmail.com");
+    password.setPassword("Aab1234");
+    user.setNome(name);
+    user.setEmail(email);
+    user.setSenha(password);
+
+    cout << "Nome: " << user.getNome().getValor() << endl;
+    cout << "Email: " << user.getEmail().getEmail() << endl;
+    cout << "Senha: " << user.getSenha().getPassword() << endl;
 
     return 0;
 }

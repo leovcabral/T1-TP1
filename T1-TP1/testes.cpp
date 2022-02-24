@@ -608,3 +608,77 @@ int TUCodigo::run(){
 }
 
 
+void TUUsuario::setUp(){
+    usuario = new Usuario();
+    estado = SUCESSO;
+}
+
+void TUUsuario::tearDown(){
+    delete usuario;
+}
+
+void TUUsuario::testarCenarioSucesso(){
+    Nome nome;
+    nome.setValor(NOME_VALIDO);
+    usuario->setNome(nome);
+    if(usuario->getNome().getValor() != NOME_VALIDO)
+        estado = FALHA;
+
+    Email email;
+    email.setEmail(EMAIL_VALIDO);
+    usuario->setEmail(email);
+    if(usuario->getEmail().getEmail() != EMAIL_VALIDO)
+        estado = FALHA;
+
+    Senha senha;
+    senha.setPassword(SENHA_VALIDA);
+    usuario->setSenha(senha);
+    if(usuario->getSenha().getPassword() != SENHA_VALIDA)
+        estado = FALHA;
+
+}
+
+int TUUsuario::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+
+void TUAvaliacao::setUp(){
+    avaliacao = new Avaliacao();
+    estado = SUCESSO;
+}
+
+void TUAvaliacao::tearDown(){
+    delete avaliacao;
+}
+
+void TUAvaliacao::testarCenarioSucesso(){
+    Codigo codigo;
+    codigo.setValor(CODIGO_VALIDO);
+    avaliacao->setCodigo(codigo);
+    if(avaliacao->getCodigo().getValor() != CODIGO_VALIDO)
+        estado = FALHA;
+
+    Nota nota;
+    nota.setValor(NOTA_VALIDA);
+    avaliacao->setNota(nota);
+    if(avaliacao->getNota().getValor() != NOTA_VALIDA)
+        estado = FALHA;
+
+    Descricao descricao;
+    descricao.setDescription(DESCRICAO_VALIDA);
+    avaliacao->setDescricao(descricao);
+    if(avaliacao->getDescricao().getDescription() != DESCRICAO_VALIDA)
+        estado = FALHA;
+
+}
+
+int TUAvaliacao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
