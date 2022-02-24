@@ -18,7 +18,7 @@
 	<iostream>
 	"testes.h"
 
-1645674505 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
+1645675694 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
@@ -30,7 +30,7 @@
 	<string.h>
 	"dominios.h"
 
-1645675512 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.h
+1645675521 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.h
 	"dominios.h"
 	<iostream>
 
