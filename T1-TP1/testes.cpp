@@ -237,8 +237,10 @@ void TUEmail::testarCenarioSucesso()
         }
 
     }
-    catch(invalid_argument &excecao)
-    {
+    catch(invalid_argument &excecao){
+        estado = FALHA;
+    }
+}
 
 void TUCidade::setUp(){
     cidade = new Cidade();
@@ -495,6 +497,12 @@ void TUEmail::testarCenarioFalha()
 
 int TUEmail::run()
 {
+setUp();
+    testarCenarioSucesso();
+    testarCenarioFalha();
+    tearDown();
+    return estado;
+}
 
 void TUDescricao::testarCenarioFalha(){
     try{
@@ -555,9 +563,6 @@ int TUSenha::run(){
     testarCenarioFalha();
     tearDown();
     return estado;
-
-
-}
 
 
 }

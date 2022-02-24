@@ -257,6 +257,7 @@ void Data::validar(const int DD, string MM, const int AA)
         throw invalid_argument("Mes inválido");
 
     }
+}
 
 
 bool CheckRepeated(string valor, char caracter){
@@ -531,7 +532,6 @@ void Codigo::validar(string codigo){
 void Codigo::setValor(string valor){
     validar(valor);
     this->valor = valor;
->>>>>>> main
 }
 
 void Data::setData(const int DD, string MM, const int AA)

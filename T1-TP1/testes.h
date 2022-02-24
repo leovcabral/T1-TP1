@@ -105,7 +105,7 @@ class TUHorario{
 
 };
 
-class TUEmail{
+class TUEmail {
 
     private:
 
