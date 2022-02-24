@@ -1,74 +1,12 @@
 #include <iostream>
-<<<<<<< HEAD
 #include<stdio.h>
 #include  "dominios.h"
 #include "testes.h"
-
-=======
-#include "dominios.h"
-#include "testes.h"
->>>>>>> main
 
 using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
-
-//    Idioma* ptr1;
-//    ptr1 = new Idioma;
-//
-//    ptr1->getDisp();
-//
-//    std::cout << "\n";
-//
-//    ptr1->setIdioma("Indonesio");
-//
-//    ptr1->getIdioma();
-//
-//
-//    std::cout << "\n";
-//
-//    /////////////
-//
-//    Endereco* ptr2;
-//
-//    ptr2 = new Endereco;
-//
-//    ptr2->setEndereco("rua dos mundurucus, 1084.");
-//
-//    ptr2->getEndereco();
-//
-//    std::cout << "\n";
-//
-//    //////////////////
-//
-//    Data* ptr3;
-//    ptr3 = new Data;
-//
-//    ptr3->setData(3, "Jan", 2001);
-//
-//    ptr3->getData();
-//
-//    std::cout << "\n";
-//
-//    ////////////////////
-//
-//    Horario* ptr4;
-//    ptr4 = new Horario;
-//
-//    ptr4->setHorario(23, 59);
-//
-//    ptr4->getHorario();
-//
-//    std::cout << "\n";
-//
-//     ////////////////////
-//
-//    Email* ptr5;
-//    ptr5 = new Email;
-//
-//    ptr5->setEmail("adriano@maaaaaail.com");
 
  TUIdioma testeIdioma;
     switch(testeIdioma.run()){
@@ -110,9 +48,6 @@ TUEmail testeEmail;
             break;
     }
 
-
-
-=======
     TUNota testeA;
     TUDuracao testeB;
     TUNome testeC;
@@ -193,7 +128,6 @@ TUEmail testeEmail;
     Codigo codigo;
     codigo.setValor("2615339");
     cout << "Codigo: " << codigo.getValor() << endl;
->>>>>>> main
 
     return 0;
 }
