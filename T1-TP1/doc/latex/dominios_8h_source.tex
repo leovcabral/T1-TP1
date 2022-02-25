@@ -10,115 +10,118 @@
 \DoxyCodeLine{7 }
 \DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
 \DoxyCodeLine{9 }
-\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_cidade}{Cidade}} \{}
-\DoxyCodeLine{14     \textcolor{keyword}{private}:}
-\DoxyCodeLine{15         \textcolor{keywordtype}{string} valor;}
-\DoxyCodeLine{16         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{17     \textcolor{keyword}{public}:}
-\DoxyCodeLine{18         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cidade_aeef5731f70dc20c2ede394dbd325d3f3}{setCidade}}(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{19         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_cidade_ae2f2d7ac06aac571cb7633f56c9a0762}{getCidade}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{20 \};}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_cidade_ae2f2d7ac06aac571cb7633f56c9a0762}{Cidade::getCidade}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{23     \textcolor{keywordflow}{return} valor;}
-\DoxyCodeLine{24 \}}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{class_nota}{Nota}} \{}
-\DoxyCodeLine{27     \textcolor{keyword}{private}:}
-\DoxyCodeLine{28         \textcolor{keywordtype}{int} valor;}
-\DoxyCodeLine{29         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{int});}
-\DoxyCodeLine{30     \textcolor{keyword}{public}:}
-\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nota_abfcc1a0e6924f38b19598acb9bd58001}{setValor}}(\textcolor{keywordtype}{int});}
-\DoxyCodeLine{32         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_nota_abf2bac0c08529c4f2ccbd75710b4cc95}{getValor}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{33 \};}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_nota_abf2bac0c08529c4f2ccbd75710b4cc95}{Nota::getValor}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{36     \textcolor{keywordflow}{return} valor;}
-\DoxyCodeLine{37 \}}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39 \textcolor{keyword}{class }\mbox{\hyperlink{class_descricao}{Descricao}}  \{}
-\DoxyCodeLine{40     private :}
-\DoxyCodeLine{41         \textcolor{keywordtype}{string} valor;}
-\DoxyCodeLine{42         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{43         \textcolor{keywordtype}{bool} CheckRepeated(\textcolor{keywordtype}{string}, \textcolor{keywordtype}{char});}
-\DoxyCodeLine{44     \textcolor{keyword}{public}:}
-\DoxyCodeLine{45         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_descricao_a02e425d9c3843ace205fd9daf15cb847}{setDescription}}(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{46         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_descricao_afbe357509f41a96d5118f2e649270cc6}{getDescription}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{47 \};}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{49 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_descricao_afbe357509f41a96d5118f2e649270cc6}{Descricao::getDescription}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{50     \textcolor{keywordflow}{return} valor;}
-\DoxyCodeLine{51 \}}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53 \textcolor{keyword}{class }\mbox{\hyperlink{class_titulo}{Titulo}} \{}
-\DoxyCodeLine{54     \textcolor{keyword}{private}:}
-\DoxyCodeLine{55         \textcolor{keywordtype}{string} valor;}
-\DoxyCodeLine{56         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{57         \textcolor{keywordtype}{bool} CheckRepeated(\textcolor{keywordtype}{string},\textcolor{keywordtype}{char});}
-\DoxyCodeLine{58     \textcolor{keyword}{public}:}
-\DoxyCodeLine{59         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_titulo_ac4b3e70d24f498a9085ae9d01d51ef12}{setTitulo}}(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{60         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_titulo_ad13d7166263fe5b8053532a820165390}{getTitulo}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{61 \};}
-\DoxyCodeLine{62 }
-\DoxyCodeLine{63 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_titulo_ad13d7166263fe5b8053532a820165390}{Titulo::getTitulo}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{64     \textcolor{keywordflow}{return} valor;}
-\DoxyCodeLine{65 \}}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{67 \textcolor{keyword}{class }\mbox{\hyperlink{class_senha}{Senha}} \{}
-\DoxyCodeLine{68     \textcolor{keyword}{private}:}
-\DoxyCodeLine{69         \textcolor{keywordtype}{string} valor;}
-\DoxyCodeLine{70         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{71         \textcolor{keywordtype}{bool} MagicThree(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{72         \textcolor{keywordtype}{bool} CheckRepeated(\textcolor{keywordtype}{string},\textcolor{keywordtype}{char});}
-\DoxyCodeLine{73     \textcolor{keyword}{public}:}
-\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_senha_a2bf750a2ae3ab8e08c0b9b4484b9f279}{setPassword}}(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{75         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}{getPassword}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{76 \};}
-\DoxyCodeLine{77 }
-\DoxyCodeLine{78 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}{Senha::getPassword}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{79     \textcolor{keywordflow}{return} valor;}
-\DoxyCodeLine{80 \}}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82 \textcolor{keyword}{class }\mbox{\hyperlink{class_nome}{Nome}} \{}
-\DoxyCodeLine{83     \textcolor{keyword}{private}:}
-\DoxyCodeLine{84         \textcolor{keywordtype}{string} valor;}
-\DoxyCodeLine{85         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{86     \textcolor{keyword}{public}:}
-\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nome_aaad6a1ad8718cce8dde090a435c3cd81}{setValor}}(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{88         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_nome_ac8881234a0e2d0ddff4fb689ceb256eb}{getValor}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{89 \};}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{91 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_nome_ac8881234a0e2d0ddff4fb689ceb256eb}{Nome::getValor}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{92     \textcolor{keywordflow}{return} valor;}
-\DoxyCodeLine{93 \}}
-\DoxyCodeLine{94 }
-\DoxyCodeLine{95 \textcolor{keyword}{class }\mbox{\hyperlink{class_duracao}{Duracao}} \{}
-\DoxyCodeLine{96     \textcolor{keyword}{private}:}
-\DoxyCodeLine{97         \textcolor{keywordtype}{int} valor;}
-\DoxyCodeLine{98         \textcolor{keyword}{const} \textcolor{keywordtype}{int} valores\_validos[5] = \{30, 60, 90, 120, 180\};}
-\DoxyCodeLine{99         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{int});}
-\DoxyCodeLine{100     \textcolor{keyword}{public}:}
-\DoxyCodeLine{101         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_duracao_ad4659398cd168f931fc00667ab45bc6f}{setValor}}(\textcolor{keywordtype}{int});}
-\DoxyCodeLine{102         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{getValor}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{103 \};}
-\DoxyCodeLine{104 }
-\DoxyCodeLine{105 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{Duracao::getValor}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{106     \textcolor{keywordflow}{return} valor;}
-\DoxyCodeLine{107 \}}
-\DoxyCodeLine{108 }
-\DoxyCodeLine{109 \textcolor{keyword}{class }\mbox{\hyperlink{class_codigo}{Codigo}} \{}
-\DoxyCodeLine{110     \textcolor{keyword}{private}:}
-\DoxyCodeLine{111         \textcolor{keywordtype}{string} valor;}
-\DoxyCodeLine{112         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_cidade}{Cidade}} \{}
+\DoxyCodeLine{17     \textcolor{keyword}{private}:}
+\DoxyCodeLine{18         \textcolor{keywordtype}{string} valor;}
+\DoxyCodeLine{19         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{20     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_cidade_aeef5731f70dc20c2ede394dbd325d3f3}{setCidade}}(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{24         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_cidade_ae2f2d7ac06aac571cb7633f56c9a0762}{getCidade}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_cidade_ae2f2d7ac06aac571cb7633f56c9a0762}{Cidade::getCidade}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{28     \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{29 \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{37 \textcolor{keyword}{class }\mbox{\hyperlink{class_nota}{Nota}} \{}
+\DoxyCodeLine{38     \textcolor{keyword}{private}:}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} valor;}
+\DoxyCodeLine{40         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{41     \textcolor{keyword}{public}:}
+\DoxyCodeLine{42         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nota_abfcc1a0e6924f38b19598acb9bd58001}{setValor}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_nota_abf2bac0c08529c4f2ccbd75710b4cc95}{getValor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_nota_abf2bac0c08529c4f2ccbd75710b4cc95}{Nota::getValor}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{48 \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{59 \textcolor{keyword}{class }\mbox{\hyperlink{class_descricao}{Descricao}}  \{}
+\DoxyCodeLine{60     private :}
+\DoxyCodeLine{61         \textcolor{keywordtype}{string} valor;}
+\DoxyCodeLine{62         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{63         \textcolor{keywordtype}{bool} CheckRepeated(\textcolor{keywordtype}{string}, \textcolor{keywordtype}{char});}
+\DoxyCodeLine{64     \textcolor{keyword}{public}:}
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_descricao_a02e425d9c3843ace205fd9daf15cb847}{setDescription}}(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{66         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_descricao_afbe357509f41a96d5118f2e649270cc6}{getDescription}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{67 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_descricao_afbe357509f41a96d5118f2e649270cc6}{Descricao::getDescription}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{71 \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 }
+\DoxyCodeLine{83 \textcolor{keyword}{class }\mbox{\hyperlink{class_titulo}{Titulo}} \{}
+\DoxyCodeLine{84     \textcolor{keyword}{private}:}
+\DoxyCodeLine{85         \textcolor{keywordtype}{string} valor;}
+\DoxyCodeLine{86         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{87         \textcolor{keywordtype}{bool} CheckRepeated(\textcolor{keywordtype}{string},\textcolor{keywordtype}{char});}
+\DoxyCodeLine{88     \textcolor{keyword}{public}:}
+\DoxyCodeLine{89         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_titulo_ac4b3e70d24f498a9085ae9d01d51ef12}{setTitulo}}(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{90         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_titulo_ad13d7166263fe5b8053532a820165390}{getTitulo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{91 \};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_titulo_ad13d7166263fe5b8053532a820165390}{Titulo::getTitulo}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{95 \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keyword}{class }\mbox{\hyperlink{class_senha}{Senha}} \{}
+\DoxyCodeLine{108     \textcolor{keyword}{private}:}
+\DoxyCodeLine{109         \textcolor{keywordtype}{string} valor;}
+\DoxyCodeLine{110         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{111         \textcolor{keywordtype}{bool} MagicThree(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{112         \textcolor{keywordtype}{bool} CheckRepeated(\textcolor{keywordtype}{string},\textcolor{keywordtype}{char});}
 \DoxyCodeLine{113     \textcolor{keyword}{public}:}
-\DoxyCodeLine{114         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{setValor}}(\textcolor{keywordtype}{string});}
-\DoxyCodeLine{115         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}{getValor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{114         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_senha_a2bf750a2ae3ab8e08c0b9b4484b9f279}{setPassword}}(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{115         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}{getPassword}}() \textcolor{keyword}{const};}
 \DoxyCodeLine{116 \};}
 \DoxyCodeLine{117 }
-\DoxyCodeLine{118 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}{Codigo::getValor}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{118 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}{Senha::getPassword}}()\textcolor{keyword}{ const }\{}
 \DoxyCodeLine{119     \textcolor{keywordflow}{return} valor;}
 \DoxyCodeLine{120 \}}
 \DoxyCodeLine{121 }
-\DoxyCodeLine{122 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125 \textcolor{keyword}{class }\mbox{\hyperlink{class_nome}{Nome}} \{}
+\DoxyCodeLine{126     \textcolor{keyword}{private}:}
+\DoxyCodeLine{127         \textcolor{keywordtype}{string} valor;}
+\DoxyCodeLine{128         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{129     \textcolor{keyword}{public}:}
+\DoxyCodeLine{130         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_nome_aaad6a1ad8718cce8dde090a435c3cd81}{setValor}}(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{131         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_nome_ac8881234a0e2d0ddff4fb689ceb256eb}{getValor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{132 \};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_nome_ac8881234a0e2d0ddff4fb689ceb256eb}{Nome::getValor}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{135     \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{136 \}}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 }
+\DoxyCodeLine{146 \textcolor{keyword}{class }\mbox{\hyperlink{class_duracao}{Duracao}} \{}
+\DoxyCodeLine{147     \textcolor{keyword}{private}:}
+\DoxyCodeLine{148         \textcolor{keywordtype}{int} valor;}
+\DoxyCodeLine{149         \textcolor{keyword}{const} \textcolor{keywordtype}{int} valores\_validos[5] = \{30, 60, 90, 120, 180\};}
+\DoxyCodeLine{150         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{151     \textcolor{keyword}{public}:}
+\DoxyCodeLine{152         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_duracao_ad4659398cd168f931fc00667ab45bc6f}{setValor}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{153         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{getValor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{154 \};}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{Duracao::getValor}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{157     \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{158 \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{168 \textcolor{keyword}{class }\mbox{\hyperlink{class_codigo}{Codigo}} \{}
+\DoxyCodeLine{169     \textcolor{keyword}{private}:}
+\DoxyCodeLine{170         \textcolor{keywordtype}{string} valor;}
+\DoxyCodeLine{171         \textcolor{keywordtype}{void} validar(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{172     \textcolor{keyword}{public}:}
+\DoxyCodeLine{173         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{setValor}}(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{174         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}{getValor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{175 \};}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 \textcolor{keyword}{inline} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}{Codigo::getValor}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{178     \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{179 \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

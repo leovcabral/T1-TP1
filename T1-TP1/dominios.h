@@ -9,12 +9,17 @@ using namespace std;
 
 /// Domínio Cidade.
 ///
-/// Referente à cidade da excursão. Tem valor definido que deve estar na lista de cidades definidas.
+/// Campo da entidade excursão.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~.md
+///Tem valor definido que deve estar na lista de cidades definidas.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Cidade {
     private:
         string valor;
         void validar(string);
     public:
+        /// Funcão para definir valor da classe Cidade
+        /// Valida os requisitos da classe. Se o argumento for valido, o argumento passado é definido como Valor.
         void setCidade(string);
         string getCidade() const;
 };
@@ -23,6 +28,12 @@ inline string Cidade::getCidade() const {
     return valor;
 }
 
+/// Domínio Nota.
+///
+/// Campo das entidades excursão e avaliação.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~.md
+/// Valor inteiro de 0 a 5
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Nota {
     private:
         int valor;
@@ -36,6 +47,15 @@ inline int Nota::getValor() const {
     return valor;
 }
 
+/// Domínio Descrição.
+///
+///Campo das entidades excursão e avaliação.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.md
+///Requisitos:
+///  0 a 30 caracteres.
+///  Não há espaços em branco em sequência.
+///  Não há pontos (.) em sequência.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Descricao  {
     private :
         string valor;
@@ -50,6 +70,16 @@ inline string Descricao::getDescription() const {
     return valor;
 }
 
+
+/// Domínio Título.
+///
+///Campo das entidade excursão.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.md
+///Requisitos:
+/// 5 a 20 letras (A-Z) (a-z)
+/// Não há espaços em branco em sequência.
+/// Não há pontos (.) em sequência.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Titulo {
     private:
         string valor;
@@ -63,6 +93,16 @@ class Titulo {
 inline string Titulo::getTitulo() const {
     return valor;
 }
+
+/// Domínio Senha.
+///
+///Campo da entidade Usuário.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.md
+///Requisitos:
+/// Cada caractere X é letra (A-Z ou a-z) ou dígito (0-9).
+/// Não existe caracter repetido.
+/// Existe pelo menos uma letra maiúscula, uma letra minúscula e um dígito.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class Senha {
     private:
@@ -79,6 +119,9 @@ inline string Senha::getPassword() const {
     return valor;
 }
 
+/// Domínio Nome.
+///
+///Campo da entidade Usuário.
 class Nome {
     private:
         string valor;
@@ -92,6 +135,14 @@ inline string Nome::getValor() const {
     return valor;
 }
 
+
+/// Domínio Duração.
+///
+///Campo da entidade Excursão.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.md
+///Requisitos:
+///  Tem valor 30, 60, 90, 120 ou 180.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Duracao {
     private:
         int valor;
@@ -106,6 +157,14 @@ inline int Duracao::getValor() const {
     return valor;
 }
 
+/// Domínio Código.
+///
+///Campo da entidades Excursão, Avaliação e Sessão.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.md
+///Requisitos:
+///  D é dígito (0-9).
+///  É validado por um algoritmo privado.
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Codigo {
     private:
         string valor;
