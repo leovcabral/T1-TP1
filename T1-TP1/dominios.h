@@ -7,6 +7,9 @@
 
 using namespace std;
 
+/// Domínio Cidade.
+///
+/// Referente à cidade da excursão. Tem valor definido que deve estar na lista de cidades definidas.
 class Cidade {
     private:
         string valor;
