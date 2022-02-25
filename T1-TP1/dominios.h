@@ -128,7 +128,6 @@ class Senha {
         /// Funcão para definir valor da classe Senha.
         /// Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia.
         /// @param valor String que deve ser definida como valor da instancia da classe Senha.
-        void setTitulo(string);
         void setPassword(string);
         ///@returns string com valor da instancia da classe Senha.
         string getPassword() const;
