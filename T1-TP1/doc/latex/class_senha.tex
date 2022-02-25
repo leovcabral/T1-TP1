@@ -2,16 +2,34 @@
 \label{class_senha}\index{Senha@{Senha}}
 
 
+Domínio \mbox{\hyperlink{class_senha}{Senha}}.  
+
+
+
+
 {\ttfamily \#include $<$dominios.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_senha_a2bf750a2ae3ab8e08c0b9b4484b9f279}{set\+Password}} (string)
-\item 
+\begin{DoxyCompactList}\small\item\em Funcão para definir valor da classe \mbox{\hyperlink{class_senha}{Senha}}. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}{get\+Password}} () const
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Domínio \mbox{\hyperlink{class_senha}{Senha}}. 
+
+Campo da entidade Usuário. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Requisitos do valor:}
+\DoxyCodeLine{ Cada caractere X é letra (A-\/Z ou a-\/z) ou dígito (0-\/9).}
+\DoxyCodeLine{ Não existe caracter repetido.}
+\DoxyCodeLine{ Existe pelo menos uma letra maiúscula, uma letra minúscula e um dígito.}
+
+\end{DoxyCode}
+ 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}\label{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}} 
@@ -20,9 +38,21 @@ string \mbox{\hyperlink{class_senha_aa9eae7526ddc3c4292e07f5b91b3a8f2}{get\+Pass
 \doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
 {\footnotesize\ttfamily string Senha\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyReturn}{Returns}
+string com valor da instancia da classe \mbox{\hyperlink{class_senha}{Senha}}. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_senha_a2bf750a2ae3ab8e08c0b9b4484b9f279}\label{class_senha_a2bf750a2ae3ab8e08c0b9b4484b9f279}} 
 \index{Senha@{Senha}!setPassword@{setPassword}}
 \index{setPassword@{setPassword}!Senha@{Senha}}
 \doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
 {\footnotesize\ttfamily void Senha\+::set\+Password (\begin{DoxyParamCaption}\item[{string}]{valor }\end{DoxyParamCaption})}
 
+
+
+Funcão para definir valor da classe \mbox{\hyperlink{class_senha}{Senha}}. 
+
+Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em valor} & String que deve ser definida como valor da instancia da classe \mbox{\hyperlink{class_senha}{Senha}}. \\
+\hline
+\end{DoxyParams}

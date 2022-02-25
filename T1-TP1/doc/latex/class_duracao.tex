@@ -2,16 +2,32 @@
 \label{class_duracao}\index{Duracao@{Duracao}}
 
 
+Domínio Duração.  
+
+
+
+
 {\ttfamily \#include $<$dominios.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_duracao_ad4659398cd168f931fc00667ab45bc6f}{set\+Valor}} (int)
-\item 
+\begin{DoxyCompactList}\small\item\em Funcão para definir valor da classe Duração. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{get\+Valor}} () const
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Domínio Duração. 
+
+Campo da entidade Excursão. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Requisitos do valor:}
+\DoxyCodeLine{  Tem valor 30, 60, 90, 120 ou 180.}
+
+\end{DoxyCode}
+ 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}\label{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}} 
@@ -20,9 +36,21 @@ int \mbox{\hyperlink{class_duracao_a5fd6f8ad02e0daa5b40341a27919c565}{get\+Valor
 \doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
 {\footnotesize\ttfamily int Duracao\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyReturn}{Returns}
+inteiro com valor da instancia da classe Duração. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_duracao_ad4659398cd168f931fc00667ab45bc6f}\label{class_duracao_ad4659398cd168f931fc00667ab45bc6f}} 
 \index{Duracao@{Duracao}!setValor@{setValor}}
 \index{setValor@{setValor}!Duracao@{Duracao}}
 \doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
 {\footnotesize\ttfamily void Duracao\+::set\+Valor (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
 
+
+
+Funcão para definir valor da classe Duração. 
+
+Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em valor} & Inteiro que deve ser definido como \mbox{\hyperlink{class_nota}{Nota}} da Duração. \\
+\hline
+\end{DoxyParams}

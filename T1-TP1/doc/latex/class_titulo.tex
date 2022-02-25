@@ -2,16 +2,34 @@
 \label{class_titulo}\index{Titulo@{Titulo}}
 
 
+Domínio Título.  
+
+
+
+
 {\ttfamily \#include $<$dominios.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_titulo_ac4b3e70d24f498a9085ae9d01d51ef12}{set\+Titulo}} (string)
-\item 
+\begin{DoxyCompactList}\small\item\em Funcão para definir valor da classe Título. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_titulo_ad13d7166263fe5b8053532a820165390}{get\+Titulo}} () const
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Domínio Título. 
+
+Campo das entidade excursão. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Requisitos do valor:}
+\DoxyCodeLine{ 5 a 20 letras (A-\/Z) (a-\/z)}
+\DoxyCodeLine{ Não há espaços em branco em sequência.}
+\DoxyCodeLine{ Não há pontos (.) em sequência.}
+
+\end{DoxyCode}
+ 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_titulo_ad13d7166263fe5b8053532a820165390}\label{class_titulo_ad13d7166263fe5b8053532a820165390}} 
@@ -20,9 +38,21 @@ string \mbox{\hyperlink{class_titulo_ad13d7166263fe5b8053532a820165390}{get\+Tit
 \doxysubsubsection{\texorpdfstring{getTitulo()}{getTitulo()}}
 {\footnotesize\ttfamily string Titulo\+::get\+Titulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyReturn}{Returns}
+string com valor da instancia da classe Título. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_titulo_ac4b3e70d24f498a9085ae9d01d51ef12}\label{class_titulo_ac4b3e70d24f498a9085ae9d01d51ef12}} 
 \index{Titulo@{Titulo}!setTitulo@{setTitulo}}
 \index{setTitulo@{setTitulo}!Titulo@{Titulo}}
 \doxysubsubsection{\texorpdfstring{setTitulo()}{setTitulo()}}
 {\footnotesize\ttfamily void Titulo\+::set\+Titulo (\begin{DoxyParamCaption}\item[{string}]{valor }\end{DoxyParamCaption})}
 
+
+
+Funcão para definir valor da classe Título. 
+
+Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em valor} & String que deve ser definida como valor da instancia da classe Título. \\
+\hline
+\end{DoxyParams}

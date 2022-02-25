@@ -2,16 +2,33 @@
 \label{class_codigo}\index{Codigo@{Codigo}}
 
 
+Domínio Código.  
+
+
+
+
 {\ttfamily \#include $<$dominios.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}{set\+Valor}} (string)
-\item 
+\begin{DoxyCompactList}\small\item\em Funcão para definir valor da classe Código. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}{get\+Valor}} () const
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Domínio Código. 
+
+Campo da entidades Excursão, Avaliação e Sessão. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Requisitos do valor:}
+\DoxyCodeLine{  D é dígito (0-\/9).}
+\DoxyCodeLine{  É validado por um algoritmo privado.}
+
+\end{DoxyCode}
+ 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}\label{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}} 
@@ -20,9 +37,21 @@ string \mbox{\hyperlink{class_codigo_ae7dad73e010b3760cbd9310336c19aa2}{get\+Val
 \doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
 {\footnotesize\ttfamily string Codigo\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyReturn}{Returns}
+string com valor da instancia da classe Código. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}\label{class_codigo_afdc4d9c6e42358cd0d48001d4c671584}} 
 \index{Codigo@{Codigo}!setValor@{setValor}}
 \index{setValor@{setValor}!Codigo@{Codigo}}
 \doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
 {\footnotesize\ttfamily void Codigo\+::set\+Valor (\begin{DoxyParamCaption}\item[{string}]{valor }\end{DoxyParamCaption})}
 
+
+
+Funcão para definir valor da classe Código. 
+
+Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em valor} & String que deve ser definida como valor da instancia da classe Código. \\
+\hline
+\end{DoxyParams}
