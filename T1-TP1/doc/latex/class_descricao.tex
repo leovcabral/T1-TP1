@@ -13,7 +13,7 @@ Domínio Descrição.
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_descricao_a02e425d9c3843ace205fd9daf15cb847}{set\+Description}} (string)
-\item 
+\begin{DoxyCompactList}\small\item\em Funcão para definir valor da classe Descrição. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_descricao_afbe357509f41a96d5118f2e649270cc6}{get\+Description}} () const
 \end{DoxyCompactItemize}
 
@@ -23,7 +23,7 @@ Domínio Descrição.
 
 Campo das entidades excursão e avaliação. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{Requisitos:}
+\DoxyCodeLine{Requisitos do valor:}
 \DoxyCodeLine{  0 a 30 caracteres.}
 \DoxyCodeLine{  Não há espaços em branco em sequência.}
 \DoxyCodeLine{  Não há pontos (.) em sequência.}
@@ -38,9 +38,21 @@ Campo das entidades excursão e avaliação.
 \doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
 {\footnotesize\ttfamily string Descricao\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\begin{DoxyReturn}{Returns}
+string com valor da instancia da classe Descrição. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_descricao_a02e425d9c3843ace205fd9daf15cb847}\label{class_descricao_a02e425d9c3843ace205fd9daf15cb847}} 
 \index{Descricao@{Descricao}!setDescription@{setDescription}}
 \index{setDescription@{setDescription}!Descricao@{Descricao}}
 \doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
 {\footnotesize\ttfamily void Descricao\+::set\+Description (\begin{DoxyParamCaption}\item[{string}]{valor }\end{DoxyParamCaption})}
 
+
+
+Funcão para definir valor da classe Descrição. 
+
+Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em valor} & String que deve ser definida como valor da instancia da classe Descrição. \\
+\hline
+\end{DoxyParams}
