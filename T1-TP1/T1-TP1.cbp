@@ -33,9 +33,14 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 <<<<<<< HEAD
+		<Unit filename="T1-TP1.cbp" />
+		<Unit filename="T1-TP1.layout" />
+=======
+<<<<<<< HEAD
 		<Unit filename="T1-TP1.layout" />
 =======
 >>>>>>> origin/development
+>>>>>>> main
 		<Unit filename="dominios.cpp" />
 		<Unit filename="dominios.h" />
 		<Unit filename="entidades.cpp" />
