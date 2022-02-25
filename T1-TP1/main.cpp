@@ -60,6 +60,8 @@ TUEmail testeEmail;
     TUCodigo testeH;
     TUUsuario testeI;
     TUAvaliacao testeJ;
+    TUSessao testeK;
+    TUExcursao testeL;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -133,25 +135,23 @@ TUEmail testeEmail;
                                 break;
     }
 
+    switch(testeK.run()){
+        case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO" << endl;
+                                break;
+        case TUSessao::FALHA  : cout << "FALHA   - SESSAO" << endl;
+                                break;
+    }
+
+    switch(testeL.run()){
+        case TUExcursao::SUCESSO: cout << "SUCESSO - EXCURSAO" << endl;
+                                break;
+        case TUExcursao::FALHA  : cout << "FALHA   - EXCURSAO" << endl;
+                                break;
+    }
+
 
 
     cout << "\nINSTANCIAS TESTE: \n";
-    Nome name;
-    name.setValor("L. V. Cabral");
-    cout << "Nome: " << name.getValor() << endl;
-
-    Cidade cidade;
-    cidade.setCidade("Hong Kong");
-    cout << "Cidade: " << cidade.getCidade() << endl;
-
-    Senha senha;
-    senha.setPassword("Ab123456");
-    cout << "Senha: " << senha.getPassword() << endl;
-
-    Codigo codigo;
-    codigo.setValor("2615339");
-    cout << "Codigo: " << codigo.getValor() << endl;
-
     Usuario user;
     Email email;
     Senha password;

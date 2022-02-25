@@ -300,6 +300,53 @@ public:
     int run();
 };
 
+class TUSessao {
+private:
+    const string CODIGO_VALIDO = "2615339";
+
+    string VALOR_VALIDO_DATA = "01-Jan-2004";
+    int VALOR_VALIDO_DIA = 1;
+    string VALOR_VALIDO_MES  = "Jan";
+    int VALOR_VALIDO_ANO = 2004;
+
+    string VALOR_VALIDO_HORARIO = "23:59";
+    int VALOR_VALIDO_HORAS = 23;
+    int VALOR_VALIDO_MINUTOS  = 59;
+
+    string VALOR_VALIDO_IDIOMA = "Ingles";
+
+    Sessao *sessao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
+
+
+class TUExcursao {
+private:
+    const string CODIGO_VALIDO = "2615339";
+    const string TITULO_VALIDO = "Amor e Choppa";
+    const int    NOTA_VALIDA   = 5;
+    const string CIDADE_VALIDA = "Nova Iorque";
+    const int   DURACAO_VALIDA = 90;
+    const string DESCRICAO_VALIDA = "cidade das cidades";
+    const string ENDERECO_VALIDO   = "Rua paraciacaiba, 1084";
+
+    Excursao *excursao;
+    int estado;
+    void setUp();
+    void tearDown();
+    void testarCenarioSucesso();
+public:
+    const static int SUCESSO =  0;
+    const static int FALHA   = -1;
+    int run();
+};
 
 
 #endif

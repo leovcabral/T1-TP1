@@ -89,9 +89,6 @@ class Email {
 
     void setEmail(string str);
     string getEmail();
-
-
-
 };
 
 

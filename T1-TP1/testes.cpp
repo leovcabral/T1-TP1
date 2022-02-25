@@ -682,3 +682,107 @@ int TUAvaliacao::run(){
     tearDown();
     return estado;
 }
+
+
+void TUSessao::setUp(){
+    sessao = new Sessao();
+    estado = SUCESSO;
+}
+
+void TUSessao::tearDown(){
+    delete sessao;
+}
+
+void TUSessao::testarCenarioSucesso(){
+    Codigo codigo;
+    codigo.setValor(CODIGO_VALIDO);
+    sessao->setCodigo(codigo);
+    if(sessao->getCodigo().getValor() != CODIGO_VALIDO)
+        estado = FALHA;
+
+    Data data;
+    data.setData(VALOR_VALIDO_DIA, VALOR_VALIDO_MES, VALOR_VALIDO_ANO);
+    sessao->setData(data);
+    if(sessao->getData().getData() != VALOR_VALIDO_DATA)
+        estado = FALHA;
+
+    Horario horario;
+    horario.setHorario(VALOR_VALIDO_HORAS, VALOR_VALIDO_MINUTOS);
+    sessao->setHorario(horario);
+    if(sessao->getHorario().getHorario() != VALOR_VALIDO_HORARIO)
+        estado = FALHA;
+
+    Idioma idioma;
+    idioma.setIdioma(VALOR_VALIDO_IDIOMA);
+    sessao->setIdioma(idioma);
+    if (sessao->getIdioma().getIdioma() != VALOR_VALIDO_IDIOMA)
+        estado = FALHA;
+}
+
+int TUSessao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}
+
+
+void TUExcursao::setUp(){
+    excursao = new Excursao();
+    estado = SUCESSO;
+}
+
+void TUExcursao::tearDown(){
+    delete excursao;
+}
+
+void TUExcursao::testarCenarioSucesso(){
+    Codigo codigo;
+    codigo.setValor(CODIGO_VALIDO);
+    excursao->setCodigo(codigo);
+    if(excursao->getCodigo().getValor() != CODIGO_VALIDO)
+        estado = FALHA;
+
+    Titulo titulo;
+    titulo.setTitulo(TITULO_VALIDO);
+    excursao->setTitulo(titulo);
+    if(excursao->getTitulo().getTitulo() != TITULO_VALIDO)
+        estado = FALHA;
+
+    Nota nota;
+    nota.setValor(NOTA_VALIDA);
+    excursao->setNota(nota);
+    if(excursao->getNota().getValor() != NOTA_VALIDA)
+        estado = FALHA;
+
+    Cidade cidade;
+    cidade.setCidade(CIDADE_VALIDA);
+    excursao->setCidade(cidade);
+    if (excursao->getCidade().getCidade() != CIDADE_VALIDA)
+        estado = FALHA;
+
+    Duracao duracao;
+    duracao.setValor(DURACAO_VALIDA);
+    excursao->setDuracao(duracao);
+    if (excursao->getDuracao().getValor() != DURACAO_VALIDA)
+        estado = FALHA;
+
+    Descricao descricao;
+    descricao.setDescription(DESCRICAO_VALIDA);
+    excursao->setDescricao(descricao);
+    if (excursao->getDescricao().getDescription() != DESCRICAO_VALIDA)
+        estado = FALHA;
+
+    Endereco endereco;
+    endereco.setEndereco(ENDERECO_VALIDO);
+    excursao->setEndereco(endereco);
+    if (excursao->getEndereco().getEndereco() != ENDERECO_VALIDO)
+        estado = FALHA;
+}
+
+int TUExcursao::run(){
+    setUp();
+    testarCenarioSucesso();
+    tearDown();
+    return estado;
+}

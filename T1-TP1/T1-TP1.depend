@@ -60,11 +60,11 @@
 	<string>
 	"dominios.h"
 
-1645714871 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
+1645822909 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	"testes.h"
 
-1645715186 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
+1645822871 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
@@ -95,14 +95,14 @@
 	<ctype.h>
 	<stdio.h>
 
-1645703521 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
+1645820388 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
 	<string.h>
 	<cstring>
 
-1645717670 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+1645822945 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
