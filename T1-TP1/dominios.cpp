@@ -260,7 +260,7 @@ void Data::validar(const int DD, string MM, const int AA)
 }
 
 
-bool CheckRepeated(string valor, char caracter){
+bool Titulo::CheckRepeated(string valor, char caracter){
     int contador = 0;
     for(int i = 0; i < valor.length(); i++){
         if(valor[i] == caracter){
@@ -276,7 +276,40 @@ bool CheckRepeated(string valor, char caracter){
     return false;
 }
 
-bool MagicThree(string valor){
+
+bool Descricao::CheckRepeated(string valor, char caracter){
+    int contador = 0;
+    for(int i = 0; i < valor.length(); i++){
+        if(valor[i] == caracter){
+            contador++;
+            if(contador >= 2){
+                return true;
+                break;
+            }
+        }else{
+            contador = 0;
+        }
+    }
+    return false;
+}
+
+bool Senha::CheckRepeated(string valor, char caracter){
+    int contador = 0;
+    for(int i = 0; i < valor.length(); i++){
+        if(valor[i] == caracter){
+            contador++;
+            if(contador >= 2){
+                return true;
+                break;
+            }
+        }else{
+            contador = 0;
+        }
+    }
+    return false;
+}
+
+bool Senha::MagicThree(string valor){
     bool has_upper = false;
     bool has_lower = false;
     bool has_digit = false;
@@ -298,14 +331,14 @@ bool MagicThree(string valor){
         return false;}
    }
 
-bool CheckIfAlpha(string valor){
-    for(int i = 0; i < valor.length(); i++){
-        if(!isalpha(valor[i])){
-            return false;
-            }
-    }
-    return true;
-}
+//bool CheckIfAlpha(string valor){
+//    for(int i = 0; i < valor.length(); i++){
+//        if(!isalpha(valor[i])){
+//            return false;
+//            }
+//    }
+//    return true;
+//}
 
 
 void Cidade::validar(string valor){

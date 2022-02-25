@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
 140733379332912 <<<<<<< HEAD
 
-1645826317 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/main.cpp
+1645828075 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
 	"testes.h"
 
-1645827384 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.cpp
+1645828086 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -18,11 +18,11 @@
 
 1645825767 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/entidades.cpp
 
-1645826437 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.cpp
+1645828075 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	"testes.h"
 
-1645827367 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
+1645828184 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
@@ -35,7 +35,7 @@
 	<string.h>
 	"dominios.h"
 
-1645826317 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.h
+1645828075 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
@@ -45,12 +45,13 @@
 
 1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.cpp
 
-1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.cpp
+1645820815 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
-	<testes.h>
+	"testes.h"
 
-1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
+1645820815 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
+	<stdio.h>
 	"dominios.h"
 	"testes.h"
 
@@ -82,23 +83,27 @@
 
 1645562833 D
 
-1645571630 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
-	<iostream>
+1645824745 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
+	<iostream>
+	<stdlib.h>
+	<string.h>
 	<cstring>
 
-1645572226 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.h
+1645820815 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
 	"entidades.h"
 
-1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.cpp
+1645821220 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
-	<dominios.h>
 	<cstring>
 	<ctype.h>
 	<stdio.h>
+	<stdlib.h>
+	<string>
+	"dominios.h"
 
 1645820388 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
@@ -117,11 +122,11 @@
 	"dominios.h"
 	<string>
 
-1645571630 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.h
+1645822320 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.h
 
 1645571630 n
 
-1645826317 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/entidades.h
+1645828279 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/entidades.h
 	"dominios.h"
 	<string>
 
