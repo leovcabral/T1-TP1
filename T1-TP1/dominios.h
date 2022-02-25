@@ -174,13 +174,17 @@ inline string Nome::getValor() const {
 }
 
 class Duracao {
+
     private:
+
         int valor;
-        const int valores_validos[5] = {30, 60, 90, 120, 180};
         void validar(int);
+
     public:
+
         void setValor(int);
         int getValor() const;
+
 };
 
 inline int Duracao::getValor() const {

@@ -151,19 +151,5 @@ TUEmail testeEmail;
 
 
 
-    cout << "\nINSTANCIAS TESTE: \n";
-    Usuario user;
-    Email email;
-    Senha password;
-    email.setEmail("leonardo@gmail.com");
-    password.setPassword("Aab1234");
-    user.setNome(name);
-    user.setEmail(email);
-    user.setSenha(password);
-
-    cout << "Nome: " << user.getNome().getValor() << endl;
-    cout << "Email: " << user.getEmail().getEmail() << endl;
-    cout << "Senha: " << user.getSenha().getPassword() << endl;
-
     return 0;
 }
