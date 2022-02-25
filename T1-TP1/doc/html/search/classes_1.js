@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['cidade_0',['Cidade',['../class_cidade.html',1,'']]],
-  ['codigo_1',['Codigo',['../class_codigo.html',1,'']]]
+  ['data_0',['Data',['../class_data.html',1,'']]],
+  ['descricao_1',['Descricao',['../class_descricao.html',1,'']]],
+  ['duracao_2',['Duracao',['../class_duracao.html',1,'']]]
 ];

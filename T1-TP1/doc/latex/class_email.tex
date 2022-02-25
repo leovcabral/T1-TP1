@@ -1,0 +1,68 @@
+\hypertarget{class_email}{}\doxysection{Email Class Reference}
+\label{class_email}\index{Email@{Email}}
+
+
+Domínio \mbox{\hyperlink{class_email}{Email}}.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_email_ac83cc6b2b5eb1ae8ca10dc2fefe4a816}{set\+Email}} (string str)
+\begin{DoxyCompactList}\small\item\em Funcão para definir valor da classe \mbox{\hyperlink{class_email}{Email}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_email_aa9a0e1a66b4efde65cf017bdd1c6c625}{get\+Email}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Domínio \mbox{\hyperlink{class_email}{Email}}. 
+
+Campo da entidade Usuário. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Requisitos do valor:}
+\DoxyCodeLine{   Formato parte-\/local@domínio}
+\DoxyCodeLine{   parte-\/local é composta por até 64 caracteres.}
+\DoxyCodeLine{   Caractere de parte local pode ser letra maiúscula (A-\/Z) ou minúscula (a-\/z).}
+\DoxyCodeLine{   Caractere de parte local pode ser dígito (0-\/9).}
+\DoxyCodeLine{   Caractere de parte local pode ser ! \# \$ \% \& ' * + -\/ / = ? \string^ \_ ` \{ | \} \string~}
+\DoxyCodeLine{   Caractere de parte local pode ser ponto (.) desde que não seja o primeiro ou o último}
+\DoxyCodeLine{   caractere e que não ocorra em sequência.}
+\DoxyCodeLine{   domínio é composto por até 253 caracteres.}
+\DoxyCodeLine{   Caractere de domínio pode ser letra maiúscula (A-\/Z) ou minúscula (a-\/z).}
+\DoxyCodeLine{   Caractere de domínio pode ser dígito (0-\/9).}
+\DoxyCodeLine{   Caractere de domínio pode hífen (-\/).}
+\DoxyCodeLine{   Caractere de domínio pode ser ponto (.) desde que não seja o primeiro caractere e não ocorra}
+\DoxyCodeLine{   em sequência.}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_email_aa9a0e1a66b4efde65cf017bdd1c6c625}\label{class_email_aa9a0e1a66b4efde65cf017bdd1c6c625}} 
+\index{Email@{Email}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily string Email\+::get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+String com valor da instancia da classe \mbox{\hyperlink{class_email}{Email}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_email_ac83cc6b2b5eb1ae8ca10dc2fefe4a816}\label{class_email_ac83cc6b2b5eb1ae8ca10dc2fefe4a816}} 
+\index{Email@{Email}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily void Email\+::set\+Email (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+
+
+Funcão para definir valor da classe \mbox{\hyperlink{class_email}{Email}}. 
+
+Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em valor} & String que deve ser definida como valor da instancia da classe \mbox{\hyperlink{class_email}{Email}}. \\
+\hline
+\end{DoxyParams}

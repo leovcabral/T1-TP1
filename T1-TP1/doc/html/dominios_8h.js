@@ -1,5 +1,10 @@
 var dominios_8h =
 [
+    [ "Idioma", "class_idioma.html", "class_idioma" ],
+    [ "Endereco", "class_endereco.html", "class_endereco" ],
+    [ "Data", "class_data.html", "class_data" ],
+    [ "Horario", "class_horario.html", "class_horario" ],
+    [ "Email", "class_email.html", "class_email" ],
     [ "Cidade", "class_cidade.html", "class_cidade" ],
     [ "Nota", "class_nota.html", "class_nota" ],
     [ "Descricao", "class_descricao.html", "class_descricao" ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['senha_0',['Senha',['../class_senha.html',1,'']]]
+  ['idioma_0',['Idioma',['../class_idioma.html',1,'']]]
 ];

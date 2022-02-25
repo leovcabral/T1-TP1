@@ -1,0 +1,63 @@
+\hypertarget{class_data}{}\doxysection{Data Class Reference}
+\label{class_data}\index{Data@{Data}}
+
+
+Domínio \mbox{\hyperlink{class_data}{Data}}.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_a214291c01af58174fd46f177f8d055be}{set\+Data}} (const int DD, string, const int AA)
+\begin{DoxyCompactList}\small\item\em Funcão para definir valores da classe \mbox{\hyperlink{class_data}{Data}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_data_afc7b15a5e81334858e48709b2f45cdc3}{get\+Data}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Domínio \mbox{\hyperlink{class_data}{Data}}. 
+
+Campo da entidade Sessão. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Requisitos do valor:}
+\DoxyCodeLine{  Tem formato DD-\/MES-\/AAAA}
+\DoxyCodeLine{  DD -\/ 01 a 31}
+\DoxyCodeLine{  MES -\/Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez}
+\DoxyCodeLine{  AA -\/ 2000 a 9999}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_afc7b15a5e81334858e48709b2f45cdc3}\label{class_data_afc7b15a5e81334858e48709b2f45cdc3}} 
+\index{Data@{Data}!getData@{getData}}
+\index{getData@{getData}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily string Data\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+String com valor da instancia da classe \mbox{\hyperlink{class_data}{Data}} com formato DD-\/\+Mes-\/\+AAAA. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_data_a214291c01af58174fd46f177f8d055be}\label{class_data_a214291c01af58174fd46f177f8d055be}} 
+\index{Data@{Data}!setData@{setData}}
+\index{setData@{setData}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Data\+::set\+Data (\begin{DoxyParamCaption}\item[{const int}]{DD,  }\item[{string}]{MM,  }\item[{const int}]{AA }\end{DoxyParamCaption})}
+
+
+
+Funcão para definir valores da classe \mbox{\hyperlink{class_data}{Data}}. 
+
+Valida os argumentos conforme os requisitos da classe. Se os argumentos forem validos, eles são definidos como valores que compoẽm o valor de data para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em DD} & Inteiro que deve ser definido como valor de Dia para instancia da classe \mbox{\hyperlink{class_data}{Data}}. \\
+\hline
+{\em Mes} & String que deve ser definida como valor para Mes da instancia. \\
+\hline
+{\em AA} & Inteiro que deve ser definido como valor de Ano para instancia da classe \mbox{\hyperlink{class_data}{Data}}. \\
+\hline
+\end{DoxyParams}

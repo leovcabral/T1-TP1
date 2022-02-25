@@ -1,0 +1,60 @@
+\hypertarget{class_horario}{}\doxysection{Horario Class Reference}
+\label{class_horario}\index{Horario@{Horario}}
+
+
+Domínio Horário.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_horario_a31c9c7e463865acff19ff7e918d2ae00}{set\+Horario}} (int HH, int MM)
+\begin{DoxyCompactList}\small\item\em Funcão para definir valores de horas e minutos da classe Horário. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_horario_a48bafd16811951544db6244ddc17e2ab}{get\+Horario}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Domínio Horário. 
+
+Campo da entidade Sessão. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Requisitos do valor:}
+\DoxyCodeLine{  Tem formato HH:MM}
+\DoxyCodeLine{  HH -\/ 00 a 23}
+\DoxyCodeLine{  MM -\/ 00 a 59}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_horario_a48bafd16811951544db6244ddc17e2ab}\label{class_horario_a48bafd16811951544db6244ddc17e2ab}} 
+\index{Horario@{Horario}!getHorario@{getHorario}}
+\index{getHorario@{getHorario}!Horario@{Horario}}
+\doxysubsubsection{\texorpdfstring{getHorario()}{getHorario()}}
+{\footnotesize\ttfamily string Horario\+::get\+Horario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+String com valor da instancia da classe Horário com formato HH\+:MM. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_horario_a31c9c7e463865acff19ff7e918d2ae00}\label{class_horario_a31c9c7e463865acff19ff7e918d2ae00}} 
+\index{Horario@{Horario}!setHorario@{setHorario}}
+\index{setHorario@{setHorario}!Horario@{Horario}}
+\doxysubsubsection{\texorpdfstring{setHorario()}{setHorario()}}
+{\footnotesize\ttfamily void Horario\+::set\+Horario (\begin{DoxyParamCaption}\item[{int}]{HH,  }\item[{int}]{MM }\end{DoxyParamCaption})}
+
+
+
+Funcão para definir valores de horas e minutos da classe Horário. 
+
+Valida os argumentos conforme os requisitos da classe. Se os argumentos forem validos, eles são definidos como valores de horas e minutos para a instancia. 
+\begin{DoxyParams}{Parameters}
+{\em HH} & Inteiro que deve ser definido como valor de Hora para instancia da classe Horário. \\
+\hline
+{\em MM} & Inteiro que deve ser definido como valor de Minutos para instancia da classe Horário. \\
+\hline
+\end{DoxyParams}
