@@ -1,30 +1,33 @@
 # depslib dependency file v1.0
 140733379332912 <<<<<<< HEAD
 
-1645675428 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/main.cpp
+1645828075 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
 	"testes.h"
 
-1645675474 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.cpp
+1645828086 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
+	<cstring>
+	<ctype.h>
+	<stdio.h>
 	<stdlib.h>
 	<string>
 	"dominios.h"
 
-1645364174 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/entidades.cpp
-	<iostream>
+1645825767 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/entidades.cpp
 
-1645675352 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.cpp
+1645828075 source:/home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	"testes.h"
 
-1645675694 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
+1645828184 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
 	<string.h>
+	<cstring>
 
 1645662073 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
@@ -32,9 +35,11 @@
 	<string.h>
 	"dominios.h"
 
-1645675521 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.h
-	"dominios.h"
+1645828075 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
+	<cstring>
+	"dominios.h"
+	"entidades.h"
 
 1645154723 
 
@@ -61,11 +66,11 @@
 	<string>
 	"dominios.h"
 
-1645703749 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
+1645822909 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	"testes.h"
 
-1645704020 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
+1645822871 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
@@ -100,22 +105,28 @@
 	<string>
 	"dominios.h"
 
-1645703521 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
+1645820388 /home/leonardocabral/TP1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
 	<string.h>
 	<cstring>
 
-1645703976 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
+1645822945 /home/leonardocabral/TP1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
 	"entidades.h"
 
-1645703627 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
+1645717403 /home/leonardocabral/TP1/T1-TP1/T1-TP1/entidades.h
+	"dominios.h"
+	<string>
 
 1645822320 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.h
 
 1645571630 n
+
+1645828279 /home/adriano/Desktop/T1-TP1/T1-TP1/T1-TP1/entidades.h
+	"dominios.h"
+	<string>
 

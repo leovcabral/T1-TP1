@@ -165,9 +165,6 @@ class Email {
     void setEmail(string str);
     ///@returns String com valor da instancia da classe Email.
     string getEmail();
-
-
-
 };
 
 
@@ -333,17 +330,22 @@ inline string Nome::getValor() const {
 ///  Tem valor 30, 60, 90, 120 ou 180.
 ///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Duracao {
+
     private:
+
         int valor;
-        const int valores_validos[5] = {30, 60, 90, 120, 180};
         void validar(int);
+
     public:
+
         /// Funcão para definir valor da classe Duração.
         /// Valida o argumento conforme os requisitos da classe. Se o argumento for valido, o argumento passado é definido como valor para a instancia.
-         /// @param valor Inteiro que deve ser definido como Nota da Duração.
+        /// @param valor Inteiro que deve ser definido como Nota da Duração.
+
         void setValor(int);
         ///@returns Inteiro com valor da instancia da classe Duração.
         int getValor() const;
+
 };
 
 inline int Duracao::getValor() const {

@@ -8,7 +8,9 @@ using namespace std;
 int main()
 {
 
- TUIdioma testeIdioma;
+cout << "TESTES DE UNIDADE DE DOMINIOS: \n";
+
+TUIdioma testeIdioma;
     switch(testeIdioma.run()){
         case TUIdioma::SUCESSO : cout << "SUCESSO - IDIOMA" << endl;
             break;
@@ -56,10 +58,10 @@ TUEmail testeEmail;
     TUDescricao testeF;
     TUSenha testeG;
     TUCodigo testeH;
-    TUIdioma testeI;
-    TUEndereco testeJ;
-    TUData testeK;
-    TUHorario testeL;
+    TUUsuario testeI;
+    TUAvaliacao testeJ;
+    TUSessao testeK;
+    TUExcursao testeL;
 
     switch(testeA.run()){
         case TUNota::SUCESSO: cout << "SUCESSO - NOTA" << endl;
@@ -117,23 +119,37 @@ TUEmail testeEmail;
                                 break;
     }
 
+    cout << "\nTESTES DE UNIDADE DE ENTIDADES: \n";
+
+    switch(testeI.run()){
+        case TUUsuario::SUCESSO: cout << "SUCESSO - USUARIO" << endl;
+                                break;
+        case TUUsuario::FALHA  : cout << "FALHA   - USUARIO" << endl;
+                                break;
+    }
+
+    switch(testeJ.run()){
+        case TUAvaliacao::SUCESSO: cout << "SUCESSO - AVALIAÇÂO" << endl;
+                                break;
+        case TUAvaliacao::FALHA  : cout << "FALHA   - AVALIAÇÂO" << endl;
+                                break;
+    }
+
+    switch(testeK.run()){
+        case TUSessao::SUCESSO: cout << "SUCESSO - SESSAO" << endl;
+                                break;
+        case TUSessao::FALHA  : cout << "FALHA   - SESSAO" << endl;
+                                break;
+    }
+
+    switch(testeL.run()){
+        case TUExcursao::SUCESSO: cout << "SUCESSO - EXCURSAO" << endl;
+                                break;
+        case TUExcursao::FALHA  : cout << "FALHA   - EXCURSAO" << endl;
+                                break;
+    }
 
 
-    Nome name;
-    name.setValor("L. V. Cabral");
-    cout << "\nNome: " << name.getValor() << endl;
-
-    Cidade cidade;
-    cidade.setCidade("Hong Kong");
-    cout << "Cidade: " << cidade.getCidade() << endl;
-
-    Senha senha;
-    senha.setPassword("Ab123456");
-    cout << "Senha: " << senha.getPassword() << endl;
-
-    Codigo codigo;
-    codigo.setValor("2615339");
-    cout << "Codigo: " << codigo.getValor() << endl;
 
     return 0;
 }

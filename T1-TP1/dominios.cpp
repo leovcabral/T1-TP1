@@ -450,6 +450,8 @@ void Nota::setValor(int valor){
 
 
 void Duracao::validar(int duracao){
+
+    const int valores_validos[5] = {30, 60, 90, 120, 180};
     bool valido = false;
     for (const int n : valores_validos){
         if (duracao == n) {
