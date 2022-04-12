@@ -43,13 +43,13 @@
 
 1645154723 
 
-1645571630 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.cpp
+1649799240 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.cpp
 
-1645820815 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.cpp
+1649799240 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	"testes.h"
 
-1645820815 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
+1649799240 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
@@ -83,20 +83,20 @@
 
 1645562833 D
 
-1645824745 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
+1649799240 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
 	<string.h>
 	<cstring>
 
-1645820815 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.h
+1649799240 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
 	"entidades.h"
 
-1645821220 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.cpp
+1649799240 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -122,7 +122,9 @@
 	"dominios.h"
 	<string>
 
-1645822320 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.h
+1649799240 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.h
+	"dominios.h"
+	<string>
 
 1645571630 n
 
