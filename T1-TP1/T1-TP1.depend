@@ -158,3 +158,67 @@
 1650173636 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/controladorasapresentacao.cpp
 	"controladorasapresentacao.h"
 
+1650179277 source:/home/adriano/Desktop/T1-TP1/T1-TP1/controladorasapresentacao.cpp
+	"controladorasapresentacao.h"
+
+1650179523 /home/adriano/Desktop/T1-TP1/T1-TP1/controladorasapresentacao.h
+	<iostream>
+	<string.h>
+	"dominios.h"
+	"entidades.h"
+	"interfaces.h"
+
+1650167859 /home/adriano/Desktop/T1-TP1/T1-TP1/dominios.h
+	<stdexcept>
+	<iostream>
+	<stdlib.h>
+	<string.h>
+	<cstring>
+
+1650167859 /home/adriano/Desktop/T1-TP1/T1-TP1/entidades.h
+	"dominios.h"
+	<string>
+
+1650179403 /home/adriano/Desktop/T1-TP1/T1-TP1/interfaces.h
+	"dominios.h"
+	"entidades.h"
+
+1650167859 source:/home/adriano/Desktop/T1-TP1/T1-TP1/dominios.cpp
+	<iostream>
+	<cstring>
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	"dominios.h"
+
+1650167859 source:/home/adriano/Desktop/T1-TP1/T1-TP1/entidades.cpp
+
+1650179835 source:/home/adriano/Desktop/T1-TP1/T1-TP1/main.cpp
+	<iostream>
+	<stdio.h>
+	"dominios.h"
+	"testes.h"
+	<stdexcept>
+	"interfaces.h"
+	"controladorasapresentacao.h"
+	"stubs.h"
+
+1650167859 /home/adriano/Desktop/T1-TP1/T1-TP1/testes.h
+	<iostream>
+	<cstring>
+	"dominios.h"
+	"entidades.h"
+
+1650175029 /home/adriano/Desktop/T1-TP1/T1-TP1/stubs.h
+	<string>
+	"dominios.h"
+	"interfaces.h"
+
+1650175029 source:/home/adriano/Desktop/T1-TP1/T1-TP1/stubs.cpp
+	"stubs.h"
+
+1650167859 source:/home/adriano/Desktop/T1-TP1/T1-TP1/testes.cpp
+	<iostream>
+	"testes.h"
+

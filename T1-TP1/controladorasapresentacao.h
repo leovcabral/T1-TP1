@@ -60,12 +60,12 @@ class CntrApresentacaoConta:public IApresentacaoConta{
     private:
         IServicoConta *cntrServicoConta;
 //        IServicoExcursao *cntrServicoExcursao;
-        void consultarDadosConta(Email);
     public:
         void executar(Email*);
-        void cadastrar();
-        void editar(Email);
-        void descadastrar(Email);
+        void consultarDadosConta(Email*);
+//      void cadastrar();
+//      void editar(Email);
+//      void descadastrar(Email);
         void setCntrServicoConta(IServicoConta*);
 //        void setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros*);
 };

@@ -22,9 +22,15 @@ bool StubServicoAutenticacao::autenticar(Email email, Senha senha){
 }
 
 void StubServicoConta::consultarDadosConta(Email *email){
+    char lixo;
     cout << "Dados de conta" << endl;
     cout << "Email: " << email->getEmail() << endl;
     cout << "Nome: Fernando" << endl;
+
+    printf("pressione enter para retornar");
+    scanf("%c", &lixo);
+    scanf("%c", &lixo);
+
 }
 //
 //bool StubServicoPessoal::cadastrarUsuario(Usuario usuario){

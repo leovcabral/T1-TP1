@@ -162,33 +162,33 @@ int main()
 
     CntrApresentacaoControle *cntrApresentacaoControle;
     IApresentacaoAutenticacao *cntrApresentacaoAutenticacao;
-//    IApresentacaoPessoal *cntrApresentacaoPessoal;
+    IApresentacaoConta *cntrApresentacaoConta;
 //    IApresentacaoProdutosFinanceiros *cntrApresentacaoProdutosFinanceiros;
 
     cntrApresentacaoControle = new CntrApresentacaoControle();
     cntrApresentacaoAutenticacao = new CntrApresentacaoAutenticacao();
-//    cntrApresentacaoPessoal = new CntrApresentacaoPessoal();
+    cntrApresentacaoConta = new CntrApresentacaoConta();
 //    cntrApresentacaoProdutosFinanceiros = new CntrApresentacaoProdutosFinanceiros();
 
     // Instanciar stubs.
 
     IServicoAutenticacao *stubServicoAutenticacao;
-//    IServicoPessoal *stubServicoPessoal;
+    IServicoConta *stubServicoConta;
 //    IServicoProdutosFinanceiros *stubServicoProdutosFinanceiros;
 
     stubServicoAutenticacao = new StubServicoAutenticacao();
-//    stubServicoPessoal = new StubServicoPessoal();
+    stubServicoConta = new StubServicoConta();
 //    stubServicoProdutosFinanceiros = new StubServicoProdutosFinanceiros();
 
     // Interligar controladoras e stubs.
 
     cntrApresentacaoControle->setCntrApresentacaoAutenticacao(cntrApresentacaoAutenticacao);
-//    cntrApresentacaoControle->setCntrApresentacaoPessoal(cntrApresentacaoPessoal);
+    cntrApresentacaoControle->setCntrApresentacaoConta(cntrApresentacaoConta);
 //    cntrApresentacaoControle->setCntrApresentacaoProdutosFinanceiros(cntrApresentacaoProdutosFinanceiros);
 
     cntrApresentacaoAutenticacao->setCntrServicoAutenticacao(stubServicoAutenticacao);
 
-//    cntrApresentacaoPessoal->setCntrServicoPessoal(stubServicoPessoal);
+   cntrApresentacaoConta->setCntrServicoConta(stubServicoConta);
 //    cntrApresentacaoPessoal->setCntrServicoProdutosFinanceiros(stubServicoProdutosFinanceiros);
 
 //    cntrApresentacaoProdutosFinanceiros->setCntrServicoProdutosFinanceiros(stubServicoProdutosFinanceiros);
