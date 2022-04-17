@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/arthur/Documents/tp1/T1-TP1'
+make: Leaving directory '/home/arthur/Documents/tp1/T1-TP1'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
