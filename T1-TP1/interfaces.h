@@ -14,7 +14,7 @@
 // Forward declarations.
 
 class IServicoAutenticacao;
-//class IServicoPessoal;
+class IServicoConta;
 //class IServicoProdutosFinanceiros;
 
 //--------------------------------------------------------------------------------------------
@@ -29,17 +29,18 @@ class IApresentacaoAutenticacao {
         virtual ~IApresentacaoAutenticacao(){}
 };
 
-//// 190046953
-//class IApresentacaoConta{
-//    public:
-//        virtual void executar(Email) = 0;
+// 190046953
+class IApresentacaoConta{
+    public:
+        virtual void executar(Email*) = 0;
 //        virtual void cadastrar() = 0;
-////        virtual void editar(Email*) = 0;
-////        virtual void descadastrar(Email*) = 0;
-//        virtual void setCntrServicoConta(IServicoConta*) = 0;
-//        virtual ~IApresentacaoConta(){}
-//};
-//
+//        virtual void editar(Email*) = 0;
+//        virtual void descadastrar(Email*) = 0;
+        virtual void setCntrServicoConta(IServicoConta*) = 0;
+//        virtual void setCntrServicoExcursao(IServicoExcursao*) = 0;
+        virtual ~IApresentacaoConta(){}
+};
+
 //// 202061421
 //class IApresentacaoExcursao{
 //    public:
@@ -58,12 +59,13 @@ class IServicoAutenticacao {
         virtual ~IServicoAutenticacao(){}
 };
 
-//class IServicoConta{
-//public:
+class IServicoConta{
+public:
 //        virtual bool cadastrarConta(Usuario*) = 0;
-//        virtual ~IServicoConta(){}
-//};
-//
+        virtual void consultarDadosConta(Email*) = 0;
+        virtual ~IServicoConta(){}
+};
+
 //class IServicoExcursao{
 //public:
 //        virtual void listar() = 0;

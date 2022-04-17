@@ -20,6 +20,12 @@ bool StubServicoAutenticacao::autenticar(Email email, Senha senha){
         return false;
         }
 }
+
+void StubServicoConta::consultarDadosConta(Email *email){
+    cout << "Dados de conta" << endl;
+    cout << "Email: " << email->getEmail() << endl;
+    cout << "Nome: Fernando" << endl;
+}
 //
 //bool StubServicoPessoal::cadastrarUsuario(Usuario usuario){
 //    if(usuario.getCPF().getValor().compare(INVALIDO) == 0)
@@ -76,5 +82,5 @@ bool StubServicoAutenticacao::autenticar(Email email, Senha senha){
 //
 //    return true;
 //}
-//
+
 

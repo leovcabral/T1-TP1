@@ -32,20 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-<<<<<<< HEAD
-		<Unit filename="T1-TP1.cbp" />
 		<Unit filename="T1-TP1.layout" />
-=======
-<<<<<<< HEAD
-		<Unit filename="T1-TP1.layout" />
-=======
->>>>>>> origin/development
->>>>>>> main
+		<Unit filename="controladorasapresentacao.cpp" />
+		<Unit filename="controladorasapresentacao.h" />
 		<Unit filename="dominios.cpp" />
 		<Unit filename="dominios.h" />
 		<Unit filename="entidades.cpp" />
 		<Unit filename="entidades.h" />
+		<Unit filename="interfaces.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="stubs.cpp" />
+		<Unit filename="stubs.h" />
 		<Unit filename="testes.cpp" />
 		<Unit filename="testes.h" />
 		<Extensions />

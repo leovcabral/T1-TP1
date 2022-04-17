@@ -19,13 +19,14 @@ class StubServicoAutenticacao:public IServicoAutenticacao {
 };
 
 //--------------------------------------------------------------------------------------------
-//
-//class StubServicoPessoal:public IServicoPessoal {
-//    private:
-//        static const string INVALIDO;
-//    public:
-//        bool cadastrarUsuario(Usuario);
-//};
+
+class StubServicoConta:public IServicoConta{
+    private:
+        static const string INVALIDO;
+    public:
+        void consultarDadosConta(Email*);
+        bool cadastrarUsuario(Usuario);
+};
 
 //--------------------------------------------------------------------------------------------
 //
