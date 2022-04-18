@@ -198,16 +198,16 @@ void CntrApresentacaoConta::executar(Email* email){
 void CntrApresentacaoConta::cadastrar(){
 
     // Mensagens a serem apresentadas na tela de cadastramento.
-
     char texto1[] ="Preencha os seguintes campos: ";
-    char texto2[] ="Nome            :";
-    char texto3[] ="Email        :";
-    char texto4[] ="Senha             :";
+    char texto2[] ="Nome:";
+    char texto3[] ="Email:";
+    char texto4[] ="Senha:";
     char texto5[] ="Usuário cadastrado!";
     char texto6[] ="Valor inválido para cadastro";
 
     char campo1[80], campo2[80], campo3[80];                                              // Cria campos para entrada dos dados.
     char c;
+
     int campo;
     // Instancia os dom�nios.
 
@@ -217,19 +217,18 @@ void CntrApresentacaoConta::cadastrar(){
 
     // Apresenta tela de cadastramento.
 
-//    CLR_SCR;                                                                                   // Limpa janela.
-
+//    CLR_SCR;
+    system("clear");                                                                                 // Limpa janela.
     cout << texto1 << endl;                                                                    // Imprime solicita��o ao usu�rio.
     cout << texto2 << " ";                                                                     // Imprime nome do campo.
     cin.getline(campo1,sizeof(campo1));                                                        // L� valor do campo composto.
 
-    cout << "Valor lido" << campo1 << " ";
 
     cout << texto3 << " ";                                                                     // Imprime nome do campo.
     cin >> campo2;                                                                             // L� valor do campo.
     cout << texto4 << " ";                                                                     // Imprime nome do campo.
-    cin >> campo3;                                                                             // L� valor do campo.
-
+    cin >> campo3;
+    system("clear");                                                                            // L� valor do campo.
     try{
         nome.setValor(string(campo1));
         email.setEmail(string(campo2));
@@ -238,7 +237,8 @@ void CntrApresentacaoConta::cadastrar(){
     catch(invalid_argument &exp){
         cout << texto6 << endl;                                                                // Informa formato incorreto.
         c = getc(stdin);
-        campo = c - 48;
+        scanf("%c", &c);
+        system("clear");
         return;
     }
 
