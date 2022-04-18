@@ -59,12 +59,13 @@ inline void CntrApresentacaoAutenticacao::setCntrServicoAutenticacao(IServicoAut
 class CntrApresentacaoConta:public IApresentacaoConta{
     private:
         IServicoConta *cntrServicoConta;
+        Usuario user;
 //        IServicoExcursao *cntrServicoExcursao;
     public:
         void executar(Email*);
         void consultarDadosConta(Email*);
 //      void cadastrar();
-//      void editar(Email);
+        void editar(Usuario*);
 //      void descadastrar(Email);
         void setCntrServicoConta(IServicoConta*);
 //        void setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros*);

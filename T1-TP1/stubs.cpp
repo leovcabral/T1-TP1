@@ -32,6 +32,65 @@ void StubServicoConta::consultarDadosConta(Email *email){
     scanf("%c", &lixo);
 
 }
+
+void StubServicoConta::editar(Usuario *user){
+
+    char lixo;
+
+    char campo1[80];
+    char campo2[80];
+    char campo3[80];
+
+    Email email;
+    Senha senha;
+    Nome nome;
+
+    char texto1[]="Preencha novo valor para Nome : ";
+    char texto2[]="Preencha novo valor para Email: ";
+    char texto3[]="Preencha novo valor para Senha: ";
+    char texto4[]="Dados em formato incorreto. Digite algo.";
+
+    while(true)
+    {
+
+    system("clear");
+
+    cout << texto1 << " ";
+    cin >> campo1;
+    cout << texto2 << " ";
+    cin >> campo2;
+    cout << texto3 << " ";
+    cin >> campo3;
+
+    try{
+            nome.setValor(string(campo1));
+            email.setEmail(string(campo2));
+            senha.setPassword(string(campo3));
+
+            user->setEmail(email);
+            user->setSenha(senha);
+            user->setNome(nome);
+                                                                // Atribui Valor � senha.
+            break;                                                                              // Abandona la�o em caso de formatos corretos.
+        }
+        catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
+
+            system("clear");                                         // Limpa janela.
+            cout << texto4 << endl;
+
+            printf("Dados em formato incorreto. pressione enter para tentar dnovo");
+            scanf("%c", &lixo);
+            scanf("%c", &lixo);
+                                                                                     // L� caracter digitado.
+        }
+
+    }
+
+    printf("voce editou com sucesso, aperte enter para retornar");
+            scanf("%c", &lixo);
+            scanf("%c", &lixo);
+
+}
 //
 //bool StubServicoPessoal::cadastrarUsuario(Usuario usuario){
 //    if(usuario.getCPF().getValor().compare(INVALIDO) == 0)

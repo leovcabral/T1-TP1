@@ -152,13 +152,19 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
 
 //--------------------------------------------------------------------------------------------
 //
+void CntrApresentacaoConta::editar(Usuario* user){
+
+    cntrServicoConta->editar(user);
+
+}
 void CntrApresentacaoConta::executar(Email* email){
 
     // Mensagens a serem apresentadas na tela de sele��o de servi�o..
 
     char texto1[]="Selecione um dos servicos : ";
     char texto2[]="1 - Consultar dados de conta.";
-    char texto3[]="2 - Retornar.";
+    char texto3[]="2 - Editar dados de conta.";
+    char texto4[]="3 - Retornar.";
 
     int campo;                                                                                  // Campo de entrada.
 
@@ -172,7 +178,6 @@ void CntrApresentacaoConta::executar(Email* email){
 //        CLR_SCR;
         system("clear");
                                                                                       // Limpa janela.
-        cout << email->getEmail() << endl;
         cout << texto1 << endl;                                                                 // Imprime nome do campo.
         cout << texto2 << endl;                                                                 // Imprime nome do campo.
         cout << texto3 << endl;                                                                 // Imprime nome do campo.
@@ -183,7 +188,9 @@ void CntrApresentacaoConta::executar(Email* email){
         switch(campo){
             case 1: consultarDadosConta(email);
                     break;
-            case 2: apresentar = false;
+            case 2: editar(&user);
+                    break;
+            case 3: apresentar = false;
                     break;
         }
     }

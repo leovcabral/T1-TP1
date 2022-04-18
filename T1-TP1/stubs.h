@@ -25,6 +25,7 @@ class StubServicoConta:public IServicoConta{
         static const string INVALIDO;
     public:
         void consultarDadosConta(Email*);
+        void editar(Usuario*);
         bool cadastrarUsuario(Usuario);
 };
 
