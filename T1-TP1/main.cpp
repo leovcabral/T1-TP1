@@ -177,7 +177,7 @@ int main()
 //    IServicoProdutosFinanceiros *stubServicoProdutosFinanceiros;
 
     stubServicoAutenticacao = new StubServicoAutenticacao();
-    stubServicoConta = new StubServicoConta();
+//    stubServicoConta = new StubServicoConta();
 //    stubServicoProdutosFinanceiros = new StubServicoProdutosFinanceiros();
 
     // Interligar controladoras e stubs.

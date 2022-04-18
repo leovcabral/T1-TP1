@@ -33,10 +33,10 @@ void StubServicoConta::consultarDadosConta(Email *email){
 
 }
 //
-//bool StubServicoPessoal::cadastrarUsuario(Usuario usuario){
-//    if(usuario.getCPF().getValor().compare(INVALIDO) == 0)
-//        return false;
-//    return true;
+//bool StubServicoConta::cadastrarUsuario(Usuario usuario){
+//    if(usuario.getEmail().getValor().compare(EMAIL_VALIDO) == 0)
+//        return true;
+//    return false;
 //}
 //
 //bool StubServicoProdutosFinanceiros::cadastrarConta(Conta conta){
