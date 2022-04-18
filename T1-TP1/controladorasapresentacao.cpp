@@ -94,8 +94,7 @@ void CntrApresentacaoControle::executar(){
        }
        else if(campo ==2)
        {
-            if(cntrApresentacaoConta->cadastrar()){
-                cout << "ok" << endl;}
+            cntrApresentacaoConta->cadastrar();
        }
        else if(campo == 4)
        {
