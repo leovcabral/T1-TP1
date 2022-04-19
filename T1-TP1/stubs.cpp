@@ -104,12 +104,17 @@ void StubServicoExcursao::listar(){
      scanf("%c", &lixo);
 
 }
-//
-//bool StubServicoPessoal::cadastrarUsuario(Usuario usuario){
-//    if(usuario.getCPF().getValor().compare(INVALIDO) == 0)
-//        return false;
-//    return true;
+
+//bool StubServicoConta::cadastrarUsuario(Usuario usuario){
+//    if(usuario.getEmail().getValor().compare(EMAIL_VALIDO) == 0)
+//        return true;
+//    return false;
 //}
+
+bool StubServicoConta::descadastrarConta(Email *email){
+    return true;
+}
+
 //
 //bool StubServicoProdutosFinanceiros::cadastrarConta(Conta conta){
 //    if(conta.getNumero().getValor().compare(INVALIDO) == 0)

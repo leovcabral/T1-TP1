@@ -9,7 +9,7 @@ void CntrApresentacaoControle::executar(){
 
     char texto1[]="Selecione um dos servicos : ";
     char texto2[]="1 - Acessar sistema.";
-//    char texto3[]="2 - Cadastrar usuario.";
+    char texto3[]="2 - Cadastrar usuario.";
     char texto4[]="3 - Acessar dados sobre Excursao.";
     char texto5[]="4 - Encerrar execucao do sistema.";
 
@@ -17,11 +17,10 @@ void CntrApresentacaoControle::executar(){
 
     char texto6[]="Selecione um dos servicos : ";
     char texto7[]="1 - Selecionar servicos de conta.";
-//    char texto8[]="2 - Selecionar servicos relacionados a Excursao";
+    char texto8[]="2 - Descadastrar conta.";
+//    char texto11[]="2 - Selecionar servicos relacionados a Excursao";
     char texto9[]="3 - Encerrar sessao.";
-
     char texto10[]="Falha na autenticacao. Digite algo para continuar.";                        // Mensagem a ser apresentada.
-
     int campo;
     char lixo;
     char c;                                                                            // Campo de entrada.
@@ -37,7 +36,7 @@ void CntrApresentacaoControle::executar(){
 
         cout << texto1 << endl;                                                                 // Imprime nome do campo.
         cout << texto2 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto3 << endl;                                                                 // Imprime nome do campo.
+        cout << texto3 << endl;                                                                 // Imprime nome do campo.
         cout << texto4 << endl;                                                                 // Imprime nome do campo.
         cout << texto5 << endl;
 
@@ -56,10 +55,11 @@ void CntrApresentacaoControle::executar(){
                 bool apresentar = true;                                                 // Controle de laço.
                 while(apresentar)
                 {
+                    system("clear");
                     cout << "voce esta autenticado" << endl;
                     cout << texto6 << endl;                                             // Imprime nome do campo.
                     cout << texto7 << endl;                                             // Imprime nome do campo.
-//                    cout << texto8 << endl;                                             // Imprime nome do campo.
+                    cout << texto8 << endl;                                             // Imprime nome do campo.
                     cout << texto9 << endl;
 
                     fflush(stdin);                                                      // Imprime nome do campo.
@@ -76,6 +76,13 @@ void CntrApresentacaoControle::executar(){
                     if(campo == 1)
                     {
                         cntrApresentacaoConta->executar(&email);
+                    }
+                    else if(campo == 2)
+                    {
+                        printf("\n!!!\n");
+                        if(cntrApresentacaoConta->descadastrar(&email)){
+                            break;
+                        }
                     }
                     else if(campo == 3)
                     {
@@ -95,6 +102,10 @@ void CntrApresentacaoControle::executar(){
        else if(campo == 3)
        {
             cntrApresentacaoExcursao->executar();
+        }
+       else if(campo ==2)
+       {
+            cntrApresentacaoConta->cadastrar();
        }
        else if(campo == 4)
        {
@@ -179,12 +190,13 @@ void CntrApresentacaoConta::executar(Email* email){
 
         // Apresenta tela de sela��o de servi�o.
 
-//        CLR_SCR;
+//      CLR_SCR;
         system("clear");
-                                                                                      // Limpa janela.
+
         cout << texto1 << endl;                                                                 // Imprime nome do campo.
         cout << texto2 << endl;                                                                 // Imprime nome do campo.
-        cout << texto3 << endl;                                                                 // Imprime nome do campo.
+        cout << texto3 << endl;
+        cout << texto4 << endl;                                                               // Imprime nome do campo.
 
         c = getc(stdin);
         campo = c - 48;                                                                   // Leitura do campo de entrada e convers�o de ASCII.
@@ -202,104 +214,91 @@ void CntrApresentacaoConta::executar(Email* email){
 
 ////--------------------------------------------------------------------------------------------
 //
-//void CntrApresentacaoPessoal::cadastrar(){
-//
-//    // Mensagens a serem apresentadas na tela de cadastramento.
-//
-//    char texto1[] ="Preencha os seguintes campos: ";
-//    char texto2[] ="Nome            :";
-//    char texto3[] ="Email        :";
-//    char texto4[] ="Senha             :";
-//
-//    char campo1[80], campo2[80], campo3[80], campo4[80], campo5[80];                            // Cria campos para entrada dos dados.
-//    char campo6[80], campo7[80], campo8[80];                                                    // Cria campos para entrada dos dados.
-//
-//    // Instancia os dom�nios.
-//
-//    Nome nome;
-//    Endereco endereco;
-//    CEP cep;
-//    CPF cpf;
-//    Senha senha;
-//    Numero numero;
-//    Agencia agencia;
-//    Banco banco;
-//
-//    // Apresenta tela de cadastramento.
-//
-//    CLR_SCR;                                                                                   // Limpa janela.
-//
-//    cout << texto1 << endl;                                                                    // Imprime solicita��o ao usu�rio.
-//    cout << texto2 << " ";                                                                     // Imprime nome do campo.
-//    cin.getline(campo1,sizeof(campo1));                                                        // L� valor do campo composto.
-//
-//    cout << "Valor lido" << campo1 << " ";
-//
-//    cout << texto3 << " ";                                                                     // Imprime nome do campo.
-//    cin >> campo2;                                                                             // L� valor do campo.
-//    cout << texto4 << " ";                                                                     // Imprime nome do campo.
-//    cin >> campo3;                                                                             // L� valor do campo.
-//    cout << texto5 << " ";                                                                     // Imprime nome do campo.
-//    cin >> campo4;                                                                             // L� valor do campo.
-//    cout << texto6 << " ";                                                                     // Imprime nome do campo.
-//    cin >> campo5;                                                                             // L� valor do campo.
-//    cout << texto7 << " ";                                                                     // Imprime nome do campo.
-//    cin >> campo6;                                                                             // L� valor do campo.
-//    cout << texto8 << " ";                                                                     // Imprime nome do campo.
-//    cin >> campo7;                                                                             // L� valor do campo.
-//    cout << texto9 << " ";                                                                     // Imprime nome do campo.
-//    cin >> campo8;                                                                             // L� valor do campo.
-//
-//    try{
-//        nome.setValor(string(campo1));
-//        endereco.setValor(string(campo2));
-//        cep.setValor(string(campo3));
-//        cpf.setValor(string(campo4));
-//        senha.setValor(string(campo5));
-//        numero.setValor(string(campo6));
-//        agencia.setValor(string(campo7));
-//        banco.setValor(string(campo8));
-//    }
-//    catch(invalid_argument &exp){
-//        cout << texto10 << endl;                                                                // Informa formato incorreto.
-//        getch();                                                                                // Leitura de caracter digitado.
-//        return;
-//    }
-//
-//    // Instancia e inicializa entidades.
-//
-//    Usuario usuario;
-//
-//    usuario.setNome(nome);
-//    usuario.setEndereco(endereco);
-//    usuario.setCEP(cep);
-//    usuario.setCPF(cpf);
-//    usuario.setSenha(senha);
-//
-//    Conta conta;
-//
-//    conta.setNumero(numero);
-//    conta.setAgencia(agencia);
-//    conta.setBanco(banco);
-//    conta.setCPF(cpf);
-//
-//    // Cadastra usu�rio e conta.
-//
-//    if(cntrServicoPessoal->cadastrarUsuario(usuario))
-//        if(cntrServicoProdutosFinanceiros->cadastrarConta(conta)){
-//            cout << texto11 << endl;                                                                    // Informa sucesso.
+void CntrApresentacaoConta::cadastrar(){
+
+    // Mensagens a serem apresentadas na tela de cadastramento.
+    char texto1[] ="Preencha os seguintes campos: ";
+    char texto2[] ="Nome:";
+    char texto3[] ="Email:";
+    char texto4[] ="Senha:";
+    char texto5[] ="Usuário cadastrado!";
+    char texto6[] ="Valor inválido para cadastro";
+
+    char campo1[80], campo2[80], campo3[80];                                              // Cria campos para entrada dos dados.
+    char c;
+
+    int campo;
+    // Instancia os dom�nios.
+
+    Nome nome;
+    Email email;
+    Senha senha;
+
+    // Apresenta tela de cadastramento.
+
+//    CLR_SCR;
+    system("clear");                                                                                 // Limpa janela.
+    cout << texto1 << endl;                                                                    // Imprime solicita��o ao usu�rio.
+    cout << texto2 << " ";                                                                     // Imprime nome do campo.
+    cin.getline(campo1,sizeof(campo1));                                                        // L� valor do campo composto.
+
+
+    cout << texto3 << " ";                                                                     // Imprime nome do campo.
+    cin >> campo2;                                                                             // L� valor do campo.
+    cout << texto4 << " ";                                                                     // Imprime nome do campo.
+    cin >> campo3;
+    system("clear");                                                                            // L� valor do campo.
+    try{
+        nome.setValor(string(campo1));
+        email.setEmail(string(campo2));
+        senha.setPassword(string(campo3));
+    }
+    catch(invalid_argument &exp){
+        cout << texto6 << endl;                                                                // Informa formato incorreto.
+        c = getc(stdin);
+        scanf("%c", &c);
+        system("clear");
+        return;
+    }
+
+    // Instancia e inicializa entidades.
+
+    Usuario usuario;
+
+    usuario.setNome(nome);
+    usuario.setEmail(email);
+    usuario.setSenha(senha);
+
+    cout << texto5 << endl;
+    c = getc(stdin);
+    campo = c - 48;
+    // Cadastra usu�rio e conta.
+
+//    if(cntrServicoConta->cadastrarUsuario(usuario))
+//        {
+//            cout << texto5 << endl;                                                                    // Informa sucesso.
 //            getch();
 //            return;
 //        }
-//
-//    cout << texto12 << endl;                                                                            // Informa falha.
-//    getch();
-//
-//    return;
-//}
+
+
+    return;
+}
 
 ////--------------------------------------------------------------------------------------------
 //
+
+bool CntrApresentacaoConta::descadastrar(Email* email){
+    system("clear");
+    char c;
+    if(cntrServicoConta->descadastrarConta(email)){
+        cout << "Conta descadastrada com sucesso" << endl;
+        c = getc(stdin);
+    }
+}
+
+
+
 void CntrApresentacaoConta::consultarDadosConta(Email* email){
 
     cntrServicoConta->consultarDadosConta(email);

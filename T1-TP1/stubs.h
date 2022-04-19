@@ -27,6 +27,8 @@ class StubServicoConta:public IServicoConta{
         void consultarDadosConta(Email*);
         void editar(Usuario*);
         bool cadastrarUsuario(Usuario);
+        bool descadastrarConta(Email*);
+//        bool cadastrarConta(Usuario);
 };
 
 //--------------------------------------------------------------------------------------------

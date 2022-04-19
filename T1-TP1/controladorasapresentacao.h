@@ -45,6 +45,7 @@ inline void CntrApresentacaoControle::setCntrApresentacaoExcursao(IApresentacaoE
 class CntrApresentacaoAutenticacao:public IApresentacaoAutenticacao{
     private:
         IServicoAutenticacao *cntr;
+
     public:
         bool autenticar(Email*);
         void setCntrServicoAutenticacao(IServicoAutenticacao*);
@@ -64,21 +65,15 @@ class CntrApresentacaoConta:public IApresentacaoConta{
     public:
         void executar(Email*);
         void consultarDadosConta(Email*);
-//      void cadastrar();
         void editar(Usuario*);
-//      void descadastrar(Email);
+        void cadastrar();
+        bool descadastrar(Email*);
         void setCntrServicoConta(IServicoConta*);
-//        void setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros*);
 };
 
 inline void CntrApresentacaoConta::setCntrServicoConta(IServicoConta *cntr){
-    cntrServicoConta = cntr;
+    this->cntrServicoConta = cntr;
 }
-//
-//inline void CntrApresentacaoPessoal::setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros *cntr){
-//    cntrServicoProdutosFinanceiros = cntr;
-//}
-
 //--------------------------------------------------------------------------------------------
 
 class CntrApresentacaoExcursao:public IApresentacaoExcursao{
