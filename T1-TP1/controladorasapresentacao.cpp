@@ -199,7 +199,7 @@ void CntrApresentacaoConta::executar(Email* email){
         cout << texto4 << endl;                                                               // Imprime nome do campo.
 
         c = getc(stdin);
-        campo = c - 48;                                                                   // Leitura do campo de entrada e convers�o de ASCII.
+        campo = c - 48;                                                                       // Leitura do campo de entrada e convers�o de ASCII.
 
         switch(campo){
             case 1: consultarDadosConta(email);
@@ -240,14 +240,12 @@ void CntrApresentacaoConta::cadastrar(){
     system("clear");                                                                                 // Limpa janela.
     cout << texto1 << endl;                                                                    // Imprime solicita��o ao usu�rio.
     cout << texto2 << " ";                                                                     // Imprime nome do campo.
-    cin.getline(campo1,sizeof(campo1));                                                        // L� valor do campo composto.
-
-
+    cin >> campo1;                                                       // L� valor do campo composto.
     cout << texto3 << " ";                                                                     // Imprime nome do campo.
     cin >> campo2;                                                                             // L� valor do campo.
     cout << texto4 << " ";                                                                     // Imprime nome do campo.
     cin >> campo3;
-    system("clear");                                                                            // L� valor do campo.
+                                                                               // L� valor do campo.
     try{
         nome.setValor(string(campo1));
         email.setEmail(string(campo2));
@@ -265,22 +263,27 @@ void CntrApresentacaoConta::cadastrar(){
 
     Usuario usuario;
 
+    try{
     usuario.setNome(nome);
     usuario.setEmail(email);
     usuario.setSenha(senha);
+    }
+    catch(invalid_argument &exp){
+        cout << texto6 << endl;                                                                // Informa formato incorreto.
+        c = getc(stdin);
+        scanf("%c", &c);
+        system("clear");
+        return;
+    }
 
-    cout << texto5 << endl;
-    c = getc(stdin);
-    campo = c - 48;
-    // Cadastra usu�rio e conta.
+    nome = usuario.getNome();
+    cout << nome.getValor() << " mais um passo e vc sera cadastrado!" << endl;
 
-//    if(cntrServicoConta->cadastrarUsuario(usuario))
-//        {
-//            cout << texto5 << endl;                                                                    // Informa sucesso.
-//            getch();
-//            return;
-//        }
+    printf("clique enter para continuar");
+    scanf("%c", &c);
+    scanf("%c", &c);
 
+    cntrServicoConta->cadastrarConta(&usuario);
 
     return;
 }

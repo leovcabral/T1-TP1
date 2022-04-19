@@ -1,23 +1,40 @@
 #include "stubs.h"
+#include <iostream>
+#include <string.h>
 
 //--------------------------------------------------------------------------------------------
 // Valores usados como gatilhos de erros.
 
-const string StubServicoAutenticacao::EMAIL_VALIDO = "nando@email.com";
-const string StubServicoAutenticacao::SENHA_VALIDO = "Ab123456";
-//const string StubServicoProdutosFinanceiros::INVALIDO = "12345";
+
 
 //--------------------------------------------------------------------------------------------
 // Implementa��es dos m�todos de classes stub.
 
-bool StubServicoAutenticacao::autenticar(Email email, Senha senha){
-    if(email.getEmail().compare(EMAIL_VALIDO) == 0 &&
-        senha.getPassword().compare(SENHA_VALIDO) == 0){
-        return true;
-        }
-    else{
-        return false;
-        }
+bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cadastrado){
+
+
+//    if(email.getEmail().compare(EMAIL_VALIDO) == 0 &&
+//        senha.getPassword().compare(SENHA_VALIDO) == 0){
+//        return true;
+//        }
+//    else{
+//        return false;
+//        }
+
+    char lixo;
+    Nome nome;
+    ListaUsuarios* aux = this->ptr;
+
+    printf("debug!! ");
+    scanf("%c", & lixo);
+    scanf("%c", & lixo);
+
+    nome = this->ptr->ptr->getNome();
+
+    cout << nome.getValor() << endl;
+
+
+
 }
 
 void StubServicoConta::consultarDadosConta(Email *email){
@@ -91,6 +108,88 @@ void StubServicoConta::editar(Usuario *user){
 
 }
 
+void StubServicoConta::cadastrarConta(Usuario* user)
+{
+    char lixo;
+
+    Nome nome;
+    Email email;
+    Senha senha;
+
+    nome = user->getNome();
+    email = user->getEmail();
+    senha = user->getSenha();
+
+    Usuario* novo_cadastro;
+    novo_cadastro = new Usuario;
+
+    novo_cadastro->setNome(nome);
+    novo_cadastro->setEmail(email);
+    novo_cadastro->setSenha(senha);
+
+    if(this->TamLista == 0)
+    {
+        ListaUsuarios* novo_user;
+        novo_user = new ListaUsuarios;
+
+        novo_user->ptr = novo_cadastro;
+        novo_user->prx = NULL;
+
+        this->ptr = novo_user;
+        this->TamLista ++;
+    }
+    else
+    {
+        ListaUsuarios* aux;
+        ListaUsuarios* novo_user;
+        novo_user = new ListaUsuarios;
+        aux = this->ptr;
+
+        while(aux->prx != NULL)
+        {
+            aux = aux->prx;
+        }
+
+        aux->prx = novo_user;
+        novo_user->ptr = novo_cadastro;
+        novo_user->prx = NULL;
+        this->TamLista ++;
+
+    }
+
+    printf("cadastro realizado com sucesso. aperte enter para retornar ");
+    scanf("%c", & lixo);
+    scanf("%c", & lixo);
+
+    listarUsers();
+
+}
+
+void StubServicoConta::listarUsers()
+{
+    ListaUsuarios* aux;
+    aux = this->ptr;
+    char lixo;
+    Nome nome;
+
+    while(aux->prx != NULL)
+    {
+        nome = aux->ptr->getNome();
+        cout << nome.getValor() << endl;
+        aux = aux->prx;
+
+    }
+
+    nome = aux->ptr->getNome();
+    cout << nome.getValor() << endl;
+
+    printf("aperte enter para retornar ");
+    scanf("%c", & lixo);
+    scanf("%c", & lixo);
+
+
+}
+
 void StubServicoExcursao::listar(){
     char lixo;
 
@@ -101,7 +200,8 @@ void StubServicoExcursao::listar(){
     printf("digite enter para retornar");
 
     scanf("%c", &lixo);
-     scanf("%c", &lixo);
+    scanf("%c", &lixo);
+
 
 }
 

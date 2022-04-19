@@ -158,32 +158,32 @@
 1650336874 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/controladorasapresentacao.cpp
 	"controladorasapresentacao.h"
 
-1650329636 source:/home/adriano/Desktop/T1-TP1/T1-TP1/controladorasapresentacao.cpp
+1650352690 source:/home/adriano/Desktop/T1-TP1/T1-TP1/controladorasapresentacao.cpp
 	"controladorasapresentacao.h"
 
-1650328947 /home/adriano/Desktop/T1-TP1/T1-TP1/controladorasapresentacao.h
+1650337931 /home/adriano/Desktop/T1-TP1/T1-TP1/controladorasapresentacao.h
 	<iostream>
 	<string.h>
 	"dominios.h"
 	"entidades.h"
 	"interfaces.h"
 
-1650167859 /home/adriano/Desktop/T1-TP1/T1-TP1/dominios.h
+1650348296 /home/adriano/Desktop/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
 	<string.h>
 	<cstring>
 
-1650167859 /home/adriano/Desktop/T1-TP1/T1-TP1/entidades.h
+1650353612 /home/adriano/Desktop/T1-TP1/T1-TP1/entidades.h
 	"dominios.h"
 	<string>
 
-1650329560 /home/adriano/Desktop/T1-TP1/T1-TP1/interfaces.h
+1650359291 /home/adriano/Desktop/T1-TP1/T1-TP1/interfaces.h
 	"dominios.h"
 	"entidades.h"
 
-1650167859 source:/home/adriano/Desktop/T1-TP1/T1-TP1/dominios.cpp
+1650331921 source:/home/adriano/Desktop/T1-TP1/T1-TP1/dominios.cpp
 	<iostream>
 	<cstring>
 	<ctype.h>
@@ -192,9 +192,9 @@
 	<string>
 	"dominios.h"
 
-1650167859 source:/home/adriano/Desktop/T1-TP1/T1-TP1/entidades.cpp
+1650331921 source:/home/adriano/Desktop/T1-TP1/T1-TP1/entidades.cpp
 
-1650329236 source:/home/adriano/Desktop/T1-TP1/T1-TP1/main.cpp
+1650361322 source:/home/adriano/Desktop/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
@@ -204,21 +204,24 @@
 	"controladorasapresentacao.h"
 	"stubs.h"
 
-1650167859 /home/adriano/Desktop/T1-TP1/T1-TP1/testes.h
+1650331921 /home/adriano/Desktop/T1-TP1/T1-TP1/testes.h
 	<iostream>
 	<cstring>
 	"dominios.h"
 	"entidades.h"
 
-1650329358 /home/adriano/Desktop/T1-TP1/T1-TP1/stubs.h
+1650361830 /home/adriano/Desktop/T1-TP1/T1-TP1/stubs.h
 	<string>
 	"dominios.h"
+	"entidades.h"
 	"interfaces.h"
 
-1650329819 source:/home/adriano/Desktop/T1-TP1/T1-TP1/stubs.cpp
+1650361235 source:/home/adriano/Desktop/T1-TP1/T1-TP1/stubs.cpp
 	"stubs.h"
+	<iostream>
+	<string.h>
 
-1650167859 source:/home/adriano/Desktop/T1-TP1/T1-TP1/testes.cpp
+1650331921 source:/home/adriano/Desktop/T1-TP1/T1-TP1/testes.cpp
 	<iostream>
 	"testes.h"
 

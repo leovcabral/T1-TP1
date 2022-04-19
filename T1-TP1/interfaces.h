@@ -57,6 +57,7 @@ class IApresentacaoExcursao{
 
 class IServicoAutenticacao {
     public:
+        ListaUsuarios* ptr;
         virtual bool autenticar(Email, Senha) = 0;
         virtual ~IServicoAutenticacao(){}
 };
@@ -64,10 +65,13 @@ class IServicoAutenticacao {
 class IServicoConta{
 
     public:
-//       virtual void cadastrarConta(Usuario*) = 0;
+        ListaUsuarios* ptr;
+        int TamLista;
+        virtual void cadastrarConta(Usuario*) = 0;
         virtual bool descadastrarConta(Email*) = 0;
         virtual void consultarDadosConta(Email*) = 0;
         virtual void editar(Usuario*) = 0;
+        virtual void listarUsers() = 0;
         virtual ~IServicoConta(){}
 };
 

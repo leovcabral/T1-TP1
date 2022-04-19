@@ -218,5 +218,12 @@ inline Endereco Excursao::getEndereco() const {
     return endereco;
 }
 
+class ListaUsuarios
+{
+    public:
+        Usuario* ptr;
+        ListaUsuarios* prx;
+};
+
 
 #endif // ENTIDADES_H_INCLUDE
