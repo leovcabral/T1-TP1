@@ -68,9 +68,26 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
 
 void StubServicoConta::consultarDadosConta(Email *email){
     char lixo;
-    cout << "Dados de conta" << endl;
-    cout << "Email: " << email->getEmail() << endl;
-    cout << "Nome: Fernando" << endl;
+    if(this -> TamLista == 0){
+        cout << "Não existem usuários" << endl;
+    }
+    else{
+        ListaUsuarios* aux;
+        aux = this->ptr;
+        cout << "Fora do while" << endl;
+        scanf("%c", &lixo);
+        scanf("%c", &lixo);
+        while(aux != NULL){
+            cout << "Entrou no while" << endl;
+            if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
+                cout << "Dados de conta:" << endl;
+                cout << "Email: " << email->getEmail() << endl;
+                cout << "Nome: " << aux -> ptr -> getNome().getValor() << endl;
+                break;
+            }
+            aux = aux -> prx;
+    }
+    }
 
     printf("pressione enter para retornar");
     scanf("%c", &lixo);

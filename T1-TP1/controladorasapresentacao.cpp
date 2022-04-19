@@ -62,8 +62,6 @@ void CntrApresentacaoControle::executar(){
                     cout << texto8 << endl;                                             // Imprime nome do campo.
                     cout << texto9 << endl;
 
-                    fflush(stdin);                                                      // Imprime nome do campo.
-                    scanf("%c", &lixo);
 
                     scanf("%c", &c);                                                     // Imprime nome do campo.
 

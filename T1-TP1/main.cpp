@@ -8,7 +8,6 @@
 #include "controladorasapresentacao.h"
 #include "stubs.h"
 
-
 using namespace std;
 
 int main()
@@ -194,7 +193,49 @@ int main()
 
     cntrApresentacaoExcursao->setCntrServicoExcursao(stubServicoExcursao);
 
-    stubServicoConta->TamLista = 0;
+    stubServicoConta->TamLista = 1;
+
+    Usuario user1;
+    Usuario user2;
+    Usuario user3;
+
+    Nome nome;
+    Email email;
+    Senha senha;
+
+    nome.setValor("Adriano");
+    email.setEmail("adriano@mail.com");
+    senha.setPassword("Ab123456");
+
+    user1.setNome(nome);
+    user1.setEmail(email);
+    user1.setSenha(senha);
+
+    stubServicoConta->cadastrarConta(&user1);
+
+    nome.setValor("Arthur");
+    email.setEmail("arthur@mail.com");
+    senha.setPassword("Ab123456");
+
+    user2.setNome(nome);
+    user2.setEmail(email);
+    user2.setSenha(senha);
+
+    stubServicoConta->cadastrarConta(&user2);
+
+    nome.setValor("Leonardo");
+    email.setEmail("leonardo@mail.com");
+    senha.setPassword("Ab123456");
+
+    user3.setNome(nome);
+    user3.setEmail(email);
+    user3.setSenha(senha);
+
+    stubServicoConta->cadastrarConta(&user3);
+
+
+    system("clear");
+
 
     cntrApresentacaoControle->executar();                                           // Solicitar servi�o.
 
