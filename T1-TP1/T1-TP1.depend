@@ -49,7 +49,7 @@
 	<iostream>
 	"testes.h"
 
-1650335035 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
+1650405796 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
@@ -91,7 +91,7 @@
 
 1645562833 D
 
-1649799240 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
+1650380419 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/dominios.h
 	<stdexcept>
 	<iostream>
 	<stdlib.h>
@@ -130,7 +130,7 @@
 	"dominios.h"
 	<string>
 
-1649799240 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.h
+1650380419 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/entidades.h
 	"dominios.h"
 	<string>
 
@@ -140,26 +140,29 @@
 	"dominios.h"
 	<string>
 
-1650336575 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/interfaces.h
+1650411077 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/interfaces.h
 	"dominios.h"
 	"entidades.h"
 
-1650335505 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/controladorasapresentacao.h
+1650411094 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/controladorasapresentacao.h
 	<iostream>
 	<string.h>
 	"dominios.h"
 	"entidades.h"
 	"interfaces.h"
 
-1650336163 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/stubs.h
+1650411134 /home/arthur/Documents/tp1/T1-TP1/T1-TP1/stubs.h
 	<string>
 	"dominios.h"
+	"entidades.h"
 	"interfaces.h"
 
-1650336211 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/stubs.cpp
+1650409068 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/stubs.cpp
 	"stubs.h"
+	<iostream>
+	<string.h>
 
-1650336874 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/controladorasapresentacao.cpp
+1650409404 source:/home/arthur/Documents/tp1/T1-TP1/T1-TP1/controladorasapresentacao.cpp
 	"controladorasapresentacao.h"
 
 1650366311 source:/home/adriano/Desktop/T1-TP1/T1-TP1/controladorasapresentacao.cpp

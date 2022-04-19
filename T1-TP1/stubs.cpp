@@ -12,15 +12,6 @@ ListaUsuarios* head_global;
 
 bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cadastrado){
 
-
-//    if(email.getEmail().compare(EMAIL_VALIDO) == 0 &&
-//        senha.getPassword().compare(SENHA_VALIDO) == 0){
-//        return true;
-//        }
-//    else{
-//        return false;
-//        }
-
     char lixo;
     Nome nome;
     Email email;
@@ -35,9 +26,6 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
 
         email = aux->ptr->getEmail();
 
-        cout << "cadastrado :" << email_cadastrado.getEmail() << endl;
-        cout << "analisado  :" << email.getEmail() << endl;
-
         if(email_cadastrado.getEmail().compare(email.getEmail()) == 0)
         {
             cadastro_encontrado = true;
@@ -45,16 +33,18 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
         }
         aux = aux->prx;
     }
-
+    if(aux == NULL){
+        return false;
+    }
     senha = aux->ptr->getSenha();
 
     if(cadastro_encontrado)
     {
         if(senha_cadastrado.getPassword().compare(senha.getPassword()) == 0)
         {
-            printf("encontramos seu cadatro!");
+            cout << "Encontramos seu cadastro!" << endl;
 
-            printf("pressione enter para retornar");
+            cout << "Pressione enter para retornar" << endl;
             scanf("%c", &lixo);
             scanf("%c", &lixo);
 
@@ -63,7 +53,6 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
         else return false;
     }
     else return false;
-
 }
 
 void StubServicoConta::consultarDadosConta(Email *email){
@@ -74,11 +63,9 @@ void StubServicoConta::consultarDadosConta(Email *email){
     else{
         ListaUsuarios* aux;
         aux = this->ptr;
-        cout << "Fora do while" << endl;
         scanf("%c", &lixo);
         scanf("%c", &lixo);
         while(aux != NULL){
-            cout << "Entrou no while" << endl;
             if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
                 cout << "Dados de conta:" << endl;
                 cout << "Email: " << email->getEmail() << endl;
@@ -89,26 +76,23 @@ void StubServicoConta::consultarDadosConta(Email *email){
     }
     }
 
-    printf("pressione enter para retornar");
+    cout << "Pressione enter para retornar" << endl;
     scanf("%c", &lixo);
     scanf("%c", &lixo);
 
 }
 
-void StubServicoConta::editar(Usuario *user){
+void StubServicoConta::editar(Email *email){
 
     char lixo;
 
-    char campo1[80];
-    char campo2[80];
-    char campo3[80];
+    char novoNome[80];
+    char novaSenha[80];
 
-    Email email;
     Senha senha;
     Nome nome;
 
     char texto1[]="Preencha novo valor para Nome : ";
-    char texto2[]="Preencha novo valor para Email: ";
     char texto3[]="Preencha novo valor para Senha: ";
     char texto4[]="Dados em formato incorreto. Digite algo.";
 
@@ -118,18 +102,17 @@ void StubServicoConta::editar(Usuario *user){
     system("clear");
 
     cout << texto1 << " ";
-    cin >> campo1;
-    cout << texto2 << " ";
-    cin >> campo2;
+    cin >> novoNome;
+//    cout << texto2 << " ";
+//    cin >> campo2;
     cout << texto3 << " ";
-    cin >> campo3;
+    cin >> novaSenha;
 
     try{
-            nome.setValor(string(campo1));
-            email.setEmail(string(campo2));
-            senha.setPassword(string(campo3));
+            nome.setValor(string(novoNome));
+            senha.setPassword(string(novaSenha));
 
-            user->setEmail(email);
+
             user->setSenha(senha);
             user->setNome(nome);
                                                                 // Atribui Valor � senha.
@@ -140,7 +123,7 @@ void StubServicoConta::editar(Usuario *user){
             system("clear");                                         // Limpa janela.
             cout << texto4 << endl;
 
-            printf("Dados em formato incorreto. pressione enter para tentar dnovo");
+            cout << "Dados em formato incorreto. Pressione enter para tentar de novo" << endl;
             scanf("%c", &lixo);
             scanf("%c", &lixo);
                                                                                      // L� caracter digitado.
@@ -148,9 +131,9 @@ void StubServicoConta::editar(Usuario *user){
 
     }
 
-    printf("voce editou com sucesso, aperte enter para retornar");
-            scanf("%c", &lixo);
-            scanf("%c", &lixo);
+    cout << "voce editou com sucesso, aperte enter para retornar" << endl;
+    scanf("%c", &lixo);
+    scanf("%c", &lixo);
 
 }
 
@@ -204,11 +187,9 @@ void StubServicoConta::cadastrarConta(Usuario* user)
 
     }
 
-    printf("cadastro realizado com sucesso. aperte enter para retornar ");
+    cout << "Cadastro realizado com sucesso. Aperte enter para retornar. " << endl;
     scanf("%c", & lixo);
     scanf("%c", & lixo);
-
-    listarUsers();
 
 }
 
@@ -230,7 +211,7 @@ void StubServicoConta::listarUsers()
     nome = aux->ptr->getNome();
     cout << nome.getValor() << endl;
 
-    printf("aperte enter para retornar ");
+    cout << "aperte enter para retornar " << endl;
     scanf("%c", & lixo);
     scanf("%c", & lixo);
 
@@ -259,7 +240,42 @@ void StubServicoExcursao::listar(){
 //}
 
 bool StubServicoConta::descadastrarConta(Email *email){
-    return true;
+    char lixo;
+     if(this -> TamLista == 0){
+        cout << "Não existem usuários" << endl;
+    }
+    else{
+        ListaUsuarios* aux;
+        ListaUsuarios* anterior;
+        anterior = NULL;
+        aux = this->ptr;
+        scanf("%c", &lixo);
+        scanf("%c", &lixo);
+        while(aux != NULL){
+            if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
+                if(anterior == NULL){
+                    this->ptr = aux->prx;
+                    head_global = this->ptr;
+                    this->TamLista--;
+                    return true;
+                }
+                else if(aux->prx == NULL){
+                    anterior->prx = NULL;
+                    this->TamLista--;
+                    return true;
+                }
+                else{
+                    anterior->prx = aux->prx;
+                    this->TamLista--;
+                    return true;
+                }
+
+
+            }
+            anterior = aux;
+            aux = aux -> prx;
+    }
+    }
 }
 
 //

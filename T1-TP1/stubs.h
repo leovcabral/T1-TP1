@@ -29,7 +29,7 @@ class StubServicoConta:public IServicoConta{
         ListaUsuarios* ptr;
         int TamLista;
         void consultarDadosConta(Email*);
-        void editar(Usuario*);
+        void editar(Email*);
         void listarUsers();
         void cadastrarConta(Usuario*);
         bool descadastrarConta(Email*);

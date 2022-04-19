@@ -65,7 +65,7 @@ class CntrApresentacaoConta:public IApresentacaoConta{
     public:
         void executar(Email*);
         void consultarDadosConta(Email*);
-        void editar(Usuario*);
+        void editar(Email*);
         void cadastrar();
         bool descadastrar(Email*);
         void setCntrServicoConta(IServicoConta*);

@@ -15,7 +15,7 @@ void CntrApresentacaoControle::executar(){
 
     // Mensagens a serem apresentadas na tela de sele��o de servi�o.
 
-    char texto6[]="Selecione um dos servicos : ";
+    char texto6[]="Selecione um dos servicos: ";
     char texto7[]="1 - Selecionar servicos de conta.";
     char texto8[]="2 - Descadastrar conta.";
 //    char texto11[]="2 - Selecionar servicos relacionados a Excursao";
@@ -94,6 +94,7 @@ void CntrApresentacaoControle::executar(){
             {
                 cout << texto10 << endl;
                 scanf("%c", &lixo);
+                scanf("%c", &lixo);
 
             }
        }
@@ -122,7 +123,7 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
 
     // Mensagens a serem apresentadas na tela de autentica��o.
 
-    char texto1[]="Digite o Email  : ";
+    char texto1[]="Digite o Email: ";
     char texto2[]="Digite a senha: ";
     char texto3[]="Dado em formato incorreto. Digite algo.";
 
@@ -152,11 +153,11 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
             break;                                                                              // Abandona la�o em caso de formatos corretos.
         }
         catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
-//          CLR_SCR;
+
                                                               // Limpa janela.
-            cout << texto3 << endl;
             char c;                                            // Informa formato incorreto.
             c = getc(stdin);
+            return false;
             system("clear");                                                                          // L� caracter digitado.
         }
     }
@@ -165,9 +166,9 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
 
 //--------------------------------------------------------------------------------------------
 //
-void CntrApresentacaoConta::editar(Usuario* user){
+void CntrApresentacaoConta::editar(Email* email){
 
-    cntrServicoConta->editar(user);
+    cntrApresentacaoConta->editar(email);
 
 }
 void CntrApresentacaoConta::executar(Email* email){
@@ -303,8 +304,6 @@ bool CntrApresentacaoConta::descadastrar(Email* email){
 void CntrApresentacaoConta::consultarDadosConta(Email* email){
 
     cntrServicoConta->consultarDadosConta(email);
-                                                                               // Limpa janela.
-
 }
 
 ////--------------------------------------------------------------------------------------------
