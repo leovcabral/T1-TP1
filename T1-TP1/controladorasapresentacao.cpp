@@ -10,14 +10,14 @@ void CntrApresentacaoControle::executar(){
     char texto1[]="Selecione um dos servicos : ";
     char texto2[]="1 - Acessar sistema.";
 //    char texto3[]="2 - Cadastrar usuario.";
-//    char texto4[]="3 - Acessar dados sobre produtos financeiros.";
+    char texto4[]="3 - Acessar dados sobre Excursao.";
     char texto5[]="4 - Encerrar execucao do sistema.";
 
     // Mensagens a serem apresentadas na tela de sele��o de servi�o.
 
     char texto6[]="Selecione um dos servicos : ";
     char texto7[]="1 - Selecionar servicos de conta.";
-//    char texto8[]="2 - Selecionar servicos relacionados a produtos financeiros.";
+//    char texto8[]="2 - Selecionar servicos relacionados a Excursao";
     char texto9[]="3 - Encerrar sessao.";
 
     char texto10[]="Falha na autenticacao. Digite algo para continuar.";                        // Mensagem a ser apresentada.
@@ -33,11 +33,12 @@ void CntrApresentacaoControle::executar(){
         // Apresenta tela inicial.
 
 //        CLR_SCR;                                                                                // Limpa janela.
+        system("clear");
 
         cout << texto1 << endl;                                                                 // Imprime nome do campo.
         cout << texto2 << endl;                                                                 // Imprime nome do campo.
 //        cout << texto3 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto4 << endl;                                                                 // Imprime nome do campo.
+        cout << texto4 << endl;                                                                 // Imprime nome do campo.
         cout << texto5 << endl;
 
        scanf("%c", &c);                                                                                     // Imprime nome do campo.
@@ -58,7 +59,7 @@ void CntrApresentacaoControle::executar(){
                     cout << "voce esta autenticado" << endl;
                     cout << texto6 << endl;                                             // Imprime nome do campo.
                     cout << texto7 << endl;                                             // Imprime nome do campo.
-                    //cout << texto8 << endl;                                             // Imprime nome do campo.
+//                    cout << texto8 << endl;                                             // Imprime nome do campo.
                     cout << texto9 << endl;
 
                     fflush(stdin);                                                      // Imprime nome do campo.
@@ -74,7 +75,6 @@ void CntrApresentacaoControle::executar(){
 
                     if(campo == 1)
                     {
-                        printf("\n!!!\n");
                         cntrApresentacaoConta->executar(&email);
                     }
                     else if(campo == 3)
@@ -91,6 +91,10 @@ void CntrApresentacaoControle::executar(){
                 scanf("%c", &lixo);
 
             }
+       }
+       else if(campo == 3)
+       {
+            cntrApresentacaoExcursao->executar();
        }
        else if(campo == 4)
        {
@@ -304,39 +308,42 @@ void CntrApresentacaoConta::consultarDadosConta(Email* email){
 }
 
 ////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::executar(){
-//
-//    // Mensagens a serem apresentadas na tela simplificada de produtos financeiros.
-//
-//    char texto1[]="Selecione um dos servicos : ";
-//    char texto2[]="1 - Consultar produto de investimento.";
-//    char texto3[]="2 - Retornar.";
-//
-//    int campo;                                                                                  // Campo de entrada.
-//
-//    bool apresentar = true;                                                                     // Controle de la�o.
-//
-//    while(apresentar){
-//
-//        // Apresenta tela simplificada de produtos financeiros.
-//
-//        CLR_SCR;                                                                                // Limpa janela.
-//
-//        cout << texto1 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto2 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto3 << endl;                                                                 // Imprime nome do campo.
-//
-//        campo = getch() - 48;                                                                   // Leitura do campo de entrada.
-//
-//        switch(campo){
-//            case 1: consultarProdutoInvestimento();
-//                    break;
-//            case 2: apresentar = false;
-//                    break;
-//        }
-//    }
-//}
+
+void CntrApresentacaoExcursao::executar(){
+
+    // Mensagens a serem apresentadas na tela simplificada de produtos financeiros.
+
+    char texto1[]="Selecione um dos servicos : ";
+    char texto2[]="1 - Consultar lista de Excursoes";
+    char texto3[]="2 - Retornar.";
+
+    int campo;
+
+    char c;                                                                                 // Campo de entrada.
+
+    bool apresentar = true;                                                                     // Controle de la�o.
+
+    while(apresentar){
+
+        // Apresenta tela simplificada de produtos financeiros.
+
+        system("clear");                                                                               // Limpa janela.
+
+        cout << texto1 << endl;                                                                 // Imprime nome do campo.
+        cout << texto2 << endl;                                                                 // Imprime nome do campo.
+        cout << texto3 << endl;                                                                 // Imprime nome do campo.
+
+        c = getc(stdin);
+        campo = c - 48;                                                                   // Leitura do campo de entrada.
+
+        switch(campo){
+            case 1: cntr->listar();
+                    break;
+            case 2: apresentar = false;
+                    break;
+        }
+    }
+}
 //
 ////--------------------------------------------------------------------------------------------
 //

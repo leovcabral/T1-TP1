@@ -5,7 +5,6 @@
 
 const string StubServicoAutenticacao::EMAIL_VALIDO = "nando@email.com";
 const string StubServicoAutenticacao::SENHA_VALIDO = "Ab123456";
-//const string StubServicoPessoal::INVALIDO = "12345";
 //const string StubServicoProdutosFinanceiros::INVALIDO = "12345";
 
 //--------------------------------------------------------------------------------------------
@@ -89,6 +88,20 @@ void StubServicoConta::editar(Usuario *user){
     printf("voce editou com sucesso, aperte enter para retornar");
             scanf("%c", &lixo);
             scanf("%c", &lixo);
+
+}
+
+void StubServicoExcursao::listar(){
+    char lixo;
+
+    system("clear");
+
+    printf("lista: A, B, C, D, E...\n");
+
+    printf("digite enter para retornar");
+
+    scanf("%c", &lixo);
+     scanf("%c", &lixo);
 
 }
 //

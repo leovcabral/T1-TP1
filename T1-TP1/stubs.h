@@ -30,17 +30,12 @@ class StubServicoConta:public IServicoConta{
 };
 
 //--------------------------------------------------------------------------------------------
-//
-//class StubServicoProdutosFinanceiros:public IServicoProdutosFinanceiros {
-//    private:
-//        static const string INVALIDO;
-//    public:
-//        bool cadastrarConta(Conta);
-//        bool consultarConta(Conta*);
-//        bool cadastrarProdutoInvestimento(Produto);
-//        bool descadastrarProdutoInvestimento(Codigo);
-//        bool realizarAplicacao(Aplicacao);
-//        bool recuperarAplicacao(Aplicacao*);                        // Adaptar assinatura.
-//};
+
+class StubServicoExcursao:public IServicoExcursao{
+    private:
+
+    public:
+        void listar();
+};
 
 #endif // STUBS_H_INCLUDED

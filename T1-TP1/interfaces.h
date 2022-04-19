@@ -15,7 +15,7 @@
 
 class IServicoAutenticacao;
 class IServicoConta;
-//class IServicoProdutosFinanceiros;
+class IServicoExcursao;
 
 //--------------------------------------------------------------------------------------------
 // Declarações das interfaces da camada de apresentação.
@@ -42,14 +42,13 @@ class IApresentacaoConta{
         virtual ~IApresentacaoConta(){}
 };
 
-//// 202061421
-//class IApresentacaoExcursao{
-//    public:
-//        virtual void executar() = 0;
-//        virtual void executar(Email) = 0;
-//        virtual void setCntrServicosExcursao(IServicoExcursao*) = 0;
-//        virtual ~IApresentacaoExcursao(){}
-//};
+// 202061421
+class IApresentacaoExcursao{
+    public:
+        virtual void executar() = 0;
+        virtual void setCntrServicoExcursao(IServicoExcursao*) = 0;
+        virtual ~IApresentacaoExcursao(){}
+};
 
 //--------------------------------------------------------------------------------------------
 // Declarações das interfaces da camada de serviço.
@@ -68,17 +67,16 @@ class IServicoConta{
         virtual ~IServicoConta(){}
 };
 
-//class IServicoExcursao{
-//public:
-//        virtual void listar() = 0;
+class IServicoExcursao{
+public:
+        virtual void listar() = 0;
 //        virtual bool cadastrar(Usuario*) = 0
 //        virtual bool descadastrar(Usuario*) = 0;
 //        virtual bool avaliar(Usuario*, Excursao*) = 0;
 //        virtual bool acessarExcursao(Excursao*,Usuario*) = 0;
 //        virtual bool acessarAvaliacao(Excursao*, Usuario*) = 0;
 //        virtual bool acessarSessao(Excursao*, Usuario*) = 0;
-//        virtual bool setCntrServicosExcursao(IServicoExcursao*) = 0;                      // Adaptar aos requisitos.
-//        virtual ~IServicoExcursao(){}
-//};
+        virtual ~IServicoExcursao(){}
+};
 
 #endif // INTERFACES_H_INCLUDED

@@ -163,35 +163,36 @@ int main()
     CntrApresentacaoControle *cntrApresentacaoControle;
     IApresentacaoAutenticacao *cntrApresentacaoAutenticacao;
     IApresentacaoConta *cntrApresentacaoConta;
-//    IApresentacaoProdutosFinanceiros *cntrApresentacaoProdutosFinanceiros;
+    IApresentacaoExcursao *cntrApresentacaoExcursao;
 
     cntrApresentacaoControle = new CntrApresentacaoControle();
     cntrApresentacaoAutenticacao = new CntrApresentacaoAutenticacao();
     cntrApresentacaoConta = new CntrApresentacaoConta();
-//    cntrApresentacaoProdutosFinanceiros = new CntrApresentacaoProdutosFinanceiros();
+    cntrApresentacaoExcursao = new CntrApresentacaoExcursao();
 
     // Instanciar stubs.
 
     IServicoAutenticacao *stubServicoAutenticacao;
     IServicoConta *stubServicoConta;
-//    IServicoProdutosFinanceiros *stubServicoProdutosFinanceiros;
+    IServicoExcursao *stubServicoExcursao;
 
     stubServicoAutenticacao = new StubServicoAutenticacao();
     stubServicoConta = new StubServicoConta();
-//    stubServicoProdutosFinanceiros = new StubServicoProdutosFinanceiros();
+    stubServicoExcursao = new StubServicoExcursao();
 
     // Interligar controladoras e stubs.
 
     cntrApresentacaoControle->setCntrApresentacaoAutenticacao(cntrApresentacaoAutenticacao);
     cntrApresentacaoControle->setCntrApresentacaoConta(cntrApresentacaoConta);
-//    cntrApresentacaoControle->setCntrApresentacaoProdutosFinanceiros(cntrApresentacaoProdutosFinanceiros);
+    cntrApresentacaoControle->setCntrApresentacaoExcursao(cntrApresentacaoExcursao);
 
     cntrApresentacaoAutenticacao->setCntrServicoAutenticacao(stubServicoAutenticacao);
 
-   cntrApresentacaoConta->setCntrServicoConta(stubServicoConta);
+    cntrApresentacaoConta->setCntrServicoConta(stubServicoConta);
+
 //    cntrApresentacaoPessoal->setCntrServicoProdutosFinanceiros(stubServicoProdutosFinanceiros);
 
-//    cntrApresentacaoProdutosFinanceiros->setCntrServicoProdutosFinanceiros(stubServicoProdutosFinanceiros);
+    cntrApresentacaoExcursao->setCntrServicoExcursao(stubServicoExcursao);
 
     cntrApresentacaoControle->executar();                                           // Solicitar servi�o.
 
