@@ -32,12 +32,17 @@ void StubServicoConta::consultarDadosConta(Email *email){
     scanf("%c", &lixo);
 
 }
-//
+
 //bool StubServicoConta::cadastrarUsuario(Usuario usuario){
 //    if(usuario.getEmail().getValor().compare(EMAIL_VALIDO) == 0)
 //        return true;
 //    return false;
 //}
+
+bool StubServicoConta::descadastrarConta(Email *email){
+    return true;
+}
+
 //
 //bool StubServicoProdutosFinanceiros::cadastrarConta(Conta conta){
 //    if(conta.getNumero().getValor().compare(INVALIDO) == 0)

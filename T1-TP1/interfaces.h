@@ -36,7 +36,7 @@ class IApresentacaoConta{
         virtual void consultarDadosConta(Email*) = 0;
         virtual void cadastrar() = 0;
 //        virtual void editar(Email*) = 0;
-//        virtual void descadastrar(Email*) = 0;
+        virtual bool descadastrar(Email*) = 0;
         virtual void setCntrServicoConta(IServicoConta*) = 0;
 //        virtual void setCntrServicoExcursao(IServicoExcursao*) = 0;
         virtual ~IApresentacaoConta(){}
@@ -63,6 +63,7 @@ class IServicoAutenticacao {
 class IServicoConta{
 public:
        virtual void cadastrarConta(Usuario*) = 0;
+       virtual bool descadastrarConta(Email*) = 0;
         virtual void consultarDadosConta(Email*) = 0;
         virtual ~IServicoConta(){}
 };

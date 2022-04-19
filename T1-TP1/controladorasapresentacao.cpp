@@ -17,7 +17,7 @@ void CntrApresentacaoControle::executar(){
 
     char texto6[]="Selecione um dos servicos : ";
     char texto7[]="1 - Selecionar servicos de conta.";
-//    char texto8[]="2 - Selecionar servicos relacionados a produtos financeiros.";
+    char texto8[]="2 - Descadastrar conta.";
     char texto9[]="3 - Encerrar sessao.";
 
     char texto10[]="Falha na autenticacao. Digite algo para continuar.";                        // Mensagem a ser apresentada.
@@ -58,7 +58,7 @@ void CntrApresentacaoControle::executar(){
                     cout << "voce esta autenticado" << endl;
                     cout << texto6 << endl;                                             // Imprime nome do campo.
                     cout << texto7 << endl;                                             // Imprime nome do campo.
-                    //cout << texto8 << endl;                                             // Imprime nome do campo.
+                    cout << texto8 << endl;                                             // Imprime nome do campo.
                     cout << texto9 << endl;
 
                     fflush(stdin);                                                      // Imprime nome do campo.
@@ -76,6 +76,11 @@ void CntrApresentacaoControle::executar(){
                     {
                         printf("\n!!!\n");
                         cntrApresentacaoConta->executar(&email);
+                    }
+                    else if(campo == 2)
+                    {
+                        printf("\n!!!\n");
+                        cntrApresentacaoConta->descadastrar(&email);
                     }
                     else if(campo == 3)
                     {
@@ -268,6 +273,17 @@ void CntrApresentacaoConta::cadastrar(){
 
 ////--------------------------------------------------------------------------------------------
 //
+
+bool CntrApresentacaoConta::descadastrar(Email* email){
+    system("clear");
+    cout << "chegou no apresentaçao descadastrar" << endl;
+    if(cntrServicoConta->descadastrarConta(email)){
+        cout << "Conta descadastrada" << endl;
+    }
+}
+
+
+
 void CntrApresentacaoConta::consultarDadosConta(Email* email){
 
     cntrServicoConta->consultarDadosConta(email);
