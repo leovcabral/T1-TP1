@@ -62,7 +62,7 @@ class IServicoAutenticacao {
 
 class IServicoConta{
 public:
-       virtual void cadastrarConta(Usuario*) = 0;
+//       virtual void cadastrarConta(Usuario*) = 0;
        virtual bool descadastrarConta(Email*) = 0;
         virtual void consultarDadosConta(Email*) = 0;
         virtual ~IServicoConta(){}

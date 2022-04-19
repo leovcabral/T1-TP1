@@ -80,7 +80,9 @@ void CntrApresentacaoControle::executar(){
                     else if(campo == 2)
                     {
                         printf("\n!!!\n");
-                        cntrApresentacaoConta->descadastrar(&email);
+                        if(cntrApresentacaoConta->descadastrar(&email)){
+                            break;
+                        }
                     }
                     else if(campo == 3)
                     {
@@ -178,7 +180,7 @@ void CntrApresentacaoConta::executar(Email* email){
 
         // Apresenta tela de sela��o de servi�o.
 
-//        CLR_SCR;
+//      CLR_SCR;
         system("clear");
                                                                                       // Limpa janela.
 //        cout << email->getEmail() << endl;
@@ -276,9 +278,11 @@ void CntrApresentacaoConta::cadastrar(){
 
 bool CntrApresentacaoConta::descadastrar(Email* email){
     system("clear");
-    cout << "chegou no apresentaçao descadastrar" << endl;
     if(cntrServicoConta->descadastrarConta(email)){
-        cout << "Conta descadastrada" << endl;
+        system("clear");
+        cout << "Conta descadastrada com sucesso" << endl;
+        cout << endl;
+        cout << endl;
     }
 }
 
