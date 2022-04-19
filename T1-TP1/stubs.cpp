@@ -5,7 +5,7 @@
 //--------------------------------------------------------------------------------------------
 // Valores usados como gatilhos de erros.
 
-
+ListaUsuarios* head_global;
 
 //--------------------------------------------------------------------------------------------
 // Implementa��es dos m�todos de classes stub.
@@ -23,17 +23,46 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
 
     char lixo;
     Nome nome;
-    ListaUsuarios* aux = this->ptr;
+    Email email;
+    Senha senha;
 
-    printf("debug!! ");
-    scanf("%c", & lixo);
-    scanf("%c", & lixo);
+    bool cadastro_encontrado = false;
+    ListaUsuarios* aux;
+    aux = head_global;
 
-    nome = this->ptr->ptr->getNome();
+    while(aux != NULL)
+    {
 
-    cout << nome.getValor() << endl;
+        email = aux->ptr->getEmail();
 
+        cout << "cadastrado :" << email_cadastrado.getEmail() << endl;
+        cout << "analisado  :" << email.getEmail() << endl;
 
+        if(email_cadastrado.getEmail().compare(email.getEmail()) == 0)
+        {
+            cadastro_encontrado = true;
+            break;
+        }
+        aux = aux->prx;
+    }
+
+    senha = aux->ptr->getSenha();
+
+    if(cadastro_encontrado)
+    {
+        if(senha_cadastrado.getPassword().compare(senha.getPassword()) == 0)
+        {
+            printf("encontramos seu cadatro!");
+
+            printf("pressione enter para retornar");
+            scanf("%c", &lixo);
+            scanf("%c", &lixo);
+
+            return true;
+        }
+        else return false;
+    }
+    else return false;
 
 }
 
@@ -136,6 +165,7 @@ void StubServicoConta::cadastrarConta(Usuario* user)
         novo_user->prx = NULL;
 
         this->ptr = novo_user;
+        head_global = this->ptr;
         this->TamLista ++;
     }
     else

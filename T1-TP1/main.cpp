@@ -194,13 +194,7 @@ int main()
 
     cntrApresentacaoExcursao->setCntrServicoExcursao(stubServicoExcursao);
 
-    ListaUsuarios* listaUsuarios;
-    listaUsuarios = new ListaUsuarios();
-
-    stubServicoConta->ptr = listaUsuarios;
-    stubServicoAutenticacao->ptr = listaUsuarios;
     stubServicoConta->TamLista = 0;
-
 
     cntrApresentacaoControle->executar();                                           // Solicitar servi�o.
 
