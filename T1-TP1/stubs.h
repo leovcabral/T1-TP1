@@ -39,10 +39,9 @@ class StubServicoConta:public IServicoConta{
 //--------------------------------------------------------------------------------------------
 
 class StubServicoExcursao:public IServicoExcursao{
-    private:
-
     public:
         void listar();
+        void cadastrar(Email*, Excursao*);
 };
 
 

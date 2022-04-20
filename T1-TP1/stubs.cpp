@@ -252,6 +252,12 @@ void StubServicoExcursao::listar(){
 
 }
 
+void StubServicoExcursao::cadastrar(Email* email, Excursao* excursao){
+
+
+
+}
+
 //bool StubServicoConta::cadastrarUsuario(Usuario usuario){
 //    if(usuario.getEmail().getValor().compare(EMAIL_VALIDO) == 0)
 //        return true;

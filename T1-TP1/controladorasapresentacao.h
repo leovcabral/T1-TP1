@@ -81,6 +81,7 @@ class CntrApresentacaoExcursao:public IApresentacaoExcursao{
         IServicoExcursao *cntr;
     public:
         void executar();
+        void cadastrar(Email* email);
         void setCntrServicoExcursao(IServicoExcursao*);
 };
 

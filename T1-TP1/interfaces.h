@@ -48,6 +48,7 @@ class IApresentacaoConta{
 class IApresentacaoExcursao{
     public:
         virtual void executar() = 0;
+        virtual void cadastrar(Email*) = 0;
         virtual void setCntrServicoExcursao(IServicoExcursao*) = 0;
         virtual ~IApresentacaoExcursao(){}
 };
@@ -78,7 +79,7 @@ class IServicoConta{
 class IServicoExcursao{
 public:
         virtual void listar() = 0;
-//        virtual bool cadastrar(Usuario*) = 0
+        virtual void cadastrar(Email*, Excursao*) = 0;
 //        virtual bool descadastrar(Usuario*) = 0;
 //        virtual bool avaliar(Usuario*, Excursao*) = 0;
 //        virtual bool acessarExcursao(Excursao*,Usuario*) = 0;

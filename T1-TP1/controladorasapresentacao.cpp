@@ -1,4 +1,5 @@
 #include "controladorasapresentacao.h"
+#include <stdio.h>
 
 //--------------------------------------------------------------------------------------------
 // Implementa��es de m�todos de classes controladoras.
@@ -18,8 +19,8 @@ void CntrApresentacaoControle::executar(){
     char texto6[]="Selecione um dos servicos : ";
     char texto7[]="1 - Selecionar servicos de conta.";
     char texto8[]="2 - Descadastrar conta.";
-//    char texto11[]="2 - Selecionar servicos relacionados a Excursao";
-    char texto9[]="3 - Encerrar sessao.";
+    char texto11[]="3 - Cadastrar excursao";
+    char texto9[]="4 - Encerrar sessao.";
     char texto10[]="Falha na autenticacao. Digite algo para continuar.";                        // Mensagem a ser apresentada.
     int campo;
     char lixo;
@@ -55,11 +56,13 @@ void CntrApresentacaoControle::executar(){
                 bool apresentar = true;                                                 // Controle de laço.
                 while(apresentar)
                 {
+                    fflush(stdin);
                     system("clear");
                     cout << "voce esta autenticado" << endl;
                     cout << texto6 << endl;                                             // Imprime nome do campo.
                     cout << texto7 << endl;                                             // Imprime nome do campo.
-                    cout << texto8 << endl;                                             // Imprime nome do campo.
+                    cout << texto8 << endl;
+                    cout << texto11 << endl;                                            // Imprime nome do campo.
                     cout << texto9 << endl;
 
 
@@ -83,6 +86,13 @@ void CntrApresentacaoControle::executar(){
                         }
                     }
                     else if(campo == 3)
+                    {
+                            cntrApresentacaoExcursao->cadastrar(&email);
+                            printf("Excursao cadastrada com sucesso. Clique enter para cntinuar");
+                            c = getc(stdin);
+                            campo = c - 48;
+                    }
+                    else if(campo == 4)
                     {
                         apresentar = false;
                         break;
@@ -225,7 +235,7 @@ void CntrApresentacaoConta::cadastrar(){
     char campo1[80], campo2[80], campo3[80];                                              // Cria campos para entrada dos dados.
     char c;
 
-    int campo;
+
     // Instancia os dom�nios.
 
     Nome nome;
@@ -331,7 +341,7 @@ void CntrApresentacaoExcursao::executar(){
 
         cout << texto1 << endl;                                                                 // Imprime nome do campo.
         cout << texto2 << endl;                                                                 // Imprime nome do campo.
-        cout << texto3 << endl;                                                                 // Imprime nome do campo.
+        cout << texto3 << endl;
 
         c = getc(stdin);
         campo = c - 48;                                                                   // Leitura do campo de entrada.
@@ -343,6 +353,62 @@ void CntrApresentacaoExcursao::executar(){
                     break;
         }
     }
+}
+
+void CntrApresentacaoExcursao::cadastrar(Email* email){
+
+    Excursao excursao;
+    Cidade cidade;
+    Titulo titulo;
+    Duracao duracao;
+    Descricao descricao;
+    Endereco endereco;
+
+
+    string campo1, campo2, campo3, campo4;
+    char lixo;                                            // Cria campos para entrada dos dados.
+    int i;
+    int campo;
+    char c;
+
+    bool apresentar = true;                                                                     // Controle de la�o.
+
+    system("clear");
+
+    fflush(stdin);
+
+    printf("Preencha os seguintes campos\n");
+    printf("Titulo da Excursao: ");
+    cin >> campo1;
+    printf("Cidade da Excursao: ");
+    cin >> campo2;
+    printf("Duracao da Excursao: ");
+    cin >> i;
+    printf("Descricao da Excursao: ");
+    cin >> campo3;
+    printf("Endereco da Excursao: ");
+    cin >> campo4;
+
+    c = getc(stdin);
+    campo = c - 48;
+
+    try{
+
+        titulo.setTitulo(campo1);
+        cidade.setCidade(campo2);
+        duracao.setValor(i);
+        descricao.setDescription(campo3);
+        endereco.setEndereco(campo4);
+
+    }
+    catch(invalid_argument &exp){
+        printf("Dados em formato incorreto");
+        c = getc(stdin);
+        scanf("%c", &c);
+        system("clear");
+        return;
+    }
+
 }
 //
 ////--------------------------------------------------------------------------------------------
