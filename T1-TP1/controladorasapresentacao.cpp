@@ -200,14 +200,12 @@ void CntrApresentacaoConta::editar(Email* email){
         return;
                                                                                  // L� caracter digitado.
     }
-    cout << "Acessando metodo" << endl;
     cntrServicoConta->editar(email, nome, senha);
     scanf("%c", &lixo);
-    cout << "depois da funcao" << endl;
     return;
-
-
 }
+
+
 void CntrApresentacaoConta::executar(Email* email){
 
     // Mensagens a serem apresentadas na tela de sele��o de servi�o..

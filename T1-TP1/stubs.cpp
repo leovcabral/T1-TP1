@@ -88,17 +88,15 @@ bool StubServicoConta::editar(Email *email, Nome nome_novo, Senha senha_nova){
     aux = this->ptr;
     scanf("%c", &lixo);
     scanf("%c", &lixo);
-    cout << "Antes do while " << endl;
     while(aux != NULL){
         if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
-            cout << "Acessou if" << endl;
             aux->ptr->setNome(nome_novo);
             aux->ptr->setSenha(senha_nova);
+            cout << "Usuario editado com sucesso!" << endl;
             return true;
         }
         aux = aux -> prx;
     }
-    cout << "retornou false" << endl;
     return false;
 }
 
