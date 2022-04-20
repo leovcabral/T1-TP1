@@ -64,7 +64,6 @@ void StubServicoConta::consultarDadosConta(Email *email){
         ListaUsuarios* aux;
         aux = this->ptr;
         scanf("%c", &lixo);
-        scanf("%c", &lixo);
         while(aux != NULL){
             if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
                 cout << "Dados de conta:" << endl;
@@ -77,7 +76,6 @@ void StubServicoConta::consultarDadosConta(Email *email){
     }
 
     cout << "Pressione enter para retornar" << endl;
-    scanf("%c", &lixo);
     scanf("%c", &lixo);
 
 }

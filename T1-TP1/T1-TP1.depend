@@ -74,7 +74,7 @@
 	<iostream>
 	"testes.h"
 
-1650405266 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
+1650422087 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/main.cpp
 	<iostream>
 	<stdio.h>
 	"dominios.h"
@@ -233,27 +233,28 @@
 	<iostream>
 	"testes.h"
 
-1650400291 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/controladorasapresentacao.cpp
+1650420715 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/controladorasapresentacao.cpp
 	"controladorasapresentacao.h"
+	<stdio.h>
 
-1650337844 /home/leonardocabral/TP1/T1-TP1/T1-TP1/controladorasapresentacao.h
+1650419326 /home/leonardocabral/TP1/T1-TP1/T1-TP1/controladorasapresentacao.h
 	<iostream>
 	<string.h>
 	"dominios.h"
 	"entidades.h"
 	"interfaces.h"
 
-1650398159 /home/leonardocabral/TP1/T1-TP1/T1-TP1/interfaces.h
+1650419326 /home/leonardocabral/TP1/T1-TP1/T1-TP1/interfaces.h
 	"dominios.h"
 	"entidades.h"
 
-1650403634 /home/leonardocabral/TP1/T1-TP1/T1-TP1/stubs.h
+1650419326 /home/leonardocabral/TP1/T1-TP1/T1-TP1/stubs.h
 	<string>
 	"dominios.h"
 	"entidades.h"
 	"interfaces.h"
 
-1650403631 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/stubs.cpp
+1650420586 source:/home/leonardocabral/TP1/T1-TP1/T1-TP1/stubs.cpp
 	"stubs.h"
 	<iostream>
 	<string.h>

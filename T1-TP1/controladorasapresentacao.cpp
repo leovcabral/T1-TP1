@@ -203,15 +203,10 @@ void CntrApresentacaoConta::editar(Email* email){
 
         system("clear");
         cout << texto4 << endl;
-
-        cout << "Dados em formato incorreto. Pressione enter para tentar de novo" << endl;
         scanf("%c", &lixo);
-        return;
-
+        scanf("%c", &lixo);
     }
     cntrServicoConta->editar(email, nome, senha);
-    scanf("%c", &lixo);
-    return;
 }
 
 
