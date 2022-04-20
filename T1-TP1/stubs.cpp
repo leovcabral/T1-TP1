@@ -212,8 +212,6 @@ bool StubServicoConta::descadastrarConta(Email *email){
         ListaUsuarios* anterior;
         anterior = NULL;
         aux = this->ptr;
-        scanf("%c", &lixo);
-        scanf("%c", &lixo);
         while(aux != NULL){
             if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
                 if(anterior == NULL){

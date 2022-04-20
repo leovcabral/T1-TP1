@@ -20,50 +20,50 @@ void CntrApresentacaoControle::executar(){
     char texto8[]="2 - Descadastrar conta.";
 //    char texto11[]="2 - Selecionar servicos relacionados a Excursao";
     char texto9[]="3 - Encerrar sessao.";
-    char texto10[]="Falha na autenticacao. Digite algo para continuar.";                        // Mensagem a ser apresentada.
+    char texto10[]="Falha na autenticacao. Digite algo para continuar.";
     int campo;
     char lixo;
-    char c;                                                                            // Campo de entrada.
+    char c;
 
-    bool apresentar = true;                                                                     // Controle de la�o.
+    bool apresentar = true;
 
     while(apresentar){
 
         // Apresenta tela inicial.
 
-//        CLR_SCR;                                                                                // Limpa janela.
+//        CLR_SCR;
         system("clear");
 
-        cout << texto1 << endl;                                                                 // Imprime nome do campo.
-        cout << texto2 << endl;                                                                 // Imprime nome do campo.
-        cout << texto3 << endl;                                                                 // Imprime nome do campo.
-        cout << texto4 << endl;                                                                 // Imprime nome do campo.
+        cout << texto1 << endl;
+        cout << texto2 << endl;
+        cout << texto3 << endl;
+        cout << texto4 << endl;
         cout << texto5 << endl;
 
-       scanf("%c", &c);                                                                                     // Imprime nome do campo.
+       scanf("%c", &c);
        scanf("%c", &lixo);
 
        campo = c - 48;
 
        printf("\nopcao escolhida = %i, clique enter para continuar", campo);
        scanf("%c", &lixo);
-                                                                            // Leitura do campo de entrada e convers�o de ASCII.
+
        if(campo == 1)
        {
             if(cntrApresentacaoAutenticacao->autenticar(&email))
             {
-                bool apresentar = true;                                                 // Controle de laço.
+                bool apresentar = true;
                 while(apresentar)
                 {
                     system("clear");
                     cout << "voce esta autenticado" << endl;
-                    cout << texto6 << endl;                                             // Imprime nome do campo.
-                    cout << texto7 << endl;                                             // Imprime nome do campo.
-                    cout << texto8 << endl;                                             // Imprime nome do campo.
+                    cout << texto6 << endl;
+                    cout << texto7 << endl;
+                    cout << texto8 << endl;
                     cout << texto9 << endl;
 
 
-                    scanf("%c", &c);                                                     // Imprime nome do campo.
+                    scanf("%c", &c);
 
                     campo = c - 48;
 
@@ -132,36 +132,35 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
     char campo1[80];
     char campo2[80];
 
-    Senha senha;                                                                                // Instancia a classe Senha.
+    Senha senha;
 
     while(true){
 
-        // Apresenta tela de autentica��o.
+
 
 //        CLR_SCR;
         system("clear");
-                                                                            // Limpa janela.
 
-        cout << texto1 << " ";                                                                  // Imprime nome do campo.
-        cin >> campo1;                                                                          // L� valor do campo.
-        cout << texto2 << " ";                                                                  // Imprime nome do campo.
-        cin >> campo2;                                                                          // L� valor do campo.
 
+        cout << texto1 << " ";
+        cin >> campo1;
+        cout << texto2 << " ";
+        cin >> campo2;
         try{
-            email->setEmail(string(campo1));                                                      // Atribui valor ao CPF.
-            senha.setPassword(string(campo2));                                                     // Atribui Valor � senha.
-            break;                                                                              // Abandona la�o em caso de formatos corretos.
+            email->setEmail(string(campo1));
+            senha.setPassword(string(campo2));
+            break;
         }
-        catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
+        catch(invalid_argument &exp){
 
-                                                              // Limpa janela.
-            char c;                                            // Informa formato incorreto.
+
+            char c;
             c = getc(stdin);
             return false;
-            system("clear");                                                                          // L� caracter digitado.
+            system("clear");
         }
     }
-    return (cntr->autenticar(*email, senha));                                                     // Solicita servi�o de autentica��o.
+    return (cntr->autenticar(*email, senha));
 }
 
 //--------------------------------------------------------------------------------------------
@@ -188,17 +187,16 @@ void CntrApresentacaoConta::editar(Email* email){
     try{
             nome.setValor(string(novoNome));
             senha.setPassword(string(novaSenha));
-                                                                        // Abandona la�o em caso de formatos corretos.
-        }
-    catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
+    }
+    catch(invalid_argument &exp){
 
-        system("clear");                                         // Limpa janela.
+        system("clear");
         cout << texto4 << endl;
 
         cout << "Dados em formato incorreto. Pressione enter para tentar de novo" << endl;
         scanf("%c", &lixo);
         return;
-                                                                                 // L� caracter digitado.
+
     }
     cntrServicoConta->editar(email, nome, senha);
     scanf("%c", &lixo);
@@ -208,16 +206,14 @@ void CntrApresentacaoConta::editar(Email* email){
 
 void CntrApresentacaoConta::executar(Email* email){
 
-    // Mensagens a serem apresentadas na tela de sele��o de servi�o..
-
     char texto1[]="Selecione um dos servicos : ";
     char texto2[]="1 - Consultar dados de conta.";
     char texto3[]="2 - Editar dados de conta.";
     char texto4[]="3 - Retornar.";
 
-    int campo;                                                                                  // Campo de entrada.
+    int campo;
 
-    bool apresentar = true;                                                                     // Controle de la�o.
+    bool apresentar = true;
     char c;
 
     while(apresentar){
@@ -227,13 +223,13 @@ void CntrApresentacaoConta::executar(Email* email){
 //      CLR_SCR;
         system("clear");
 
-        cout << texto1 << endl;                                                                 // Imprime nome do campo.
-        cout << texto2 << endl;                                                                 // Imprime nome do campo.
+        cout << texto1 << endl;
+        cout << texto2 << endl;
         cout << texto3 << endl;
-        cout << texto4 << endl;                                                               // Imprime nome do campo.
+        cout << texto4 << endl;
 
         c = getc(stdin);
-        campo = c - 48;                                                                       // Leitura do campo de entrada e convers�o de ASCII.
+        campo = c - 48;
 
         switch(campo){
             case 1: consultarDadosConta(email);
@@ -247,10 +243,8 @@ void CntrApresentacaoConta::executar(Email* email){
 }
 
 ////--------------------------------------------------------------------------------------------
-//
-void CntrApresentacaoConta::cadastrar(){
 
-    // Mensagens a serem apresentadas na tela de cadastramento.
+void CntrApresentacaoConta::cadastrar(){
     char texto1[] ="Preencha os seguintes campos: ";
     char texto2[] ="Nome:";
     char texto3[] ="Email:";
@@ -258,42 +252,38 @@ void CntrApresentacaoConta::cadastrar(){
     char texto5[] ="Usuário cadastrado!";
     char texto6[] ="Valor inválido para cadastro";
 
-    char campo1[80], campo2[80], campo3[80];                                              // Cria campos para entrada dos dados.
+    char campo1[80], campo2[80], campo3[80];
     char c;
 
     int campo;
-    // Instancia os dom�nios.
 
     Nome nome;
     Email email;
     Senha senha;
 
-    // Apresenta tela de cadastramento.
 
 //    CLR_SCR;
-    system("clear");                                                                                 // Limpa janela.
-    cout << texto1 << endl;                                                                    // Imprime solicita��o ao usu�rio.
-    cout << texto2 << " ";                                                                     // Imprime nome do campo.
-    cin >> campo1;                                                       // L� valor do campo composto.
-    cout << texto3 << " ";                                                                     // Imprime nome do campo.
-    cin >> campo2;                                                                             // L� valor do campo.
-    cout << texto4 << " ";                                                                     // Imprime nome do campo.
+    system("clear");
+    cout << texto1 << endl;
+    cout << texto2 << " ";
+    cin >> campo1;
+    cout << texto3 << " ";
+    cin >> campo2;
+    cout << texto4 << " ";
     cin >> campo3;
-                                                                               // L� valor do campo.
     try{
         nome.setValor(string(campo1));
         email.setEmail(string(campo2));
         senha.setPassword(string(campo3));
     }
     catch(invalid_argument &exp){
-        cout << texto6 << endl;                                                                // Informa formato incorreto.
+        cout << texto6 << endl;
         c = getc(stdin);
         scanf("%c", &c);
         system("clear");
         return;
     }
 
-    // Instancia e inicializa entidades.
 
     Usuario usuario;
 
@@ -303,7 +293,7 @@ void CntrApresentacaoConta::cadastrar(){
     usuario.setSenha(senha);
     }
     catch(invalid_argument &exp){
-        cout << texto6 << endl;                                                                // Informa formato incorreto.
+        cout << texto6 << endl;
         c = getc(stdin);
         scanf("%c", &c);
         system("clear");
@@ -345,7 +335,7 @@ void CntrApresentacaoConta::consultarDadosConta(Email* email){
 
 void CntrApresentacaoExcursao::executar(){
 
-    // Mensagens a serem apresentadas na tela simplificada de produtos financeiros.
+
 
     char texto1[]="Selecione um dos servicos : ";
     char texto2[]="1 - Consultar lista de Excursoes";
@@ -353,22 +343,21 @@ void CntrApresentacaoExcursao::executar(){
 
     int campo;
 
-    char c;                                                                                 // Campo de entrada.
+    char c;
 
-    bool apresentar = true;                                                                     // Controle de la�o.
+    bool apresentar = true;
 
     while(apresentar){
 
-        // Apresenta tela simplificada de produtos financeiros.
 
-        system("clear");                                                                               // Limpa janela.
+        system("clear");
 
-        cout << texto1 << endl;                                                                 // Imprime nome do campo.
-        cout << texto2 << endl;                                                                 // Imprime nome do campo.
-        cout << texto3 << endl;                                                                 // Imprime nome do campo.
+        cout << texto1 << endl;
+        cout << texto2 << endl;
+        cout << texto3 << endl;
 
         c = getc(stdin);
-        campo = c - 48;                                                                   // Leitura do campo de entrada.
+        campo = c - 48;
 
         switch(campo){
             case 1: cntr->listar();
