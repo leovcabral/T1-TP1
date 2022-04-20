@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Apr 16 22:03:47 2022
+# Make data base, printed on Tue Apr 19 19:12:54 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:45205
+JOURNAL_STREAM = 8:39915
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile
@@ -77,7 +77,7 @@ _ = /usr/bin/code
 # environment
 LC_CTYPE = pt_BR.UTF-8
 # environment
-MANAGERPID = 1430
+MANAGERPID = 1444
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -93,7 +93,7 @@ PATH = /home/arthur/.nvm/versions/node/v16.13.1/bin:/home/arthur/.rvm/gems/ruby-
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/ideapad:@/tmp/.ICE-unix/1624,unix/ideapad:/tmp/.ICE-unix/1624
+SESSION_MANAGER = local/ideapad:@/tmp/.ICE-unix/1638,unix/ideapad:/tmp/.ICE-unix/1638
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -107,7 +107,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=e3075179-4374-4035-a747-d8bedb5f0e43&iid=e3075179-4374-4035-a747-d8bedb5f0e43&sid=e3075179-4374-4035-a747-d8bedb5f0e43","uploadToServer":true}
 # environment
-INVOCATION_ID = 2371708d160947d186ccabef87925efd
+INVOCATION_ID = ea1a1ff8bd94449dacc933250f55c3a4
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -133,7 +133,7 @@ PWD = /home/arthur/Documents/tp1/T1-TP1
 # environment
 GEM_HOME = /home/arthur/.rvm/gems/ruby-2.7.2
 # environment
-SSH_AGENT_PID = 1578
+SSH_AGENT_PID = 1592
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -183,7 +183,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-c4f36a42-09e7-4102-9367-cc3936504c45.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-aee41475-cfbb-404d-bcaf-af9797da734a.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -229,8 +229,6 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = pt_BR.UTF-8
 # environment
-NO_AT_BRIDGE = 1
-# environment
 LC_IDENTIFICATION = pt_BR.UTF-8
 # environment
 QT_ACCESSIBILITY = 1
@@ -249,13 +247,13 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/9393c3d2_5f0f_4cc4_a6ba_0a57f2dc023e
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/0460f17e_9405_41e2_9487_1ddbe7a7d843
 # automatic
 ^F = $(notdir $^)
 # environment
 rvm_prefix = /home/arthur
 # environment
-GNOME_TERMINAL_SERVICE = :1.220
+GNOME_TERMINAL_SERVICE = :1.129
 # default
 SUFFIXES := 
 # environment
@@ -273,14 +271,14 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 5876
+VSCODE_PID = 38464
 # environment
 MY_RUBY_HOME = /home/arthur/.rvm/rubies/ruby-2.7.2
 # variable set hash-table stats:
-# Load=132/1024=13%, Rehash=0, Collisions=21/154=14%
- 
+# Load=131/1024=13%, Rehash=0, Collisions=21/153=14%
 
 # Pattern-specific Variable Values
+ 
 
 # No pattern-specific variable values.
 
@@ -344,6 +342,6 @@ GNUmakefile:
 # strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Sat Apr 16 22:03:47 2022
+# Finished Make data base on Tue Apr 19 19:12:54 2022
 
  

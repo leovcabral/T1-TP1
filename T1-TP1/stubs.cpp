@@ -12,15 +12,6 @@ ListaUsuarios* head_global;
 
 bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cadastrado){
 
-
-//    if(email.getEmail().compare(EMAIL_VALIDO) == 0 &&
-//        senha.getPassword().compare(SENHA_VALIDO) == 0){
-//        return true;
-//        }
-//    else{
-//        return false;
-//        }
-
     char lixo;
     Nome nome;
     Email email;
@@ -35,9 +26,6 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
 
         email = aux->ptr->getEmail();
 
-        cout << "cadastrado :" << email_cadastrado.getEmail() << endl;
-        cout << "analisado  :" << email.getEmail() << endl;
-
         if(email_cadastrado.getEmail().compare(email.getEmail()) == 0)
         {
             cadastro_encontrado = true;
@@ -45,16 +33,18 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
         }
         aux = aux->prx;
     }
-
+    if(aux == NULL){
+        return false;
+    }
     senha = aux->ptr->getSenha();
 
     if(cadastro_encontrado)
     {
         if(senha_cadastrado.getPassword().compare(senha.getPassword()) == 0)
         {
-            printf("encontramos seu cadatro!");
+            cout << "Encontramos seu cadastro!" << endl;
 
-            printf("pressione enter para retornar");
+            cout << "Pressione enter para retornar" << endl;
             scanf("%c", &lixo);
             scanf("%c", &lixo);
 
@@ -63,7 +53,6 @@ bool StubServicoAutenticacao::autenticar(Email email_cadastrado, Senha senha_cad
         else return false;
     }
     else return false;
-
 }
 
 void StubServicoConta::consultarDadosConta(Email *email){
@@ -74,11 +63,9 @@ void StubServicoConta::consultarDadosConta(Email *email){
     else{
         ListaUsuarios* aux;
         aux = this->ptr;
-        cout << "Fora do while" << endl;
         scanf("%c", &lixo);
         scanf("%c", &lixo);
         while(aux != NULL){
-            cout << "Entrou no while" << endl;
             if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
                 cout << "Dados de conta:" << endl;
                 cout << "Email: " << email->getEmail() << endl;
@@ -86,72 +73,31 @@ void StubServicoConta::consultarDadosConta(Email *email){
                 break;
             }
             aux = aux -> prx;
-    }
+        }
     }
 
-    printf("pressione enter para retornar");
+    cout << "Pressione enter para retornar" << endl;
     scanf("%c", &lixo);
     scanf("%c", &lixo);
 
 }
 
-void StubServicoConta::editar(Usuario *user){
-
+bool StubServicoConta::editar(Email *email, Nome nome_novo, Senha senha_nova){
     char lixo;
-
-    char campo1[80];
-    char campo2[80];
-    char campo3[80];
-
-    Email email;
-    Senha senha;
-    Nome nome;
-
-    char texto1[]="Preencha novo valor para Nome : ";
-    char texto2[]="Preencha novo valor para Email: ";
-    char texto3[]="Preencha novo valor para Senha: ";
-    char texto4[]="Dados em formato incorreto. Digite algo.";
-
-    while(true)
-    {
-
-    system("clear");
-
-    cout << texto1 << " ";
-    cin >> campo1;
-    cout << texto2 << " ";
-    cin >> campo2;
-    cout << texto3 << " ";
-    cin >> campo3;
-
-    try{
-            nome.setValor(string(campo1));
-            email.setEmail(string(campo2));
-            senha.setPassword(string(campo3));
-
-            user->setEmail(email);
-            user->setSenha(senha);
-            user->setNome(nome);
-                                                                // Atribui Valor � senha.
-            break;                                                                              // Abandona la�o em caso de formatos corretos.
+    ListaUsuarios* aux;
+    aux = this->ptr;
+    scanf("%c", &lixo);
+    scanf("%c", &lixo);
+    while(aux != NULL){
+        if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
+            aux->ptr->setNome(nome_novo);
+            aux->ptr->setSenha(senha_nova);
+            cout << "Usuario editado com sucesso!" << endl;
+            return true;
         }
-        catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
-
-            system("clear");                                         // Limpa janela.
-            cout << texto4 << endl;
-
-            printf("Dados em formato incorreto. pressione enter para tentar dnovo");
-            scanf("%c", &lixo);
-            scanf("%c", &lixo);
-                                                                                     // L� caracter digitado.
-        }
-
+        aux = aux -> prx;
     }
-
-    printf("voce editou com sucesso, aperte enter para retornar");
-            scanf("%c", &lixo);
-            scanf("%c", &lixo);
-
+    return false;
 }
 
 void StubServicoConta::cadastrarConta(Usuario* user)
@@ -204,11 +150,9 @@ void StubServicoConta::cadastrarConta(Usuario* user)
 
     }
 
-    printf("cadastro realizado com sucesso. aperte enter para retornar ");
+    cout << "Cadastro realizado com sucesso. Aperte enter para retornar. " << endl;
     scanf("%c", & lixo);
     scanf("%c", & lixo);
-
-    listarUsers();
 
 }
 
@@ -230,7 +174,7 @@ void StubServicoConta::listarUsers()
     nome = aux->ptr->getNome();
     cout << nome.getValor() << endl;
 
-    printf("aperte enter para retornar ");
+    cout << "aperte enter para retornar " << endl;
     scanf("%c", & lixo);
     scanf("%c", & lixo);
 
@@ -254,69 +198,46 @@ void StubServicoExcursao::listar(){
 
 void StubServicoExcursao::cadastrar(Email* email, Excursao* excursao){
 
-
+    cout << "Cadastrado com sucesso" << endl;
 
 }
 
-//bool StubServicoConta::cadastrarUsuario(Usuario usuario){
-//    if(usuario.getEmail().getValor().compare(EMAIL_VALIDO) == 0)
-//        return true;
-//    return false;
-//}
 
 bool StubServicoConta::descadastrarConta(Email *email){
-    return true;
+    char lixo;
+     if(this -> TamLista == 0){
+        cout << "Não existem usuários" << endl;
+    }
+    else{
+        ListaUsuarios* aux;
+        ListaUsuarios* anterior;
+        anterior = NULL;
+        aux = this->ptr;
+        while(aux != NULL){
+            if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
+                if(anterior == NULL){
+                    this->ptr = aux->prx;
+                    head_global = this->ptr;
+                    this->TamLista--;
+                    return true;
+                }
+                else if(aux->prx == NULL){
+                    anterior->prx = NULL;
+                    this->TamLista--;
+                    return true;
+                }
+                else{
+                    anterior->prx = aux->prx;
+                    this->TamLista--;
+                    return true;
+                }
+
+
+            }
+            anterior = aux;
+            aux = aux -> prx;
+    }
+    }
 }
-
-//
-//bool StubServicoProdutosFinanceiros::cadastrarConta(Conta conta){
-//    if(conta.getNumero().getValor().compare(INVALIDO) == 0)
-//        return false;
-//    return true;
-//}
-//
-//bool StubServicoProdutosFinanceiros::consultarConta(Conta *conta){
-//    if(conta->getNumero().getValor().compare(INVALIDO) == 0)
-//        return false;
-
-    //--------------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------------
-    // Implementar c�digo que atribui valores ao objeto identificado por conta.
-    //--------------------------------------------------------------------------------------------
-    //--------------------------------------------------------------------------------------------
-//
-//    return true;
-//}
-
-//bool StubServicoProdutosFinanceiros::cadastrarProdutoInvestimento(Produto produto){
-//    if(produto.getCodigo().getValor().compare(INVALIDO) == 0)
-//        return false;
-//    return true;
-//}
-//
-//bool StubServicoProdutosFinanceiros::descadastrarProdutoInvestimento(Codigo codigo){
-//    if(codigo.getValor().compare(INVALIDO) == 0)
-//        return false;
-//    return true;
-//}
-//
-//bool StubServicoProdutosFinanceiros::realizarAplicacao(Aplicacao aplicacao){
-//    if(aplicacao.getCodigo().getValor().compare(INVALIDO) == 0)
-//        return false;
-//    return true;
-//}
-//
-//bool StubServicoProdutosFinanceiros::recuperarAplicacao(Aplicacao *aplicacao){
-//    if(aplicacao->getCodigo().getValor().compare(INVALIDO) == 0)
-//        return false;
-//
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//    // Implementar c�digo que atribui valores ao objeto identificado por aplicacao.
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//
-//    return true;
-//}
 
 

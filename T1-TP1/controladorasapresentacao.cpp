@@ -16,44 +16,45 @@ void CntrApresentacaoControle::executar(){
 
     // Mensagens a serem apresentadas na tela de sele��o de servi�o.
 
-    char texto6[]="Selecione um dos servicos : ";
+    char texto6[]="Selecione um dos servicos: ";
     char texto7[]="1 - Selecionar servicos de conta.";
     char texto8[]="2 - Descadastrar conta.";
     char texto11[]="3 - Cadastrar excursao";
     char texto9[]="4 - Encerrar sessao.";
     char texto10[]="Falha na autenticacao. Digite algo para continuar.";                        // Mensagem a ser apresentada.
+
     int campo;
     char lixo;
-    char c;                                                                            // Campo de entrada.
+    char c;
 
-    bool apresentar = true;                                                                     // Controle de la�o.
+    bool apresentar = true;
 
     while(apresentar){
 
         // Apresenta tela inicial.
 
-//        CLR_SCR;                                                                                // Limpa janela.
+//        CLR_SCR;
         system("clear");
 
-        cout << texto1 << endl;                                                                 // Imprime nome do campo.
-        cout << texto2 << endl;                                                                 // Imprime nome do campo.
-        cout << texto3 << endl;                                                                 // Imprime nome do campo.
-        cout << texto4 << endl;                                                                 // Imprime nome do campo.
+        cout << texto1 << endl;
+        cout << texto2 << endl;
+        cout << texto3 << endl;
+        cout << texto4 << endl;
         cout << texto5 << endl;
 
-       scanf("%c", &c);                                                                                     // Imprime nome do campo.
+       scanf("%c", &c);
        scanf("%c", &lixo);
 
        campo = c - 48;
 
        printf("\nopcao escolhida = %i, clique enter para continuar", campo);
        scanf("%c", &lixo);
-                                                                            // Leitura do campo de entrada e convers�o de ASCII.
+
        if(campo == 1)
        {
             if(cntrApresentacaoAutenticacao->autenticar(&email))
             {
-                bool apresentar = true;                                                 // Controle de laço.
+                bool apresentar = true;
                 while(apresentar)
                 {
                     fflush(stdin);
@@ -66,7 +67,7 @@ void CntrApresentacaoControle::executar(){
                     cout << texto9 << endl;
 
 
-                    scanf("%c", &c);                                                     // Imprime nome do campo.
+                    scanf("%c", &c);
 
                     campo = c - 48;
 
@@ -88,7 +89,7 @@ void CntrApresentacaoControle::executar(){
                     else if(campo == 3)
                     {
                             cntrApresentacaoExcursao->cadastrar(&email);
-                            printf("Excursao cadastrada com sucesso. Clique enter para cntinuar");
+                            printf("Excursao cadastrada com sucesso. Clique enter para continuar");
                             c = getc(stdin);
                             campo = c - 48;
                     }
@@ -103,6 +104,7 @@ void CntrApresentacaoControle::executar(){
             else
             {
                 cout << texto10 << endl;
+                scanf("%c", &lixo);
                 scanf("%c", &lixo);
 
             }
@@ -132,7 +134,7 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
 
     // Mensagens a serem apresentadas na tela de autentica��o.
 
-    char texto1[]="Digite o Email  : ";
+    char texto1[]="Digite o Email: ";
     char texto2[]="Digite a senha: ";
     char texto3[]="Dado em formato incorreto. Digite algo.";
 
@@ -141,57 +143,88 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
     char campo1[80];
     char campo2[80];
 
-    Senha senha;                                                                                // Instancia a classe Senha.
+    Senha senha;
 
     while(true){
 
-        // Apresenta tela de autentica��o.
+
 
 //        CLR_SCR;
         system("clear");
-                                                                            // Limpa janela.
 
-        cout << texto1 << " ";                                                                  // Imprime nome do campo.
-        cin >> campo1;                                                                          // L� valor do campo.
-        cout << texto2 << " ";                                                                  // Imprime nome do campo.
-        cin >> campo2;                                                                          // L� valor do campo.
 
+        cout << texto1 << " ";
+        cin >> campo1;
+        cout << texto2 << " ";
+        cin >> campo2;
         try{
-            email->setEmail(string(campo1));                                                      // Atribui valor ao CPF.
-            senha.setPassword(string(campo2));                                                     // Atribui Valor � senha.
-            break;                                                                              // Abandona la�o em caso de formatos corretos.
+            email->setEmail(string(campo1));
+            senha.setPassword(string(campo2));
+            break;
         }
-        catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
-//          CLR_SCR;
-                                                              // Limpa janela.
-            cout << texto3 << endl;
-            char c;                                            // Informa formato incorreto.
+        catch(invalid_argument &exp){
+
+
+            char c;
             c = getc(stdin);
-            system("clear");                                                                          // L� caracter digitado.
+            return false;
+            system("clear");
         }
     }
-    return (cntr->autenticar(*email, senha));                                                     // Solicita servi�o de autentica��o.
+    return (cntr->autenticar(*email, senha));
 }
 
 //--------------------------------------------------------------------------------------------
 //
-void CntrApresentacaoConta::editar(Usuario* user){
+void CntrApresentacaoConta::editar(Email* email){
+    char lixo;
 
-    cntrServicoConta->editar(user);
+    char novoNome[80];
+    char novaSenha[80];
 
+    Senha senha;
+    Nome nome;
+
+    char texto1[]="Preencha novo valor para Nome: ";
+    char texto2[]="Preencha novo valor para Senha: ";
+    char texto4[]="Dados em formato incorreto. Digite algo.";
+    system("clear");
+
+    cout << texto1 << " ";
+    cin >> novoNome;
+    cout << texto2 << " ";
+    cin >> novaSenha;
+
+    try{
+            nome.setValor(string(novoNome));
+            senha.setPassword(string(novaSenha));
+    }
+    catch(invalid_argument &exp){
+
+        system("clear");
+        cout << texto4 << endl;
+
+        cout << "Dados em formato incorreto. Pressione enter para tentar de novo" << endl;
+        scanf("%c", &lixo);
+        return;
+
+    }
+    cntrServicoConta->editar(email, nome, senha);
+    scanf("%c", &lixo);
+    return;
 }
-void CntrApresentacaoConta::executar(Email* email){
 
-    // Mensagens a serem apresentadas na tela de sele��o de servi�o..
+
+void CntrApresentacaoConta::executar(Email* email){
 
     char texto1[]="Selecione um dos servicos : ";
     char texto2[]="1 - Consultar dados de conta.";
     char texto3[]="2 - Editar dados de conta.";
     char texto4[]="3 - Retornar.";
 
-    int campo;                                                                                  // Campo de entrada.
+    int campo;
 
-    bool apresentar = true;                                                                     // Controle de la�o.
+    bool apresentar = true;
     char c;
 
     while(apresentar){
@@ -201,18 +234,18 @@ void CntrApresentacaoConta::executar(Email* email){
 //      CLR_SCR;
         system("clear");
 
-        cout << texto1 << endl;                                                                 // Imprime nome do campo.
-        cout << texto2 << endl;                                                                 // Imprime nome do campo.
+        cout << texto1 << endl;
+        cout << texto2 << endl;
         cout << texto3 << endl;
-        cout << texto4 << endl;                                                               // Imprime nome do campo.
+        cout << texto4 << endl;
 
         c = getc(stdin);
-        campo = c - 48;                                                                       // Leitura do campo de entrada e convers�o de ASCII.
+        campo = c - 48;
 
         switch(campo){
             case 1: consultarDadosConta(email);
                     break;
-            case 2: editar(&user);
+            case 2: editar(email);
                     break;
             case 3: apresentar = false;
                     break;
@@ -221,10 +254,8 @@ void CntrApresentacaoConta::executar(Email* email){
 }
 
 ////--------------------------------------------------------------------------------------------
-//
-void CntrApresentacaoConta::cadastrar(){
 
-    // Mensagens a serem apresentadas na tela de cadastramento.
+void CntrApresentacaoConta::cadastrar(){
     char texto1[] ="Preencha os seguintes campos: ";
     char texto2[] ="Nome:";
     char texto3[] ="Email:";
@@ -232,42 +263,37 @@ void CntrApresentacaoConta::cadastrar(){
     char texto5[] ="Usuário cadastrado!";
     char texto6[] ="Valor inválido para cadastro";
 
-    char campo1[80], campo2[80], campo3[80];                                              // Cria campos para entrada dos dados.
+    char campo1[80], campo2[80], campo3[80];
     char c;
 
-
-    // Instancia os dom�nios.
 
     Nome nome;
     Email email;
     Senha senha;
 
-    // Apresenta tela de cadastramento.
 
 //    CLR_SCR;
-    system("clear");                                                                                 // Limpa janela.
-    cout << texto1 << endl;                                                                    // Imprime solicita��o ao usu�rio.
-    cout << texto2 << " ";                                                                     // Imprime nome do campo.
-    cin >> campo1;                                                       // L� valor do campo composto.
-    cout << texto3 << " ";                                                                     // Imprime nome do campo.
-    cin >> campo2;                                                                             // L� valor do campo.
-    cout << texto4 << " ";                                                                     // Imprime nome do campo.
+    system("clear");
+    cout << texto1 << endl;
+    cout << texto2 << " ";
+    cin >> campo1;
+    cout << texto3 << " ";
+    cin >> campo2;
+    cout << texto4 << " ";
     cin >> campo3;
-                                                                               // L� valor do campo.
     try{
         nome.setValor(string(campo1));
         email.setEmail(string(campo2));
         senha.setPassword(string(campo3));
     }
     catch(invalid_argument &exp){
-        cout << texto6 << endl;                                                                // Informa formato incorreto.
+        cout << texto6 << endl;
         c = getc(stdin);
         scanf("%c", &c);
         system("clear");
         return;
     }
 
-    // Instancia e inicializa entidades.
 
     Usuario usuario;
 
@@ -277,7 +303,7 @@ void CntrApresentacaoConta::cadastrar(){
     usuario.setSenha(senha);
     }
     catch(invalid_argument &exp){
-        cout << texto6 << endl;                                                                // Informa formato incorreto.
+        cout << texto6 << endl;
         c = getc(stdin);
         scanf("%c", &c);
         system("clear");
@@ -313,15 +339,13 @@ bool CntrApresentacaoConta::descadastrar(Email* email){
 void CntrApresentacaoConta::consultarDadosConta(Email* email){
 
     cntrServicoConta->consultarDadosConta(email);
-                                                                               // Limpa janela.
-
 }
 
 ////--------------------------------------------------------------------------------------------
 
 void CntrApresentacaoExcursao::executar(){
 
-    // Mensagens a serem apresentadas na tela simplificada de produtos financeiros.
+
 
     char texto1[]="Selecione um dos servicos : ";
     char texto2[]="1 - Consultar lista de Excursoes";
@@ -329,22 +353,21 @@ void CntrApresentacaoExcursao::executar(){
 
     int campo;
 
-    char c;                                                                                 // Campo de entrada.
+    char c;
 
-    bool apresentar = true;                                                                     // Controle de la�o.
+    bool apresentar = true;
 
     while(apresentar){
 
-        // Apresenta tela simplificada de produtos financeiros.
 
-        system("clear");                                                                               // Limpa janela.
+        system("clear");
 
         cout << texto1 << endl;                                                                 // Imprime nome do campo.
         cout << texto2 << endl;                                                                 // Imprime nome do campo.
         cout << texto3 << endl;
 
         c = getc(stdin);
-        campo = c - 48;                                                                   // Leitura do campo de entrada.
+        campo = c - 48;
 
         switch(campo){
             case 1: cntr->listar();
@@ -410,177 +433,4 @@ void CntrApresentacaoExcursao::cadastrar(Email* email){
     }
 
 }
-//
-////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::executar(CPF){
-//
-//    // Mensagens a serem apresentadas tela completa de produtos financeiros.
-//
-//    char texto1[] ="Selecione um dos servicos : ";
-//    char texto2[] ="1 - Consultar conta corrente.";
-//    char texto3[] ="2 - Cadastrar produto de investimento.";
-//    char texto4[] ="3 - Descadastrar produto de investimento.";
-//    char texto5[] ="4 - Consultar produto de investimento.";
-//    char texto6[] ="5 - Realizar aplicacao em produto de investimento.";
-//    char texto7[] ="6 - Listar aplicacoes em produto de investimento.";
-//    char texto8[] ="7 - Retornar.";
-//
-//    int campo;                                                                                  // Campo de entrada.
-//
-//    bool apresentar = true;                                                                     // Controle de la�o.
-//
-//    while(apresentar){
-//
-//        // Apresenta tela completa de produtos financeiros.
-//
-//        CLR_SCR;                                                                                // Limpa janela.
-//
-//        cout << texto1 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto2 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto3 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto4 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto5 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto6 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto7 << endl;                                                                 // Imprime nome do campo.
-//        cout << texto8 << endl;                                                                 // Imprime nome do campo.
-//
-//        campo = getch() - 48;                                                                   // Leitura do campo de entrada e convers�o de ASCII.
-//
-//        switch(campo){
-//            case 1: consultarConta();
-//                    break;
-//            case 2: cadastrarProdutoInvestimento();
-//                    break;
-//            case 3: descadastrarProdutoInvestimento();
-//                    break;
-//            case 4: consultarProdutoInvestimento();
-//                    break;
-//            case 5: realizarAplicacao();
-//                    break;
-//            case 6: listarAplicacoes();
-//                    break;
-//            case 7: apresentar = false;
-//                    break;
-//        }
-//    }
-//}
-//
-////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::consultarConta(){
-//
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//    // Substituir c�digo seguinte pela implementa��o do m�todo.
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//
-//    // Mensagens a serem apresentadas.
-//
-//    char texto[]="Servico consultar conta nao implementado. Digite algo.";                      // Mensagem a ser apresentada.
-//
-//    CLR_SCR;                                                                                    // Limpa janela.
-//    cout << texto << endl;                                                                      // Imprime nome do campo.
-//    getch();
-//}
-//
-////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::cadastrarProdutoInvestimento(){
-//
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//    // Substituir c�digo seguinte pela implementa��o do m�todo.
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//
-//    // Mensagens a serem apresentadas.
-//
-//    char texto[]="Servico cadastrar produto investimento nao implementado. Digite algo.";       // Mensagem a ser apresentada.
-//
-//    CLR_SCR;                                                                                    // Limpa janela.
-//    cout << texto << endl;                                                                      // Imprime nome do campo.
-//    getch();
-//
-//}
-//
-////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::descadastrarProdutoInvestimento(){
-//
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//    // Substituir c�digo seguinte pela implementa��o do m�todo.
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//
-//    // Mensagens a serem apresentadas.
-//
-//    char texto[]="Servico descadastrar produto investimento nao implementado. Digite algo.";    // Mensagem a ser apresentada.
-//
-//    CLR_SCR;                                                                                    // Limpa janela.
-//    cout << texto << endl;                                                                      // Imprime nome do campo.
-//    getch();
-//
-//}
-//
-////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::consultarProdutoInvestimento(){
-//
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//    // Substituir c�digo seguinte pela implementa��o do m�todo.
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//
-//    // Mensagens a serem apresentadas.
-//
-//    char texto[]="Servico consultar produto investimento nao implementado. Digite algo.";       // Mensagem a ser apresentada.
-//
-//    CLR_SCR;                                                                                    // Limpa janela.
-//    cout << texto << endl;                                                                      // Imprime nome do campo.
-//    getch();
-//
-//}
-//
-////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::realizarAplicacao(){
-//
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//    // Substituir c�digo seguinte pela implementa��o do m�todo.
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//
-//    // Mensagens a serem apresentadas.
-//
-//    char texto[]="Servico realizar aplicacao nao implementado. Digite algo.";                   // Mensagem a ser apresentada.
-//
-//    CLR_SCR;                                                                                    // Limpa janela.
-//    cout << texto << endl;                                                                      // Imprime nome do campo.
-//    getch();
-//
-//}
-//
-////--------------------------------------------------------------------------------------------
-//
-//void CntrApresentacaoProdutosFinanceiros::listarAplicacoes(){
-//
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//    // Substituir c�digo seguinte pela implementa��o do m�todo.
-//    //--------------------------------------------------------------------------------------------
-//    //--------------------------------------------------------------------------------------------
-//
-//    // Mensagens a serem apresentadas.
-//
-//    char texto[]="Servico listar aplicacoes nao implementado. Digite algo.";                    // Mensagem a ser apresentada.
-//
-//    CLR_SCR;                                                                                    // Limpa janela.
-//    cout << texto << endl;                                                                      // Imprime nome do campo.
-//    getch();
-//
-//}
+

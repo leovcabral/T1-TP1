@@ -34,7 +34,7 @@ class IApresentacaoConta{
     public:
         virtual void executar(Email*) = 0;
         virtual void consultarDadosConta(Email*) = 0;
-        virtual void editar(Usuario*) = 0;
+        virtual void editar(Email*) = 0;
         virtual void cadastrar() = 0;
         virtual bool descadastrar(Email*) = 0;
         virtual void setCntrServicoConta(IServicoConta*) = 0;
@@ -71,7 +71,7 @@ class IServicoConta{
         virtual void cadastrarConta(Usuario*) = 0;
         virtual bool descadastrarConta(Email*) = 0;
         virtual void consultarDadosConta(Email*) = 0;
-        virtual void editar(Usuario*) = 0;
+        virtual bool editar(Email*, Nome , Senha) = 0;
         virtual void listarUsers() = 0;
         virtual ~IServicoConta(){}
 };
