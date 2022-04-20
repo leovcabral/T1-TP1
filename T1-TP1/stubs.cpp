@@ -73,7 +73,7 @@ void StubServicoConta::consultarDadosConta(Email *email){
                 break;
             }
             aux = aux -> prx;
-    }
+        }
     }
 
     cout << "Pressione enter para retornar" << endl;
@@ -82,59 +82,24 @@ void StubServicoConta::consultarDadosConta(Email *email){
 
 }
 
-void StubServicoConta::editar(Email *email){
-
+bool StubServicoConta::editar(Email *email, Nome nome_novo, Senha senha_nova){
     char lixo;
-
-    char novoNome[80];
-    char novaSenha[80];
-
-    Senha senha;
-    Nome nome;
-
-    char texto1[]="Preencha novo valor para Nome : ";
-    char texto3[]="Preencha novo valor para Senha: ";
-    char texto4[]="Dados em formato incorreto. Digite algo.";
-
-    while(true)
-    {
-
-    system("clear");
-
-    cout << texto1 << " ";
-    cin >> novoNome;
-//    cout << texto2 << " ";
-//    cin >> campo2;
-    cout << texto3 << " ";
-    cin >> novaSenha;
-
-    try{
-            nome.setValor(string(novoNome));
-            senha.setPassword(string(novaSenha));
-
-
-            user->setSenha(senha);
-            user->setNome(nome);
-                                                                // Atribui Valor � senha.
-            break;                                                                              // Abandona la�o em caso de formatos corretos.
+    ListaUsuarios* aux;
+    aux = this->ptr;
+    scanf("%c", &lixo);
+    scanf("%c", &lixo);
+    cout << "Antes do while " << endl;
+    while(aux != NULL){
+        if(aux-> ptr -> getEmail().getEmail() == email-> getEmail()){
+            cout << "Acessou if" << endl;
+            aux->ptr->setNome(nome_novo);
+            aux->ptr->setSenha(senha_nova);
+            return true;
         }
-        catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
-
-            system("clear");                                         // Limpa janela.
-            cout << texto4 << endl;
-
-            cout << "Dados em formato incorreto. Pressione enter para tentar de novo" << endl;
-            scanf("%c", &lixo);
-            scanf("%c", &lixo);
-                                                                                     // L� caracter digitado.
-        }
-
+        aux = aux -> prx;
     }
-
-    cout << "voce editou com sucesso, aperte enter para retornar" << endl;
-    scanf("%c", &lixo);
-    scanf("%c", &lixo);
-
+    cout << "retornou false" << endl;
+    return false;
 }
 
 void StubServicoConta::cadastrarConta(Usuario* user)

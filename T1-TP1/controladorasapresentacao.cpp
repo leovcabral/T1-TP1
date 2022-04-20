@@ -167,8 +167,45 @@ bool CntrApresentacaoAutenticacao::autenticar(Email *email){
 //--------------------------------------------------------------------------------------------
 //
 void CntrApresentacaoConta::editar(Email* email){
+    char lixo;
 
-    cntrApresentacaoConta->editar(email);
+    char novoNome[80];
+    char novaSenha[80];
+
+    Senha senha;
+    Nome nome;
+
+    char texto1[]="Preencha novo valor para Nome: ";
+    char texto2[]="Preencha novo valor para Senha: ";
+    char texto4[]="Dados em formato incorreto. Digite algo.";
+    system("clear");
+
+    cout << texto1 << " ";
+    cin >> novoNome;
+    cout << texto2 << " ";
+    cin >> novaSenha;
+
+    try{
+            nome.setValor(string(novoNome));
+            senha.setPassword(string(novaSenha));
+                                                                        // Abandona la�o em caso de formatos corretos.
+        }
+    catch(invalid_argument &exp){                                                           // Captura exce��o devido a formato incorreto.
+
+        system("clear");                                         // Limpa janela.
+        cout << texto4 << endl;
+
+        cout << "Dados em formato incorreto. Pressione enter para tentar de novo" << endl;
+        scanf("%c", &lixo);
+        return;
+                                                                                 // L� caracter digitado.
+    }
+    cout << "Acessando metodo" << endl;
+    cntrServicoConta->editar(email, nome, senha);
+    scanf("%c", &lixo);
+    cout << "depois da funcao" << endl;
+    return;
+
 
 }
 void CntrApresentacaoConta::executar(Email* email){
@@ -203,7 +240,7 @@ void CntrApresentacaoConta::executar(Email* email){
         switch(campo){
             case 1: consultarDadosConta(email);
                     break;
-            case 2: editar(&user);
+            case 2: editar(email);
                     break;
             case 3: apresentar = false;
                     break;
