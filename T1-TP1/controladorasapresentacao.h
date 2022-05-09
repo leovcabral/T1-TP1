@@ -20,25 +20,25 @@ class CntrApresentacaoControle{
         Email email;
         IApresentacaoAutenticacao *cntrApresentacaoAutenticacao;
         IApresentacaoConta *cntrApresentacaoConta;
-//        IApresentacaoProdutosFinanceiros *cntrApresentacaoProdutosFinanceiros;
+        IApresentacaoExcursao *cntrApresentacaoExcursao;
     public:
         void executar();
         void setCntrApresentacaoAutenticacao(IApresentacaoAutenticacao*);
         void setCntrApresentacaoConta(IApresentacaoConta*);
-//        void setCntrApresentacaoProdutosFinanceiros(IApresentacaoProdutosFinanceiros*);
+        void setCntrApresentacaoExcursao(IApresentacaoExcursao*);
 };
 
 inline void CntrApresentacaoControle::setCntrApresentacaoAutenticacao(IApresentacaoAutenticacao *cntr){
-    cntrApresentacaoAutenticacao = cntr;
+            cntrApresentacaoAutenticacao = cntr;
 }
 
 inline void CntrApresentacaoControle::setCntrApresentacaoConta(IApresentacaoConta *cntr){
             cntrApresentacaoConta = cntr;
 }
-//
-//inline void CntrApresentacaoControle::setCntrApresentacaoProdutosFinanceiros(IApresentacaoProdutosFinanceiros *cntr){
-//    cntrApresentacaoProdutosFinanceiros = cntr;
-//}
+
+inline void CntrApresentacaoControle::setCntrApresentacaoExcursao(IApresentacaoExcursao *cntr){
+            cntrApresentacaoExcursao = cntr;
+}
 
 //--------------------------------------------------------------------------------------------
 
@@ -60,45 +60,34 @@ inline void CntrApresentacaoAutenticacao::setCntrServicoAutenticacao(IServicoAut
 class CntrApresentacaoConta:public IApresentacaoConta{
     private:
         IServicoConta *cntrServicoConta;
+        Usuario user;
 //        IServicoExcursao *cntrServicoExcursao;
     public:
         void executar(Email*);
         void consultarDadosConta(Email*);
+        void editar(Email*);
         void cadastrar();
-//      void editar(Email);
         bool descadastrar(Email*);
         void setCntrServicoConta(IServicoConta*);
-//        void setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros*);
 };
 
 inline void CntrApresentacaoConta::setCntrServicoConta(IServicoConta *cntr){
     this->cntrServicoConta = cntr;
 }
-//
-//inline void CntrApresentacaoPessoal::setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros *cntr){
-//    cntrServicoProdutosFinanceiros = cntr;
-//}
-
 //--------------------------------------------------------------------------------------------
 
-//class CntrApresentacaoProdutosFinanceiros:public IApresentacaoProdutosFinanceiros{
-//    private:
-//        IServicoProdutosFinanceiros *cntr;
-//        void consultarConta();
-//        void cadastrarProdutoInvestimento();
-//        void descadastrarProdutoInvestimento();
-//        void consultarProdutoInvestimento();
-//        void realizarAplicacao();
-//        void listarAplicacoes();
-//    public:
-//        void executar();
-//        void executar(CPF);
-//        void setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros*);
-//};
-//
-//inline void CntrApresentacaoProdutosFinanceiros::setCntrServicoProdutosFinanceiros(IServicoProdutosFinanceiros *cntr){
-//    this->cntr = cntr;
-//}
+class CntrApresentacaoExcursao:public IApresentacaoExcursao{
+    private:
+        IServicoExcursao *cntr;
+    public:
+        void executar();
+        void cadastrar(Email* email);
+        void setCntrServicoExcursao(IServicoExcursao*);
+};
+
+inline void CntrApresentacaoExcursao::setCntrServicoExcursao(IServicoExcursao *cntr){
+    this->cntr = cntr;
+}
 
 
 #endif // CONTROLADORASAPRESENTACAO_H_INCLUDED

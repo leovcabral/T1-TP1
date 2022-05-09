@@ -3,9 +3,11 @@
 
 #include <string>
 #include "dominios.h"
+#include "entidades.h"
 #include "interfaces.h"
 
 using namespace std;
+
 
 //--------------------------------------------------------------------------------------------
 // Declara��es de classes stub.
@@ -14,33 +16,34 @@ class StubServicoAutenticacao:public IServicoAutenticacao {
     private:
         static const string EMAIL_VALIDO;
         static const string SENHA_VALIDO;
+
     public:
+        ListaUsuarios* ptr;
         bool autenticar(Email, Senha);
 };
 
 //--------------------------------------------------------------------------------------------
 
 class StubServicoConta:public IServicoConta{
-    private:
-        static const string INVALIDO;
     public:
+        ListaUsuarios* ptr;
+        int TamLista;
         void consultarDadosConta(Email*);
+        bool editar(Email*, Nome, Senha);
+        void listarUsers();
+        void cadastrarConta(Usuario*);
         bool descadastrarConta(Email*);
-//        bool cadastrarConta(Usuario);
+
 };
 
 //--------------------------------------------------------------------------------------------
-//
-//class StubServicoProdutosFinanceiros:public IServicoProdutosFinanceiros {
-//    private:
-//        static const string INVALIDO;
-//    public:
-//        bool cadastrarConta(Conta);
-//        bool consultarConta(Conta*);
-//        bool cadastrarProdutoInvestimento(Produto);
-//        bool descadastrarProdutoInvestimento(Codigo);
-//        bool realizarAplicacao(Aplicacao);
-//        bool recuperarAplicacao(Aplicacao*);                        // Adaptar assinatura.
-//};
+
+class StubServicoExcursao:public IServicoExcursao{
+    public:
+        void listar();
+        void cadastrar(Email*, Excursao*);
+};
+
+
 
 #endif // STUBS_H_INCLUDED

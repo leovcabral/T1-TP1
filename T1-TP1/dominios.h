@@ -9,6 +9,8 @@
 #include <cstring>
 
 
+
+
 using namespace std;
 
 
@@ -376,5 +378,7 @@ class Codigo {
 inline string Codigo::getValor() const {
     return valor;
 }
+
+
 
 #endif

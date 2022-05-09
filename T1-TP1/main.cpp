@@ -8,7 +8,6 @@
 #include "controladorasapresentacao.h"
 #include "stubs.h"
 
-
 using namespace std;
 
 int main()
@@ -163,35 +162,80 @@ int main()
     CntrApresentacaoControle *cntrApresentacaoControle;
     IApresentacaoAutenticacao *cntrApresentacaoAutenticacao;
     IApresentacaoConta *cntrApresentacaoConta;
-//    IApresentacaoProdutosFinanceiros *cntrApresentacaoProdutosFinanceiros;
+    IApresentacaoExcursao *cntrApresentacaoExcursao;
 
     cntrApresentacaoControle = new CntrApresentacaoControle();
     cntrApresentacaoAutenticacao = new CntrApresentacaoAutenticacao();
     cntrApresentacaoConta = new CntrApresentacaoConta();
-//    cntrApresentacaoProdutosFinanceiros = new CntrApresentacaoProdutosFinanceiros();
+    cntrApresentacaoExcursao = new CntrApresentacaoExcursao();
 
     // Instanciar stubs.
 
     IServicoAutenticacao *stubServicoAutenticacao;
     IServicoConta *stubServicoConta;
-//    IServicoProdutosFinanceiros *stubServicoProdutosFinanceiros;
+    IServicoExcursao *stubServicoExcursao;
 
     stubServicoAutenticacao = new StubServicoAutenticacao();
     stubServicoConta = new StubServicoConta();
-//    stubServicoProdutosFinanceiros = new StubServicoProdutosFinanceiros();
+    stubServicoExcursao = new StubServicoExcursao();
 
     // Interligar controladoras e stubs.
 
     cntrApresentacaoControle->setCntrApresentacaoAutenticacao(cntrApresentacaoAutenticacao);
     cntrApresentacaoControle->setCntrApresentacaoConta(cntrApresentacaoConta);
-//    cntrApresentacaoControle->setCntrApresentacaoProdutosFinanceiros(cntrApresentacaoProdutosFinanceiros);
+    cntrApresentacaoControle->setCntrApresentacaoExcursao(cntrApresentacaoExcursao);
 
     cntrApresentacaoAutenticacao->setCntrServicoAutenticacao(stubServicoAutenticacao);
 
-   cntrApresentacaoConta->setCntrServicoConta(stubServicoConta);
+    cntrApresentacaoConta->setCntrServicoConta(stubServicoConta);
+
 //    cntrApresentacaoPessoal->setCntrServicoProdutosFinanceiros(stubServicoProdutosFinanceiros);
 
-//    cntrApresentacaoProdutosFinanceiros->setCntrServicoProdutosFinanceiros(stubServicoProdutosFinanceiros);
+    cntrApresentacaoExcursao->setCntrServicoExcursao(stubServicoExcursao);
+
+    stubServicoConta->TamLista = 0;
+//
+//    Usuario user1;
+//    Usuario user2;
+//    Usuario user3;
+//
+//    Nome nome;
+//    Email email;
+//    Senha senha;
+//
+//    nome.setValor("Adriano");
+//    email.setEmail("adriano@mail.com");
+//    senha.setPassword("Ab123456");
+//
+//    user1.setNome(nome);
+//    user1.setEmail(email);
+//    user1.setSenha(senha);
+//
+//    stubServicoConta->cadastrarConta(&user1);
+//
+//    nome.setValor("Arthur");
+//    email.setEmail("arthur@mail.com");
+//    senha.setPassword("Ab123456");
+//
+//    user2.setNome(nome);
+//    user2.setEmail(email);
+//    user2.setSenha(senha);
+//
+//    stubServicoConta->cadastrarConta(&user2);
+//
+//    nome.setValor("Leonardo");
+//    email.setEmail("leonardo@mail.com");
+//    senha.setPassword("Ab123456");
+//
+//    user3.setNome(nome);
+//    user3.setEmail(email);
+//    user3.setSenha(senha);
+//
+//    stubServicoConta->cadastrarConta(&user3);
+//
+//
+//    system("clear");
+
 
     cntrApresentacaoControle->executar();                                           // Solicitar servi�o.
 
